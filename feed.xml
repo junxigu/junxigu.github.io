@@ -5,9 +5,311 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Sep 2016 18:30:02 +0800</pubDate>
-    <lastBuildDate>Wed, 21 Sep 2016 18:30:02 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 20:23:03 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 20:23:03 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Java虚拟机的构成</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;Java虚拟机的构成&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#vm&quot; id=&quot;markdown-toc-vm&quot;&gt;VM运行时&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;命令行解析&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;标注选项&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;非标准选项&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;非稳定选项&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#vm-1&quot; id=&quot;markdown-toc-vm-1&quot;&gt;VM的启动和停止&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;类加载&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;加载&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;类加载器&lt;/a&gt;                    &lt;ul&gt;
+                      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;分支主题&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;链接&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;类型安全&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;类初始化&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;类元数据&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;解析器&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;异常处理&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;线程同步&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;线程管理&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#c&quot; id=&quot;markdown-toc-c&quot;&gt;C++堆管理&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#java-1&quot; id=&quot;markdown-toc-java-1&quot;&gt;Java本地接口&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#jvm&quot; id=&quot;markdown-toc-jvm&quot;&gt;JVM致命错误处理&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;垃圾回收&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;分代垃圾收集&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;新生代&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#eden&quot; id=&quot;markdown-toc-eden&quot;&gt;Eden&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#survivor&quot; id=&quot;markdown-toc-survivor&quot;&gt;Survivor&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;收集过程&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;老年代&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;永久代&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#serial&quot; id=&quot;markdown-toc-serial&quot;&gt;Serial垃圾收集器&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#parallel&quot; id=&quot;markdown-toc-parallel&quot;&gt;Parallel垃圾收集器&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;收集方法&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#cms&quot; id=&quot;markdown-toc-cms&quot;&gt;并行标记清除(CMS)收集器&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#g1&quot; id=&quot;markdown-toc-g1&quot;&gt;G1垃圾收集器&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jit&quot; id=&quot;markdown-toc-jit&quot;&gt;JIT编译器&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;本文是对JVM 功能的简单汇总和简述，目标读者是想了解一下JVM功能&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;java&quot;&gt;Java虚拟机的构成&lt;/h1&gt;
+
+&lt;h2 id=&quot;vm&quot;&gt;VM运行时&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;命令行解析&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;功能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;解析命令行的选项&lt;/li&gt;
+  &lt;li&gt;配置VM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;选项分类&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;标注选项&lt;/h4&gt;
+
+&lt;p&gt;JVM标注要求必须实现&lt;/p&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;非标准选项&lt;/h4&gt;
+
+&lt;p&gt;(-X前缀)不强制实现&lt;/p&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;非稳定选项&lt;/h4&gt;
+
+&lt;p&gt;(-XX前缀)为满足特定需求，不稳定&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;参数示例&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;-XX:+AffresiveOpts&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;+或-表示布尔类型的选项参数&lt;/li&gt;
+  &lt;li&gt;后接JVM参数名字&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-XX:OptName=&lt;N&gt;&lt;/N&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JVM参数名字&lt;/li&gt;
+  &lt;li&gt;后接=和value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vm-1&quot;&gt;VM的启动和停止&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;启动器执行的操作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;解析命令行参照&lt;/li&gt;
+  &lt;li&gt;设置堆大小和JIT编译器&lt;/li&gt;
+  &lt;li&gt;读取，设定环境变量&lt;/li&gt;
+  &lt;li&gt;获取Main-Class&lt;/li&gt;
+  &lt;li&gt;创建VM线程并初始化&lt;/li&gt;
+  &lt;li&gt;加载Main-Class&lt;/li&gt;
+  &lt;li&gt;执行main方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;类加载&lt;/h3&gt;
+
+&lt;p&gt;根据类名或接口名创建对象的过程，包括3个阶段&lt;/p&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;加载&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;定位并读取类的二进制流&lt;/li&gt;
+  &lt;li&gt;若一览其他类则先加载其他类&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;section-6&quot;&gt;类加载器&lt;/h5&gt;
+
+&lt;h6 id=&quot;section-7&quot;&gt;分支主题&lt;/h6&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;链接&lt;/h4&gt;
+
+&lt;p&gt;包括以下步骤：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;检查类的语义，常量符号池；检验类型&lt;/li&gt;
+  &lt;li&gt;创建静态字段并初始化为默认值&lt;/li&gt;
+  &lt;li&gt;解析符合引用（可选）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;section-9&quot;&gt;类型安全&lt;/h5&gt;
+
+&lt;p&gt;Java类型由类加载器和全限定名(包括包名)唯一确定&lt;/p&gt;
+
+&lt;h4 id=&quot;section-10&quot;&gt;类初始化&lt;/h4&gt;
+
+&lt;p&gt;必须先初始化父类&lt;/p&gt;
+
+&lt;h5 id=&quot;section-11&quot;&gt;类元数据&lt;/h5&gt;
+
+&lt;p&gt;在永久代中创建Class对象的JVM内部表示&lt;/p&gt;
+
+&lt;h3 id=&quot;section-12&quot;&gt;解析器&lt;/h3&gt;
+
+&lt;p&gt;使用Template Table查找对应的机器码&lt;/p&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;异常处理&lt;/h3&gt;
+
+&lt;p&gt;通过当前方法，当前字节码，异常对象来查找异常处理器并执行&lt;/p&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;线程同步&lt;/h3&gt;
+
+&lt;p&gt;使用monitor对象实现锁定和解锁&lt;/p&gt;
+
+&lt;h3 id=&quot;section-15&quot;&gt;线程管理&lt;/h3&gt;
+
+&lt;h3 id=&quot;c&quot;&gt;C++堆管理&lt;/h3&gt;
+
+&lt;h3 id=&quot;java-1&quot;&gt;Java本地接口&lt;/h3&gt;
+
+&lt;p&gt;与非Java程序进行协作&lt;/p&gt;
+
+&lt;h3 id=&quot;jvm&quot;&gt;JVM致命错误处理&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-16&quot;&gt;垃圾回收&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;分代垃圾收集&lt;/h3&gt;
+
+&lt;p&gt;原理&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;大对象生命周期短&lt;/li&gt;
+  &lt;li&gt;生命周期长的对象很少引用生命周期短的对象&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-18&quot;&gt;新生代&lt;/h4&gt;
+
+&lt;p&gt;特点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;空间小&lt;/li&gt;
+  &lt;li&gt;收集频繁&lt;/li&gt;
+  &lt;li&gt;垃圾对象多&lt;/li&gt;
+  &lt;li&gt;垃圾收集效率高&lt;/li&gt;
+  &lt;li&gt;一般使用复制垃圾收集法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;区域划分：Eden区和一对survivor区&lt;/p&gt;
+
+&lt;h5 id=&quot;eden&quot;&gt;Eden&lt;/h5&gt;
+
+&lt;p&gt;分配空间给新创建的对象&lt;/p&gt;
+
+&lt;p&gt;空间分配方法：使用线程本地分配缓冲区和指针碰撞技术来分配空间创建对象&lt;/p&gt;
+
+&lt;h5 id=&quot;survivor&quot;&gt;Survivor&lt;/h5&gt;
+
+&lt;p&gt;存放从Eden存活但不足够老的对象&lt;/p&gt;
+
+&lt;h5 id=&quot;section-19&quot;&gt;收集过程&lt;/h5&gt;
+
+&lt;h4 id=&quot;section-20&quot;&gt;老年代&lt;/h4&gt;
+
+&lt;p&gt;特点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对象从新生代晋升而来&lt;/li&gt;
+  &lt;li&gt;空间比新生代大&lt;/li&gt;
+  &lt;li&gt;占用空间增长速度较新生代慢&lt;/li&gt;
+  &lt;li&gt;垃圾收集效率低&lt;/li&gt;
+  &lt;li&gt;使用卡表来标记在新生代中对象的引用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-21&quot;&gt;永久代&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;其实不作为垃圾收集分代层次的一部分&lt;/li&gt;
+  &lt;li&gt;用户创建的对象不会存放在此&lt;/li&gt;
+  &lt;li&gt;只存放元数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;serial&quot;&gt;Serial垃圾收集器&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在新生代中使用赋值垃圾收集法&lt;/li&gt;
+  &lt;li&gt;在老年代中使用标记-压缩收集法&lt;/li&gt;
+  &lt;li&gt;单线程，stop-the-world收集&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;parallel&quot;&gt;Parallel垃圾收集器&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;与Serial收集器的收集方法相同&lt;/li&gt;
+  &lt;li&gt;使用多处理器并行收集&lt;/li&gt;
+  &lt;li&gt;目标是高吞吐率&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-22&quot;&gt;收集方法&lt;/h4&gt;
+
+&lt;h3 id=&quot;cms&quot;&gt;并行标记清除(CMS)收集器&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;新生代使用复制收集法&lt;/li&gt;
+  &lt;li&gt;老年代使用多步骤标记 和 清除 收集法&lt;/li&gt;
+  &lt;li&gt;目标是高并发，减少停顿时间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;老年代收集方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;初始标记：暂停应用程序，找出从外部可达的老年代对象并标记&lt;/li&gt;
+  &lt;li&gt;不停顿，多线程从已标记的对象出发标记可达对象，并预清除&lt;/li&gt;
+  &lt;li&gt;重新标记：暂停应用程序，多线程；并重用卡表进行重新标记&lt;/li&gt;
+  &lt;li&gt;并发清除：维护空闲表，导致空间不连续和浪费，新生代回收开销增大&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;多次遍历老年代&lt;/li&gt;
+  &lt;li&gt;需要更大的堆&lt;/li&gt;
+  &lt;li&gt;有可能收集不干净&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;g1&quot;&gt;G1垃圾收集器&lt;/h3&gt;
+
+&lt;h2 id=&quot;jit&quot;&gt;JIT编译器&lt;/h2&gt;
+
+&lt;p&gt;在使用程序解析期间使用多种技术进行性能提升&lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 Sep 2016 10:00:00 +0800</pubDate>
+        <link>/2016/09/22/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B5%84%E6%96%99/</link>
+        <guid isPermaLink="true">/2016/09/22/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B5%84%E6%96%99/</guid>
+        
+        <category>JVM</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
     
       <item>
         <title>Junit 4功能的简单汇总和简述</title>
@@ -177,8 +479,8 @@ public TemporaryFolder tempFolder = new TemporaryFolder();
 
 </description>
         <pubDate>Wed, 21 Sep 2016 10:00:00 +0800</pubDate>
-        <link>/2016/09/21/how-to-use-this-jekyll-theme/</link>
-        <guid isPermaLink="true">/2016/09/21/how-to-use-this-jekyll-theme/</guid>
+        <link>/2016/09/21/how-to-use-junit/</link>
+        <guid isPermaLink="true">/2016/09/21/how-to-use-junit/</guid>
         
         <category>Junit</category>
         
