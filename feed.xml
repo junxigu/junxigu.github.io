@@ -5,8 +5,8 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Oct 2016 17:24:58 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Oct 2016 17:24:58 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Oct 2016 17:32:56 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Oct 2016 17:32:56 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -319,74 +319,74 @@ class WildDuck extends Duck {
       <item>
         <title>Java虚拟机的构成</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;Java虚拟机的构成&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#vm&quot; id=&quot;markdown-toc-vm&quot;&gt;VM运行时&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;命令行解析&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;标注选项&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;非标准选项&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;非稳定选项&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#vm-1&quot; id=&quot;markdown-toc-vm-1&quot;&gt;VM的启动和停止&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;类加载&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;加载&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;类加载器&lt;/a&gt;                    &lt;ul&gt;
-                      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;分支主题&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;链接&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;类型安全&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;类初始化&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;类元数据&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;解析器&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;异常处理&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;线程同步&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;线程管理&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#c&quot; id=&quot;markdown-toc-c&quot;&gt;C++堆管理&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#java-1&quot; id=&quot;markdown-toc-java-1&quot;&gt;Java本地接口&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#jvm&quot; id=&quot;markdown-toc-jvm&quot;&gt;JVM致命错误处理&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jvm&quot; id=&quot;markdown-toc-jvm&quot;&gt;JVM运行时&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;命令行解析&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;标注选项&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;非标准选项&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;非稳定选项&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;垃圾回收&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;分代垃圾收集&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;新生代&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#eden&quot; id=&quot;markdown-toc-eden&quot;&gt;Eden&lt;/a&gt;&lt;/li&gt;
-                  &lt;li&gt;&lt;a href=&quot;#survivor&quot; id=&quot;markdown-toc-survivor&quot;&gt;Survivor&lt;/a&gt;&lt;/li&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;收集过程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#vm&quot; id=&quot;markdown-toc-vm&quot;&gt;VM的启动和停止&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;类加载&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;加载&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;类加载器&lt;/a&gt;                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;分支主题&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
               &lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;老年代&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;永久代&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#serial&quot; id=&quot;markdown-toc-serial&quot;&gt;Serial垃圾收集器&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#parallel&quot; id=&quot;markdown-toc-parallel&quot;&gt;Parallel垃圾收集器&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;收集方法&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;链接&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;类型安全&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#cms&quot; id=&quot;markdown-toc-cms&quot;&gt;并行标记清除(CMS)收集器&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#g1&quot; id=&quot;markdown-toc-g1&quot;&gt;G1垃圾收集器&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;类初始化&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;类元数据&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#jit&quot; id=&quot;markdown-toc-jit&quot;&gt;JIT编译器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;解析器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;异常处理&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;线程同步&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;线程管理&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#c&quot; id=&quot;markdown-toc-c&quot;&gt;C++堆管理&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;Java本地接口&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jvm-1&quot; id=&quot;markdown-toc-jvm-1&quot;&gt;JVM致命错误处理&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;垃圾回收&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;分代垃圾收集&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;新生代&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#eden&quot; id=&quot;markdown-toc-eden&quot;&gt;Eden&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#survivor&quot; id=&quot;markdown-toc-survivor&quot;&gt;Survivor&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;收集过程&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;老年代&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;永久代&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#serial&quot; id=&quot;markdown-toc-serial&quot;&gt;Serial垃圾收集器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#parallel&quot; id=&quot;markdown-toc-parallel&quot;&gt;Parallel垃圾收集器&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;收集方法&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cms&quot; id=&quot;markdown-toc-cms&quot;&gt;并行标记清除(CMS)收集器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#g1&quot; id=&quot;markdown-toc-g1&quot;&gt;G1垃圾收集器&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jit&quot; id=&quot;markdown-toc-jit&quot;&gt;JIT编译器&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;本文是对JVM 功能的简单汇总和简述，目标读者是想了解一下JVM功能&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;h1 id=&quot;java&quot;&gt;Java虚拟机的构成&lt;/h1&gt;
 
-&lt;h2 id=&quot;vm&quot;&gt;VM运行时&lt;/h2&gt;
+&lt;p&gt;这是百度脑图编辑的本文内容要点，图后是内容简介&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/Java虚拟机的构成.svg&quot; alt=&quot;Java虚拟机的构成&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jvm&quot;&gt;JVM运行时&lt;/h2&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;命令行解析&lt;/h3&gt;
 
@@ -429,7 +429,7 @@ class WildDuck extends Duck {
   &lt;li&gt;后接=和value&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;vm-1&quot;&gt;VM的启动和停止&lt;/h3&gt;
+&lt;h3 id=&quot;vm&quot;&gt;VM的启动和停止&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;启动器执行的操作&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -495,11 +495,11 @@ class WildDuck extends Duck {
 
 &lt;h3 id=&quot;c&quot;&gt;C++堆管理&lt;/h3&gt;
 
-&lt;h3 id=&quot;java-1&quot;&gt;Java本地接口&lt;/h3&gt;
+&lt;h3 id=&quot;java&quot;&gt;Java本地接口&lt;/h3&gt;
 
 &lt;p&gt;与非Java程序进行协作&lt;/p&gt;
 
-&lt;h3 id=&quot;jvm&quot;&gt;JVM致命错误处理&lt;/h3&gt;
+&lt;h3 id=&quot;jvm-1&quot;&gt;JVM致命错误处理&lt;/h3&gt;
 
 &lt;h2 id=&quot;section-16&quot;&gt;垃圾回收&lt;/h2&gt;
 
