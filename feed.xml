@@ -5,8 +5,8 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Nov 2016 15:26:06 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Nov 2016 15:26:06 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Nov 2016 15:33:47 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Nov 2016 15:33:47 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -179,7 +179,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;** Java平台的不同版本体现其 平台无关性 和 伸缩性 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Java平台的不同版本体现其 平台无关性 和 伸缩性&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;不同版本间支持的API集合不同&lt;/p&gt;
 
@@ -189,7 +189,7 @@
   &lt;li&gt;J2ME：适合作为资源高度受限的嵌入式设备上的Java平台&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** 影响Java程序的平台无关性的一些因素 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;影响Java程序的平台无关性的一些因素&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;所针对的硬件平台是否已经存在相应的Java平台实现&lt;/li&gt;
@@ -203,7 +203,7 @@
   &lt;li&gt;不同Java平台不同实现导致的功能，性能不一致&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** 开发平台无关的Java程序的步骤 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开发平台无关的Java程序的步骤&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;选定要运行的主机和设备集合&lt;/li&gt;
@@ -265,7 +265,7 @@
 
 &lt;h2 id=&quot;java4-1&quot;&gt;Java平台通过4个技术的结合来实现其目标&lt;/h2&gt;
 
-&lt;p&gt;** java虚拟机 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;java虚拟机&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;java虚拟机的主要功能是 加载class二进制(类加载器体系) 和 执行字节码(执行引擎)&lt;/p&gt;
 
@@ -287,7 +287,7 @@
   &lt;li&gt;允许自定义的加载器从网路获取类所以实现网络移动性&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** java class文件 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;java class文件&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;java class文件更好的支持java平台的 平台无关性 和 网路移动性&lt;/p&gt;
 
@@ -296,7 +296,7 @@
   &lt;li&gt;java class文件格式紧凑，适合网路传输 和 按需下载，实现了网路移动性&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** java API **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;java API&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;java API(rt.jar等)更好的支持java平台的 平台无关性 和 安全性&lt;/p&gt;
 
@@ -305,7 +305,7 @@
   &lt;li&gt;当java API进行任何潜在危险操作(硬盘io等)都会查询安全管理器和控制访问器来获取执行操作的权限&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** java语言 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;java语言&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;java语言用来开发Java平台(平台无关，安全性，网络移动)应用&lt;/li&gt;
