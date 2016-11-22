@@ -5,9 +5,342 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Oct 2016 17:32:56 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Oct 2016 17:32:56 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Nov 2016 15:26:06 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Nov 2016 15:26:06 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Java的安全性</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#java-&quot; id=&quot;markdown-toc-java-&quot;&gt;Java 安全性是什么&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java--1&quot; id=&quot;markdown-toc-java--1&quot;&gt;Java 为什么需要安全性&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java--2&quot; id=&quot;markdown-toc-java--2&quot;&gt;Java 怎么样实现安全性&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;类加载器体系结构&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#class&quot; id=&quot;markdown-toc-class&quot;&gt;class文件检验器&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;Java虚拟机中内置的安全特性&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#java-api&quot; id=&quot;markdown-toc-java-api&quot;&gt;安全管理器和Java API&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;本文是对Java的安全性的汇总和个人理解，此处的内容是针对旧版的Java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java-&quot;&gt;Java 安全性是什么&lt;/h2&gt;
+
+&lt;p&gt;Java 通过其安全模型 来保护终端用户免受从网路下载的、来自不可靠来源的、恶意程序的侵犯&lt;/p&gt;
+
+&lt;h2 id=&quot;java--1&quot;&gt;Java 为什么需要安全性&lt;/h2&gt;
+
+&lt;p&gt;Java 程序是可从任意来源获取并运行的，因此需要保证运行这些代码时能进行限制，免受恶意代码的破坏&lt;/p&gt;
+
+&lt;h2 id=&quot;java--2&quot;&gt;Java 怎么样实现安全性&lt;/h2&gt;
+
+&lt;p&gt;Java 使用沙箱模型来对程序运行进行限制，防止其进行破坏，沙箱模型由一些基本组件组成&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;类加载器体系结构&lt;/li&gt;
+  &lt;li&gt;class文件检验器&lt;/li&gt;
+  &lt;li&gt;内置于Java虚拟机(及语言)的安全特性&lt;/li&gt;
+  &lt;li&gt;安全管理器及Java API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/Java安全体系.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;前三个组成部分是为了保证JVM和它正在运行的应用程序的完整性，免受下载的恶意程序的侵犯；最后一个部分是为了保护外部资源不被JVM中运行的恶意程序侵犯&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;类加载器体系结构&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;是什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;类加载器是用于动态的加载类二进制流的对象&lt;/li&gt;
+  &lt;li&gt;类加载有4类：启动类加载器(java内部实现，负责加载java核心API)、标准扩展类加载器(java自带，加载ext目录下的类)、类路径类加载器(java自带，加载CLASS_PATH环境变量下的类)、自定义类加载器&lt;/li&gt;
+  &lt;li&gt;类加载器使用双亲委派模式进行类的加载(非启动类加载器都有一个双亲类加载器的引用，加载类时会先让双亲加载，若双亲加载不到才自己加载)，启动类加载器 &amp;lt;- 标准扩展类加载器 &amp;lt;- 类路径类加载器 &amp;lt;- 自定义类加载器,保证可信的类由可信的类加载器优先加载&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;为什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;类加载器是可信和不可信程序的入口，通过类加载器体系机构能够在一定程度上实现可信程序和不可信程序的隔离，并能对不可信的程序的资源访问进行限制&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;怎么样？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;类加载器体系结构的作用&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;防止恶意代码干涉正常代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不同的类加载器加载的代码属于不同的命名空间(相同的类可以用不同类加载器多次加载到JVM)，不同的命名空间中的代码不能互相访问(除非显式运行交互)，达到隔离恶意代码的效果&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;守护了被信任的类库的边界&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用类加载器双亲委托模型来保证所有信任的类库都通过信任的加载器来加载，不可靠的类可以使用自定义的加载器加载&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为类创建保护域，由保护域来确定类所拥有的权限&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;每个类都属于一个保护域，用户可以为某个保护域的类设置资源的访问权限策略，这样就能起到限制代码权限的作用&lt;/p&gt;
+
+&lt;h3 id=&quot;class&quot;&gt;class文件检验器&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;是什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;class文件检验器是对 类加载器加载的类 进行检查的对象&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;为什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;虚拟机不能保证 加载的类 是由合法的编译器生成的，需要对类二进制流的 结构，类型，语义，符号引用信息 进行检查，保证其完整性和健壮性&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;怎么样？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;class文件检验器需要进行四趟扫描来完成校验&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;class文件的结构检查&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;检查class文件的结构是否满足java对于一个类型的结构的定义，包括魔数、结构、长度等&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;类型数据的语义检查&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;检查各个组成部分的类型是否满足其所属的类型的定义，并检查这个类文件本身的类是否满足编译器所规定的条件&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;字节码验证&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;通过对字节码流中的操作码，操作数进行检查，保证所有字节码都能安全的执行&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;符号引用的验证&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在执行过程中第一次引用新的类型时需要进行动态链接，这时候需要对引用的合法性(存在性等)进行校验，从而保证被引用的类文件的二进制兼容性&lt;/p&gt;
+
+&lt;h3 id=&quot;java&quot;&gt;Java虚拟机中内置的安全特性&lt;/h3&gt;
+
+&lt;p&gt;JVM通过在执行过程中加入以下特性来增强程序的健壮性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;类型安全的引用转换&lt;/li&gt;
+  &lt;li&gt;结构化的内存访问&lt;/li&gt;
+  &lt;li&gt;自动垃圾收集&lt;/li&gt;
+  &lt;li&gt;数组边界检查&lt;/li&gt;
+  &lt;li&gt;空引用检查&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;java-api&quot;&gt;安全管理器和Java API&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;是什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;安全访问器是一个对象，它能确定一个程序是否有权限访问一个受保护的资源&lt;/p&gt;
+
+&lt;p&gt;所有对资源的访问都是通过Java API来完成的，当给应用程序赋予了一个安全管理器实例时，则Java API在访问资源前都会让安全管理器确认程序是否有权限访问资源&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;为什么？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;通过把对资源的访问封装在Java API里，然后API在访问资源前使用安全管理器确认程序是否有权限访问资源，这样就能保护外部资源不被不受信任的程序访问&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;怎么样？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Java通过签名对 受信任的代码 确定其身份和完整性&lt;/p&gt;
+
+&lt;p&gt;一个class文件有它的代码来源，代码来源是指 代码从哪来、若被签名则是从谁那里来&lt;/p&gt;
+
+&lt;p&gt;代码对资源所拥有的访问权限都与代码的代码来源相关联，所以在给某段代码赋予权限时，要制定其来源和所拥有权限&lt;/p&gt;
+
+&lt;p&gt;所有的代码权限赋予都记录在一个ASCII策略文件里，文件里的内容有固定的语法，内容大意是 给 某个代码来源的代码 赋予 访问某种资源的权限&lt;/p&gt;
+
+&lt;p&gt;类加载器 在加载类时 会给类创建一个保护域，保护域里有策略文件里定义的代码来源 和 所拥有的权限(类加载器也可以不参考策略文件)，当程序使用Java API时，安全管理器 能通过代码的保护域中的权限来确定代码是否能访问资源&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 22 Nov 2016 10:00:00 +0800</pubDate>
+        <link>/2016/11/22/DEEP_IN_JAVA_VM__security/</link>
+        <guid isPermaLink="true">/2016/11/22/DEEP_IN_JAVA_VM__security/</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>Java平台的无关性</title>
+        <description>
+&lt;p&gt;&lt;strong&gt;本文是对Java平台无关性的汇总和个人理解，此处的内容是针对旧版的Java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;** Java平台的不同版本体现其 平台无关性 和 伸缩性 **&lt;/p&gt;
+
+&lt;p&gt;不同版本间支持的API集合不同&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;J2EE：适合作为高端性能的服务器上的Java平台&lt;/li&gt;
+  &lt;li&gt;J2SE：适合作为浏览器上或桌面应用上的Java平台&lt;/li&gt;
+  &lt;li&gt;J2ME：适合作为资源高度受限的嵌入式设备上的Java平台&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** 影响Java程序的平台无关性的一些因素 **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;所针对的硬件平台是否已经存在相应的Java平台实现&lt;/li&gt;
+  &lt;li&gt;Java程序使用的API集合在网路中的不同节点的Java平台是否存在&lt;/li&gt;
+  &lt;li&gt;Java平台的版本改变后对原有程序使用的API的影响&lt;/li&gt;
+  &lt;li&gt;Java程序是否使用了本地方法&lt;/li&gt;
+  &lt;li&gt;Java程序是否使用了某些硬件平台厂商提供的特定扩展库&lt;/li&gt;
+  &lt;li&gt;Java程序是否依赖特定Java平台的实现(及时终结，线程的优先级)&lt;/li&gt;
+  &lt;li&gt;对用户界面的依赖&lt;/li&gt;
+  &lt;li&gt;Java平台中的bug&lt;/li&gt;
+  &lt;li&gt;不同Java平台不同实现导致的功能，性能不一致&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** 开发平台无关的Java程序的步骤 **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;选定要运行的主机和设备集合&lt;/li&gt;
+  &lt;li&gt;选定一个足够好的Java平台&lt;/li&gt;
+  &lt;li&gt;对每个目标主机和设备选定一个Java平台实现&lt;/li&gt;
+  &lt;li&gt;编写程序时只使用标准的API&lt;/li&gt;
+  &lt;li&gt;编写程序时不要依赖及时终结和线程优先级&lt;/li&gt;
+  &lt;li&gt;努力设计一个能在每个平台正常运行的界面&lt;/li&gt;
+  &lt;li&gt;在所有目标主机和设备上测试&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;是否选择平台无关需要考虑性能，功能等各种因素&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Nov 2016 10:00:00 +0800</pubDate>
+        <link>/2016/11/08/DEEP_IN_JAVA_VM__plateform_unrelated/</link>
+        <guid isPermaLink="true">/2016/11/08/DEEP_IN_JAVA_VM__plateform_unrelated/</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>Java平台系统的基本知识</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#java4&quot; id=&quot;markdown-toc-java4&quot;&gt;Java平台系统中由4个独立并相关的技术构成&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java-&quot; id=&quot;markdown-toc-java-&quot;&gt;Java平台的目标 平台无关性，安全性和网路移动性&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java4-1&quot; id=&quot;markdown-toc-java4-1&quot;&gt;Java平台通过4个技术的结合来实现其目标&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;Java的劣势&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;本文是对Java平台系统的基本知识的汇总和个人理解，此处的内容是针对旧版的Java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java4&quot;&gt;Java平台系统中由4个独立并相关的技术构成&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java程序设计语言&lt;/li&gt;
+  &lt;li&gt;Java Class文件&lt;/li&gt;
+  &lt;li&gt;Java API(rt.jar等)，提供访问系统底层资源的统一接口&lt;/li&gt;
+  &lt;li&gt;Java虚拟机&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/Java平台组成及关系.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;java-&quot;&gt;Java平台的目标 平台无关性，安全性和网路移动性&lt;/h2&gt;
+
+&lt;p&gt;现代的硬件发展趋势和软件发展趋势 需要大型系统能实现 平台无关性，安全性和网路移动性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;平台无关性：程序一次开发可以在多种目标硬件平台都能使用、执行，不需要针对特定硬件平台做移植、定制&lt;/li&gt;
+  &lt;li&gt;安全性：通过某种方式获得的程序的可校验，权限的可控，不同源的程序的隔离等&lt;/li&gt;
+  &lt;li&gt;网路移动性：运行的状态，可执行的代码等 能在网路的不同节点中传递和执行，这是3种特性中的最高目标，前两种特性是这一特性的基本要求&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;java4-1&quot;&gt;Java平台通过4个技术的结合来实现其目标&lt;/h2&gt;
+
+&lt;p&gt;** java虚拟机 **&lt;/p&gt;
+
+&lt;p&gt;java虚拟机的主要功能是 加载class二进制(类加载器体系) 和 执行字节码(执行引擎)&lt;/p&gt;
+
+&lt;p&gt;类加载器体系包括java平台默认实现的启动类加载器 和 用户实现的自定义类加载器，通过用户提供的类加载可以更加灵活的实现从不同地方(网路，文件系统，动态生成等) 动态地 加载类&lt;/p&gt;
+
+&lt;p&gt;执行引擎有三种执行形式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;解析执行&lt;/li&gt;
+  &lt;li&gt;编译执行&lt;/li&gt;
+  &lt;li&gt;自适应优化执行(动态编译高频率执行代码)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;java虚拟机是 java平台 实现 平台无关性，安全性和网路移动性 的核心&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java虚拟机的功能有统一的规范，但不同平台上的实现可根据平台实现&lt;/li&gt;
+  &lt;li&gt;不同的类加载加载的类在不同的命名空间，不能互相调用，实现隔离，所以安全&lt;/li&gt;
+  &lt;li&gt;允许自定义的加载器从网路获取类所以实现网络移动性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** java class文件 **&lt;/p&gt;
+
+&lt;p&gt;java class文件更好的支持java平台的 平台无关性 和 网路移动性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;java class是一种与平台无关的二进制服务形式(反例是c，c++的编译结果是平台相关的二进制代码)&lt;/li&gt;
+  &lt;li&gt;java class文件格式紧凑，适合网路传输 和 按需下载，实现了网路移动性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** java API **&lt;/p&gt;
+
+&lt;p&gt;java API(rt.jar等)更好的支持java平台的 平台无关性 和 安全性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;java API封装了对底层系统资源的调用，对java程序提供统一的接口，实现平台无关&lt;/li&gt;
+  &lt;li&gt;当java API进行任何潜在危险操作(硬盘io等)都会查询安全管理器和控制访问器来获取执行操作的权限&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** java语言 **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;java语言用来开发Java平台(平台无关，安全性，网络移动)应用&lt;/li&gt;
+  &lt;li&gt;java语言是一种设计良好、开发效率高的语言，所以也非常适合用于开发不一定用到java平台特性的应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;设计良好、开发效率的体现：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;是面向对象语言，所以比面向过程的抽象程度更高，更容易开发重用度更高的程序&lt;/li&gt;
+  &lt;li&gt;垃圾收集，不用开发人员自己管理垃圾&lt;/li&gt;
+  &lt;li&gt;去除指针概念，减少开发人员的失误&lt;/li&gt;
+  &lt;li&gt;通过运行时类型检查抛异常来法制程序崩溃&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;java&quot;&gt;Java的劣势&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java虚拟机执行速度可能较编译执行的程序慢&lt;/li&gt;
+  &lt;li&gt;Java虚拟机的垃圾收集引入了性能的不确定性&lt;/li&gt;
+  &lt;li&gt;Java虚拟机的线程管理说明模糊不清，使程序员无法了解如何调度线程&lt;/li&gt;
+  &lt;li&gt;Java的平台无关性导致API的设计存在最小公分母问题&lt;/li&gt;
+  &lt;li&gt;Java的class文件容易逆向工程，被窃取开发成果&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Nov 2016 10:00:00 +0800</pubDate>
+        <link>/2016/11/08/DEEP_IN_JAVA_VM__java_plateform/</link>
+        <guid isPermaLink="true">/2016/11/08/DEEP_IN_JAVA_VM__java_plateform/</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
     
       <item>
         <title>面向对象系统的基本知识</title>
