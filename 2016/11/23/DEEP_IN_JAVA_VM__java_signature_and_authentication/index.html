@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java平台的无关性</title>
+	<title>Java 代码签名和认证</title>
 
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
-	<link rel="canonical" href="/2016/11/08/DEEP_IN_JAVA_VM__plateform_unrelated/">
+	<link rel="canonical" href="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/">
 	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
 	
 	<meta name="description" content="顾俊喜;个人博客">
@@ -73,8 +73,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>Java平台的无关性</h1>
-		    <p>Post on Nov 08, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		    <h1>Java 代码签名和认证</h1>
+		    <p>Post on Nov 23, 2016 by <a href="/about">Jun Xi Gu</a></p>
 		-->
 		    <h1>Stay Hungry Stay Foolish</h1>
     
@@ -209,57 +209,60 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Java平台的无关性</h1>
+              <h1 class="post-title">Java 代码签名和认证</h1>
               <!--
-                <p class="post-meta">Nov 8, 2016</p>
+                <p class="post-meta">Nov 23, 2016</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Nov 08, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <div class="meta">Posted on <span class="postdate">Nov 23, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
               <br />
             </header>
             <article class="post-content">
-              
-<p><strong>本文是对Java平台无关性的汇总和个人理解，此处的内容是针对旧版的Java</strong></p>
+              <ul id="markdown-toc">
+  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
+  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
+</ul>
+
+<p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
 
 <hr />
 
-<p><strong>Java平台的不同版本体现其 平台无关性 和 伸缩性</strong></p>
+<p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
 
-<p>不同版本间支持的API集合不同</p>
+<h3 id="java--">Java对 公私钥和证书 的支持</h3>
 
-<ul>
-  <li>J2EE：适合作为高端性能的服务器上的Java平台</li>
-  <li>J2SE：适合作为浏览器上或桌面应用上的Java平台</li>
-  <li>J2ME：适合作为资源高度受限的嵌入式设备上的Java平台</li>
-</ul>
+<p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
 
-<p><strong>影响Java程序的平台无关性的一些因素</strong></p>
+<p><img src="../../../../styles/images/java_sign_0.png" alt="alt text" /></p>
 
-<ul>
-  <li>所针对的硬件平台是否已经存在相应的Java平台实现</li>
-  <li>Java程序使用的API集合在网路中的不同节点的Java平台是否存在</li>
-  <li>Java平台的版本改变后对原有程序使用的API的影响</li>
-  <li>Java程序是否使用了本地方法</li>
-  <li>Java程序是否使用了某些硬件平台厂商提供的特定扩展库</li>
-  <li>Java程序是否依赖特定Java平台的实现(及时终结，线程的优先级)</li>
-  <li>对用户界面的依赖</li>
-  <li>Java平台中的bug</li>
-  <li>不同Java平台不同实现导致的功能，性能不一致</li>
-</ul>
+<p><strong>一个创建公私钥和证书的例子</strong></p>
 
-<p><strong>开发平台无关的Java程序的步骤</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>// 把class文件打包到一个jar文件里
+jar cvf example.jar *.class
 
-<ul>
-  <li>选定要运行的主机和设备集合</li>
-  <li>选定一个足够好的Java平台</li>
-  <li>对每个目标主机和设备选定一个Java平台实现</li>
-  <li>编写程序时只使用标准的API</li>
-  <li>编写程序时不要依赖及时终结和线程优先级</li>
-  <li>努力设计一个能在每个平台正常运行的界面</li>
-  <li>在所有目标主机和设备上测试</li>
-</ul>
+// 用keytool生成一对公私钥和证书，这些公私钥和证书储存在example_key_store文件，别名是example_alias，获
+// 取这对公私钥所用的密码是example_key_pass；创建过程需要填入一些信息，如果example_key_store本来不存在则
+// keytool会创建一个并需要你输入example_key_store的密码(可忽略,假设使用密码example_key_store_pass)
+keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -keystore example_key_store
 
-<p>是否选择平台无关需要考虑性能，功能等各种因素</p>
+</code></pre>
+</div>
 
+<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+
+<p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
+
+<p><img src="../../../../styles/images/java_sign_1.png" alt="alt text" /></p>
+
+<p><img src="../../../../styles/images/java_sign_2.png" alt="alt text" /></p>
+
+<p><strong>一个签名的例子</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 用jarsigner对example.jar认证，需要使用别名example_alias从example_key_store里使用密码
+// example_key_pass获取私钥
+jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass example_key_pass example.jar example_alias
+
+</code></pre>
+</div>
 
             </article>
         </div>
@@ -270,7 +273,7 @@
             
 
 
-  <div class="ds-thread" data-thread-key="/2016/11/08/DEEP_IN_JAVA_VM__plateform_unrelated/" data-title="Java平台的无关性" data-url="/2016/11/08/DEEP_IN_JAVA_VM__plateform_unrelated/"></div>
+  <div class="ds-thread" data-thread-key="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/" data-title="Java 代码签名和认证" data-url="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"junxigu"};
