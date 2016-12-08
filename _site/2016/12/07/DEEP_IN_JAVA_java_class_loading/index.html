@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java 代码签名和认证</title>
+	<title>Java的类型装载</title>
 
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
-	<link rel="canonical" href="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/">
+	<link rel="canonical" href="/2016/12/07/DEEP_IN_JAVA_java_class_loading/">
 	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
 	
 	<meta name="description" content="顾俊喜;个人博客">
@@ -73,8 +73,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>Java 代码签名和认证</h1>
-		    <p>Post on Nov 23, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		    <h1>Java的类型装载</h1>
+		    <p>Post on Dec 07, 2016 by <a href="/about">Jun Xi Gu</a></p>
 		-->
 		    <h1>Stay Hungry Stay Foolish</h1>
     
@@ -289,57 +289,93 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Java 代码签名和认证</h1>
+              <h1 class="post-title">Java的类型装载</h1>
               <!--
-                <p class="post-meta">Nov 23, 2016</p>
+                <p class="post-meta">Dec 7, 2016</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Nov 23, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <div class="meta">Posted on <span class="postdate">Dec 07, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
               <br />
             </header>
             <article class="post-content">
-              <ul id="markdown-toc">
-  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
-  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
-</ul>
-
-<p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
+              
+<p><strong>本文是对Java的类型装载的汇总和个人理解</strong></p>
 
 <hr />
 
-<p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
+<p>Java有多种类装载器，其中一个虚拟机内置的叫 启动类装载器，用户自定义的类装载器都需要继承ClassLoader</p>
 
-<h3 id="java--">Java对 公私钥和证书 的支持</h3>
+<p>有两种方式可以触发类型的装载，一种是使用forName、classloader等来装载类型，一种是程序使用了新的类型时虚拟机解析符号引用前装载类型</p>
 
-<p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
+<p>无论哪种方式触发类型装载，都需要装载器进行装载；当一个装载器装载类型时使用 双亲委派模型，也就是本装载器 装载类之前先用parent装载器来装载；除了启动类装载器外，每个装载器都有一个parent装载器，这样就组成了一个装载器链；所以每个类装载器得到装载请求时可能是通过其他装载器装载的；</p>
 
-<p><img src="../../../../styles/images/java_sign_0.png" alt="alt text" /></p>
+<p>真正装载类型的装载器被称为 定义类型装载器，装载器链上从 定义类型装载器 到 开始接受装载请求的装载器 都被称为 初始类型装载器</p>
 
-<p><strong>一个创建公私钥和证书的例子</strong></p>
+<p>每个被装载的类型都有一个指向其 定义类型装载器的引用；而每个装载器都会保存一个类型列表，列表里存放的每个类型 都是该装载器作为其初始类型装载器的类型</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 把class文件打包到一个jar文件里
-jar cvf example.jar *.class
+<p>一个类型的装载流程：</p>
 
-// 用keytool生成一对公私钥和证书，这些公私钥和证书储存在example_key_store文件，别名是example_alias，获
-// 取这对公私钥所用的密码是example_key_pass；创建过程需要填入一些信息，如果example_key_store本来不存在则
-// keytool会创建一个并需要你输入example_key_store的密码(可忽略,假设使用密码example_key_store_pass)
-keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -keystore example_key_store
+<ol>
+  <li>当一个装载器接收到装载请求时，首先检查其类型列表里是否已经存在该类型，有则返回该类型</li>
+  <li>否则委托parent装载器装载类型，这个委托流程会一直把请求传递到 启动类型装载器</li>
+  <li>若parent装载器没办法装载类型(它会抛异常)，则由本装载器装载该类型，若装载不了则抛异常</li>
+  <li>若装载成功，则新类型会有一个指向本装载器的引用，并且装载器链上从本装载开始到开始受到装载请求的装载器都会在其类型列表里增加一个新类型</li>
+  <li>当一个类型装载了以后，虚拟机会检查其类型信息并使用本类型的 定义类型装载器 装载其父类型和所实现的接口类型(自定义的类型装载器在调用defineClass的时候进行)</li>
+</ol>
 
-</code></pre>
-</div>
+<p><strong>装载约束</strong></p>
 
-<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+<p>当两个由不同 定义类型装载器 装载的对象引用同一个限定名(包名)的类型时，在这两个定义类型装载器加载该类型的过程中，该类型必须由同一个 装载器加载</p>
 
-<p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
+<p><strong>自定义装载器例子</strong></p>
 
-<p><img src="../../../../styles/images/java_sign_1.png" alt="alt text" /></p>
+<p>覆盖findClass，在此方法里获取class文件格式的二进制流并使用defineClass创建 Class实例并返回</p>
 
-<p><img src="../../../../styles/images/java_sign_2.png" alt="alt text" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+class MyClassLoader extends ClassLoader {
 
-<p><strong>一个签名的例子</strong></p>
+	private String basePath;
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 用jarsigner对example.jar认证，需要使用别名example_alias从example_key_store里使用密码
-// example_key_pass获取私钥
-jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass example_key_pass example.jar example_alias
+	MyClassLoader(String basePath) {
+		this.basePath = basePath;
+	}
+
+	MyClassLoader(ClassLoader parent, String basePath) {
+		super(parent);
+		this.basePath = basePath;
+	}
+
+	@Override
+	protected Class&lt;?&gt; findClass(String className) throws ClassNotFoundException {
+		byte[] classData = getTypeFromBasePath(className);
+
+		// Try to load the class from base path directory
+		if (classData == null) {
+			throw new ClassNotFoundException();
+		}
+		
+		// Parse the class binary data to create a Class instance 
+		return defineClass(className, classData, 0, classData.length);
+	}
+
+	private byte[] getTypeFromBasePath(String typeName) {
+		String fileName = basePath + File.separator + typeName.replace(".", File.pathSeparator) + ".class";
+
+		try {
+			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(fileName));
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+			int c = bis.read();
+			while (c != -1) {
+				out.write(c);
+				c = bis.read();
+			}
+			return out.toByteArray();
+		} catch (IOException e) {
+			return null;
+		}
+	}
+}
+
 
 </code></pre>
 </div>
@@ -353,7 +389,7 @@ jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass
             
 
 
-  <div class="ds-thread" data-thread-key="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/" data-title="Java 代码签名和认证" data-url="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/"></div>
+  <div class="ds-thread" data-thread-key="/2016/12/07/DEEP_IN_JAVA_java_class_loading/" data-title="Java的类型装载" data-url="/2016/12/07/DEEP_IN_JAVA_java_class_loading/"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"junxigu"};

@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java 代码签名和认证</title>
+	<title>JVM简介</title>
 
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
-	<link rel="canonical" href="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/">
+	<link rel="canonical" href="/2016/12/07/DEEP_IN_JAVA_VM_JVM/">
 	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
 	
 	<meta name="description" content="顾俊喜;个人博客">
@@ -73,8 +73,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>Java 代码签名和认证</h1>
-		    <p>Post on Nov 23, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		    <h1>JVM简介</h1>
+		    <p>Post on Dec 07, 2016 by <a href="/about">Jun Xi Gu</a></p>
 		-->
 		    <h1>Stay Hungry Stay Foolish</h1>
     
@@ -289,60 +289,63 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Java 代码签名和认证</h1>
+              <h1 class="post-title">JVM简介</h1>
               <!--
-                <p class="post-meta">Nov 23, 2016</p>
+                <p class="post-meta">Dec 7, 2016</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Nov 23, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <div class="meta">Posted on <span class="postdate">Dec 07, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
-  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
+  <li><a href="#jvm" id="markdown-toc-jvm">JVM是什么</a></li>
+  <li><a href="#jvm-1" id="markdown-toc-jvm-1">JVM的生命周期</a></li>
+  <li><a href="#jvm-2" id="markdown-toc-jvm-2">JVM的体系结构</a></li>
 </ul>
 
-<p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
+<p><strong>本文是对JVM的基本知识的汇总和个人理解</strong></p>
 
 <hr />
 
-<p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
+<h2 id="jvm">JVM是什么</h2>
 
-<h3 id="java--">Java对 公私钥和证书 的支持</h3>
+<p>JVM有三个含义</p>
 
-<p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
+<ul>
+  <li>JVM的规范</li>
+  <li>JVM的具体实现</li>
+  <li>JVM的一个运行实例</li>
+</ul>
 
-<p><img src="../../../../styles/images/java_sign_0.png" alt="alt text" /></p>
+<h2 id="jvm-1">JVM的生命周期</h2>
 
-<p><strong>一个创建公私钥和证书的例子</strong></p>
+<p>JVM实例运行时为应用程序创建非守护线程并运行运行程序，当所有非守护线程都结束时，JVM实例结束运行</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 把class文件打包到一个jar文件里
-jar cvf example.jar *.class
+<h2 id="jvm-2">JVM的体系结构</h2>
 
-// 用keytool生成一对公私钥和证书，这些公私钥和证书储存在example_key_store文件，别名是example_alias，获
-// 取这对公私钥所用的密码是example_key_pass；创建过程需要填入一些信息，如果example_key_store本来不存在则
-// keytool会创建一个并需要你输入example_key_store的密码(可忽略,假设使用密码example_key_store_pass)
-keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -keystore example_key_store
+<p>JVM规范通过对一个虚拟机实例的 子系统的行为特征，内存区构成和作用，处理的数据类型和执行的指令 这几方面的抽象描述和它们间的相互作用，来定义一个JVM所应该实现的功能和外部特征</p>
 
-</code></pre>
-</div>
+<p>JVM的体系结构包括</p>
 
-<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+<ul>
+  <li>类加载子系统：负责获取class文件格式的二进制流，处理二进制流并把 类型信息装入到内存的 方法区，并未类型在堆中生成一个Class实例</li>
+  <li>运行时数据区：主要包括 方法区，堆，Java栈，PC寄存器，本地方法栈 等数据块
+    <ul>
+      <li>方法区：存放 加载器装载的类型信息，类型信息包括类名，类字段，类方法，超类，实现的接口，常量池，Class引用，ClassLoader引用，方法字节码等，可以被垃圾回收</li>
+      <li>堆: 存放程序运行过程中对象，可以被垃圾回收</li>
+      <li>Java栈：每个线程都会有一个私有的Java栈，线程每次条用一个方法都会压一个栈帧，栈帧包含局部变量区，操作数栈，帧数据区 等等</li>
+      <li>PC寄存器：执行引擎执行的下一条指令的地址</li>
+      <li>本地方法栈：JVM调用本地方法时使用的栈在这里生成</li>
+    </ul>
+  </li>
+  <li>执行引擎：执行class文件里的指令，处理数据，一般使用自适应优化技术来优化执行代码</li>
+  <li>本地方法接口：是Java API本地实现 对外暴露的接口</li>
+</ul>
 
-<p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
+<p><strong>一个JVM的逻辑结构(图源自《深入Java虚拟机》)</strong></p>
 
-<p><img src="../../../../styles/images/java_sign_1.png" alt="alt text" /></p>
+<p><img src="../../../../styles/images/JVM_architecture.png" alt="alt text" /></p>
 
-<p><img src="../../../../styles/images/java_sign_2.png" alt="alt text" /></p>
-
-<p><strong>一个签名的例子</strong></p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>// 用jarsigner对example.jar认证，需要使用别名example_alias从example_key_store里使用密码
-// example_key_pass获取私钥
-jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass example_key_pass example.jar example_alias
-
-</code></pre>
-</div>
 
             </article>
         </div>
@@ -353,7 +356,7 @@ jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass
             
 
 
-  <div class="ds-thread" data-thread-key="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/" data-title="Java 代码签名和认证" data-url="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/"></div>
+  <div class="ds-thread" data-thread-key="/2016/12/07/DEEP_IN_JAVA_VM_JVM/" data-title="JVM简介" data-url="/2016/12/07/DEEP_IN_JAVA_VM_JVM/"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"junxigu"};

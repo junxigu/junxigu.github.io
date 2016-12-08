@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java 代码签名和认证</title>
+	<title>Java 垃圾收集</title>
 
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
-	<link rel="canonical" href="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/">
+	<link rel="canonical" href="/2016/12/07/DEEP_IN_JAVA_java_gc/">
 	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
 	
 	<meta name="description" content="顾俊喜;个人博客">
@@ -73,8 +73,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>Java 代码签名和认证</h1>
-		    <p>Post on Nov 23, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		    <h1>Java 垃圾收集</h1>
+		    <p>Post on Dec 07, 2016 by <a href="/about">Jun Xi Gu</a></p>
 		-->
 		    <h1>Stay Hungry Stay Foolish</h1>
     
@@ -289,60 +289,75 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Java 代码签名和认证</h1>
+              <h1 class="post-title">Java 垃圾收集</h1>
               <!--
-                <p class="post-meta">Nov 23, 2016</p>
+                <p class="post-meta">Dec 7, 2016</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Nov 23, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <div class="meta">Posted on <span class="postdate">Dec 07, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
-  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
+  <li><a href="#section" id="markdown-toc-section">火车算法</a></li>
 </ul>
 
-<p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
+<p><strong>本文是对Java 垃圾收集的汇总和个人理解</strong></p>
 
 <hr />
 
-<p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
+<p>垃圾收集算法必须要完成两件事：垃圾对象的检测 和 方法区和堆上的空间回收</p>
 
-<h3 id="java--">Java对 公私钥和证书 的支持</h3>
+<p>垃圾对象的检测有两种方法</p>
 
-<p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
+<ul>
+  <li>引用计数：每个对象都有个引用计数器，当引用数为0时成为垃圾，缺点是无法检测循环引用</li>
+  <li>跟踪：从根对象开始遍历可达的对象图，不可达的都是垃圾</li>
+</ul>
 
-<p><img src="../../../../styles/images/java_sign_0.png" alt="alt text" /></p>
+<p>垃圾对象空间回收的算法</p>
 
-<p><strong>一个创建公私钥和证书的例子</strong></p>
+<ul>
+  <li>压缩收集：通过把存活对象移动到堆的一端，剩余空间即为回收的空间，这样可以消除碎片</li>
+  <li>拷贝收集：通过把存活对象拷贝到一个新的区域，然后回收旧的区域，好处是垃圾对象的检测和收集同时进行，但需要更大的空间</li>
+  <li>按代收集：把堆分成不同的区域 存放不同年龄的对象，长久存活的对象就不用多次检测，提高高死亡率的对象回收效率</li>
+  <li>自适应收集：JVM根据运行时的情况自适应的选择不同的算法</li>
+  <li>火车算法：</li>
+</ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 把class文件打包到一个jar文件里
-jar cvf example.jar *.class
+<h2 id="section">火车算法</h2>
 
-// 用keytool生成一对公私钥和证书，这些公私钥和证书储存在example_key_store文件，别名是example_alias，获
-// 取这对公私钥所用的密码是example_key_pass；创建过程需要填入一些信息，如果example_key_store本来不存在则
-// keytool会创建一个并需要你输入example_key_store的密码(可忽略,假设使用密码example_key_store_pass)
-keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -keystore example_key_store
+<p><strong>为什么？</strong></p>
 
-</code></pre>
-</div>
+<p>一般的垃圾收集算法会导致应用程序的停顿，而停顿的时长是不可控的，为此需要使用渐进式的垃圾收集算法；渐进式垃圾收集算法不一次性的完成整个堆的垃圾收集，而只收集一部分空间；只需要控制一次收集的空间的大小即可控制并减少停顿的时间</p>
 
-<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+<p>渐进式垃圾收集算法一般是按代收集，通过控制每一个代(除了成熟对象空间)的大小即可控制最长停顿时长，但最老的那个代(成熟对象空间)的大小是无法给定最大上限的(因为不适合放到其他代的对象都会放到成熟对象空间)，火车算法就是为了能在成熟对象空间中渐进的收集垃圾对象而发明的</p>
 
-<p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
+<p><strong>是什么？</strong></p>
 
-<p><img src="../../../../styles/images/java_sign_1.png" alt="alt text" /></p>
+<p>火车算法把 成熟对象空间 按固定长度的内存块进行划分，每个固定长度的内存块叫“车厢”，多个“车厢”组成的内存块成为一列“火车”，而成熟对象空间里就是一系列“火车”组成的空间</p>
 
-<p><img src="../../../../styles/images/java_sign_2.png" alt="alt text" /></p>
+<p>“火车”按创建的顺序进行编号，编号小的火车里的对象都是比较老的对象，同样，一列“火车”里的“车厢”也按照创建的顺序进行编号，新创建的“车厢”会被放到“火车”尾部</p>
 
-<p><strong>一个签名的例子</strong></p>
+<p>对象从年轻的代中晋升到成熟对象区间时，或者把它放到已存在的(非最小号吗的)“火车”的尾部“车厢”，或者新建个“火车”并放进去</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 用jarsigner对example.jar认证，需要使用别名example_alias从example_key_store里使用密码
-// example_key_pass获取私钥
-jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass example_key_pass example.jar example_alias
+<p><img src="../../../../styles/images/java_gc.png" alt="alt text" /></p>
 
-</code></pre>
-</div>
+<p><strong>怎么样?</strong></p>
+
+<p>火车算法执行时首先检查序号最小的火车内的对象 是否被 成熟对象区以外或其他火车的对象引用，没有则回收这列火车</p>
+
+<p>否则检查序号最小的火车的序号最小的车厢：</p>
+
+<ol>
+  <li>检查是否有从 对象成熟区 以外的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到本列火车外的其他车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到其他火车，若其他火车的车厢满了则新建一个车厢</li>
+  <li>检查是否有从 其他火车 的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到发起引用的火车的车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到发起引用的火车，若车厢满了则新建一个车厢</li>
+  <li>检查是否有从 本列火车内的其他车厢 的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到最后一个车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到最后一个车厢，若车厢满了则新建一个车厢</li>
+  <li>然后回收当前车厢</li>
+</ol>
+
+<p>通过控制车厢的大小即可控制回收的停顿时间</p>
+
+<p>算法为了让检查和转移对象更高效，使用了一种 记忆集合 的数据结构，每个车厢和火车都有一个记忆集合，记忆集合里存放的是对车厢或火车的外部引用，所以当记忆集合为空时则可回收车厢或火车，当转移对象以后，也可以方便的使用记忆集合的信息更新外部引用；但转移流行对象则会导致需要更新大量外部引用</p>
 
             </article>
         </div>
@@ -353,7 +368,7 @@ jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass
             
 
 
-  <div class="ds-thread" data-thread-key="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/" data-title="Java 代码签名和认证" data-url="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/"></div>
+  <div class="ds-thread" data-thread-key="/2016/12/07/DEEP_IN_JAVA_java_gc/" data-title="Java 垃圾收集" data-url="/2016/12/07/DEEP_IN_JAVA_java_gc/"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"junxigu"};

@@ -110,7 +110,61 @@
       
         <li><a href="#year_2016">2016</a>
           <ul class="nav">
-            <li><a href="#month_2016_November">November</a></li>
+            <li><a href="#month_2016_December">December</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -278,7 +332,7 @@
   <li>安全管理器及Java API</li>
 </ul>
 
-<p><img src="../../../../styles/images/Java安全体系.png" alt="alt text" /></p>
+<p><img src="../../../../styles/images/java_security.png" alt="alt text" /></p>
 
 <p>前三个组成部分是为了保证JVM和它正在运行的应用程序的完整性，免受下载的恶意程序的侵犯；最后一个部分是为了保护外部资源不被JVM中运行的恶意程序侵犯</p>
 
@@ -390,8 +444,11 @@
 
 <p>所有的代码权限赋予都记录在一个ASCII策略文件里，文件里的内容有固定的语法，内容大意是 给 某个代码来源的代码 赋予 访问某种资源的权限</p>
 
-<p>类加载器 在加载类时 会给类创建一个保护域，保护域里有策略文件里定义的代码来源 和 所拥有的权限(类加载器也可以不参考策略文件)，当程序使用Java API时，安全管理器 能通过代码的保护域中的权限来确定代码是否能访问资源</p>
+<p>类加载器 在加载类时 会给类创建一个保护域，保护域里有策略文件里定义的代码来源 和 所拥有的权限(类加载器也可以不参考策略文件)，当程序使用Java API时，安全管理器 能通过代码的保护域中的权限来确定代码是否有权访问资源</p>
 
+<p>安全管理器通过获取Java栈中 从资源访问调用开始到栈顶的所有栈帧，然后从每个栈帧所关联的class中获取保护域，并根据保护域中的权限来确定每个栈帧关联的类能否访问资源</p>
+
+<p><img src="../../../../styles/images/java_access_permision_check.png" alt="alt text" /></p>
 
             </article>
         </div>

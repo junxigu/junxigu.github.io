@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java 代码签名和认证</title>
+	<title>Java对象的终结与可达性</title>
 
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
-	<link rel="canonical" href="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/">
+	<link rel="canonical" href="/2016/12/07/DEEP_IN_JAVA_java_obj_finalize_and_reachability/">
 	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
 	
 	<meta name="description" content="顾俊喜;个人博客">
@@ -73,8 +73,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>Java 代码签名和认证</h1>
-		    <p>Post on Nov 23, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		    <h1>Java对象的终结与可达性</h1>
+		    <p>Post on Dec 07, 2016 by <a href="/about">Jun Xi Gu</a></p>
 		-->
 		    <h1>Stay Hungry Stay Foolish</h1>
     
@@ -289,60 +289,57 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Java 代码签名和认证</h1>
+              <h1 class="post-title">Java对象的终结与可达性</h1>
               <!--
-                <p class="post-meta">Nov 23, 2016</p>
+                <p class="post-meta">Dec 7, 2016</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Nov 23, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <div class="meta">Posted on <span class="postdate">Dec 07, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
-  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
+  <li><a href="#finalize" id="markdown-toc-finalize">finalize方法</a></li>
+  <li><a href="#section" id="markdown-toc-section">对象的可达性</a></li>
 </ul>
 
-<p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
+<p><strong>本文是对Java对象的终结与可达性的汇总和个人理解</strong></p>
 
 <hr />
 
-<p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
+<h2 id="finalize">finalize方法</h2>
 
-<h3 id="java--">Java对 公私钥和证书 的支持</h3>
+<p>对象可以有一个finalize方法，当垃圾回收器检查到对象成为垃圾时 会调用这个对象的finalize方法；执行外finalize方法后，垃圾回收器需要重新扫描来查找垃圾对象，因为在finalize方法里对象有可能复活了(被其他存活对象引用 变成可达时)；但一个对象的finalize方法只会被执行一次，当对象复活后又变成垃圾时，垃圾收集器是不会再调用它的finalize方法的</p>
 
-<p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
+<p>一般不用finalize方法，因为它是由垃圾收集器调用的，而垃圾回收的时机是应用不能控制的，具有不确定性</p>
 
-<p><img src="../../../../styles/images/java_sign_0.png" alt="alt text" /></p>
+<h2 id="section">对象的可达性</h2>
 
-<p><strong>一个创建公私钥和证书的例子</strong></p>
+<p><strong>是什么？</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 把class文件打包到一个jar文件里
-jar cvf example.jar *.class
+<p>在垃圾收集器看来，堆中的对象有6中状态：可达，软可达，弱可达，影子可达，可复活，不可达</p>
 
-// 用keytool生成一对公私钥和证书，这些公私钥和证书储存在example_key_store文件，别名是example_alias，获
-// 取这对公私钥所用的密码是example_key_pass；创建过程需要填入一些信息，如果example_key_store本来不存在则
-// keytool会创建一个并需要你输入example_key_store的密码(可忽略,假设使用密码example_key_store_pass)
-keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -keystore example_key_store
+<ul>
+  <li>可达：普通的引用指向的对象都是可达，垃圾收集器是不会回收 可达对象的</li>
+  <li>软可达：不是可达并被SoftReference指向的对象是软可达的，垃圾回收器在内存实在不够用时(要抛OutOfMemoryException) 可以 回收软可达对象，并尽量不回收，回收时也先回收更老的对象</li>
+  <li>弱可达：不是可达或软可达并被WeakReference指向的对象是弱可达的，垃圾回收器 必须 回收弱可达对象</li>
+  <li>可复活：当垃圾回收器在执行finalize方法时，所有的未被回收的不可达对象都有可能复活，他们就处于可复活状态</li>
+  <li>影子可达：不是可达，软可达或弱可达且不能被复活，并被PhantomReference指向的对象是影子可达的</li>
+  <li>不可达：finalize方法执行完后还是不可达的对象是不可达的</li>
+</ul>
 
-</code></pre>
-</div>
+<p>SoftReference，WeakReference和PhantomReference是Java的三种引用对象，继承于Reference类，程序可以通过这3种引用来间接的引用一个对象；Reference有个clear方法，用来切断Reference和对象之间的引用了</p>
 
-<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+<p>由于软可达和弱可达的对象可能会被回收，程序为了得到对象已被通知，程序可以为SoftReference和WeakReference对象提供一个队列，当Reference引用的对象被回收时，垃圾收集器调用Reference对象的clear方法并把Reference对象放到队列中，程序可以从队列里取出Reference对象来获知对象已被清除</p>
 
-<p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
+<p>程序必须为PhantomReference对象提供一个队列，当一个对象成为影子可达时，垃圾收集器会把PhantomReference对象放到队列里，程序从队列里获取PhantomReference对象后调用clear方法后，垃圾收集器才会回收 垃圾对象；当一个对象成为影子可达时，程序是没有办法让这个对象的可达性发生变化</p>
 
-<p><img src="../../../../styles/images/java_sign_1.png" alt="alt text" /></p>
+<p><strong>为什么？</strong></p>
 
-<p><img src="../../../../styles/images/java_sign_2.png" alt="alt text" /></p>
+<p>通过软可达可以实现内存缓存，当软可达对象未被回收时，可通过Reference的get方法获取对象</p>
 
-<p><strong>一个签名的例子</strong></p>
+<p>通过弱可达可以达到一种效果：使用一些不由程序决定其回收时刻的对象，该对象可能存在也可能已经被回收</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// 用jarsigner对example.jar认证，需要使用别名example_alias从example_key_store里使用密码
-// example_key_pass获取私钥
-jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass example_key_pass example.jar example_alias
-
-</code></pre>
-</div>
+<p>通过影子可达可以让程序决定一个对象的释放时刻</p>
 
             </article>
         </div>
@@ -353,7 +350,7 @@ jarsigner -keystore example_key_store -storepass example_key_store_pass -keypass
             
 
 
-  <div class="ds-thread" data-thread-key="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/" data-title="Java 代码签名和认证" data-url="/2016/11/23/DEEP_IN_JAVA_VM__java_signature_and_authentication/"></div>
+  <div class="ds-thread" data-thread-key="/2016/12/07/DEEP_IN_JAVA_java_obj_finalize_and_reachability/" data-title="Java对象的终结与可达性" data-url="/2016/12/07/DEEP_IN_JAVA_java_obj_finalize_and_reachability/"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"junxigu"};
