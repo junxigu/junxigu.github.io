@@ -308,9 +308,20 @@
 
 <h2 id="finalize">finalize方法</h2>
 
+<p><strong>是什么？</strong></p>
+
 <p>对象可以有一个finalize方法，当垃圾回收器检查到对象成为垃圾时 会调用这个对象的finalize方法；执行外finalize方法后，垃圾回收器需要重新扫描来查找垃圾对象，因为在finalize方法里对象有可能复活了(被其他存活对象引用 变成可达时)；但一个对象的finalize方法只会被执行一次，当对象复活后又变成垃圾时，垃圾收集器是不会再调用它的finalize方法的</p>
 
-<p>一般不用finalize方法，因为它是由垃圾收集器调用的，而垃圾回收的时机是应用不能控制的，具有不确定性</p>
+<p><strong>为什么使用finalize？</strong></p>
+
+<p>一般作为释放非内存资源的最后一道“保护栏”，以防止客户没有明确的释放资源时能有JVM帮忙释放<br />
+让JVM帮忙在回收内存的最后时刻释放非内存资源，这些资源必须是非关键、时间不敏感的</p>
+
+<p><strong>缺点</strong></p>
+
+<p>finalize非常底层，依赖JVM的机制，很容易用错，用错时还会导致资源和内存的不及时释放；<br />
+一般不用finalize方法，因为它是由垃圾收集器调用的，而垃圾回收的时机是应用不能控制的，具有不确定性；<br />
+可以用WeakReference来作为替代方案，请参考<a href="http://www.devx.com/Java/Article/30192">文章</a></p>
 
 <h2 id="section">对象的可达性</h2>
 

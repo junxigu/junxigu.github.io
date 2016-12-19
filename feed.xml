@@ -5,8 +5,8 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2016 09:29:34 +0800</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 09:29:34 +0800</lastBuildDate>
+    <pubDate>Mon, 19 Dec 2016 19:12:00 +0800</pubDate>
+    <lastBuildDate>Mon, 19 Dec 2016 19:12:00 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -22,9 +22,20 @@
 
 &lt;h2 id=&quot;finalize&quot;&gt;finalize方法&lt;/h2&gt;
 
+&lt;p&gt;&lt;strong&gt;是什么？&lt;/strong&gt;&lt;/p&gt;
+
 &lt;p&gt;对象可以有一个finalize方法，当垃圾回收器检查到对象成为垃圾时 会调用这个对象的finalize方法；执行外finalize方法后，垃圾回收器需要重新扫描来查找垃圾对象，因为在finalize方法里对象有可能复活了(被其他存活对象引用 变成可达时)；但一个对象的finalize方法只会被执行一次，当对象复活后又变成垃圾时，垃圾收集器是不会再调用它的finalize方法的&lt;/p&gt;
 
-&lt;p&gt;一般不用finalize方法，因为它是由垃圾收集器调用的，而垃圾回收的时机是应用不能控制的，具有不确定性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么使用finalize？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;一般作为释放非内存资源的最后一道“保护栏”，以防止客户没有明确的释放资源时能有JVM帮忙释放&lt;br /&gt;
+让JVM帮忙在回收内存的最后时刻释放非内存资源，这些资源必须是非关键、时间不敏感的&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;finalize非常底层，依赖JVM的机制，很容易用错，用错时还会导致资源和内存的不及时释放；&lt;br /&gt;
+一般不用finalize方法，因为它是由垃圾收集器调用的，而垃圾回收的时机是应用不能控制的，具有不确定性；&lt;br /&gt;
+可以用WeakReference来作为替代方案，请参考&lt;a href=&quot;http://www.devx.com/Java/Article/30192&quot;&gt;文章&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;对象的可达性&lt;/h2&gt;
 
