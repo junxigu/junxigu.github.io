@@ -5,9 +5,1759 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Jan 2017 16:52:20 +0800</pubDate>
-    <lastBuildDate>Wed, 04 Jan 2017 16:52:20 +0800</lastBuildDate>
+    <pubDate>Mon, 06 Feb 2017 16:19:22 +0800</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2017 16:19:22 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>《沟通的艺术》读书笔记</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;第一章 人际沟通入门&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;1.1 我们为什么需要沟通&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;1.2 沟通的历程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;1.3 沟通的原则与迷思&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;1.4 人际沟通的本质&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;1.5 如何成为沟通高手&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;第二章 认同：自我的塑造和展现&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;2.1 沟通和自我概念&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;2.2 自我的展现：沟通作为认同管理&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;第三章 知觉：看到什么就是什么&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;3.1 知觉历程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;3.2 影响知觉的因素&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;3.3 知觉的倾向&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;&lt;em&gt;3.4 知觉检验&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;3.5 同理心与沟通&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;第四章 情绪：适时适地的产达感觉&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;4.1 情绪是什么？&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;4.2 影响情绪表达的因素&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;4.3 情绪表达的原则&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;4.4 管理困扰的情绪&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;第五章 语言：既是障碍又是桥梁&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;5.1 语言是符号&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;5.2 语言的影响&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-23&quot; id=&quot;markdown-toc-section-23&quot;&gt;5.3 性别与语言&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-24&quot; id=&quot;markdown-toc-section-24&quot;&gt;5.4 语言与文化&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-25&quot; id=&quot;markdown-toc-section-25&quot;&gt;第六章 非口语沟通：超越字词之外的信息&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-26&quot; id=&quot;markdown-toc-section-26&quot;&gt;6.1 非口语沟通的特征&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-27&quot; id=&quot;markdown-toc-section-27&quot;&gt;6.2 影响非口语沟通的元素&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-28&quot; id=&quot;markdown-toc-section-28&quot;&gt;6.3 非口语沟通的类型&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-29&quot; id=&quot;markdown-toc-section-29&quot;&gt;第七章 倾听：不只是听见&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-30&quot; id=&quot;markdown-toc-section-30&quot;&gt;7.1 倾听的定义&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-31&quot; id=&quot;markdown-toc-section-31&quot;&gt;7.2 倾听过程的元素&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-32&quot; id=&quot;markdown-toc-section-32&quot;&gt;7.3 倾听的挑战&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-33&quot; id=&quot;markdown-toc-section-33&quot;&gt;7.4 倾听反应的类型&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-34&quot; id=&quot;markdown-toc-section-34&quot;&gt;第八章 发展关系动力&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-35&quot; id=&quot;markdown-toc-section-35&quot;&gt;8.1 我们为什么要建立关系&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-36&quot; id=&quot;markdown-toc-section-36&quot;&gt;8.2 关系发展与维系的模式&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-37&quot; id=&quot;markdown-toc-section-37&quot;&gt;8.3 对关系做沟通&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-38&quot; id=&quot;markdown-toc-section-38&quot;&gt;第九章 表达亲密感&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-39&quot; id=&quot;markdown-toc-section-39&quot;&gt;9.1 关系中的亲密&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-40&quot; id=&quot;markdown-toc-section-40&quot;&gt;9.2 关系中的自我袒露&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-41&quot; id=&quot;markdown-toc-section-41&quot;&gt;9.3 自我袒露以外的其他选择&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-42&quot; id=&quot;markdown-toc-section-42&quot;&gt;第十章 增进沟通气氛&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-43&quot; id=&quot;markdown-toc-section-43&quot;&gt;10.1 沟通气氛：正向关系的关键&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-44&quot; id=&quot;markdown-toc-section-44&quot;&gt;10.2 防卫：原因与对策&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-45&quot; id=&quot;markdown-toc-section-45&quot;&gt;10.3 保留面子：清晰信息处方&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-46&quot; id=&quot;markdown-toc-section-46&quot;&gt;10.4 对批评以不防卫回应&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-47&quot; id=&quot;markdown-toc-section-47&quot;&gt;第十一章 处理人际冲突&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-48&quot; id=&quot;markdown-toc-section-48&quot;&gt;11.1 冲突的本质&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-49&quot; id=&quot;markdown-toc-section-49&quot;&gt;11.2 冲突的类型&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-50&quot; id=&quot;markdown-toc-section-50&quot;&gt;11.3 关系系统中的冲突&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-51&quot; id=&quot;markdown-toc-section-51&quot;&gt;11.4 冲突类型的变项&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-52&quot; id=&quot;markdown-toc-section-52&quot;&gt;11.5 建设性处理冲突的技巧&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-53&quot; id=&quot;markdown-toc-section-53&quot;&gt;11.6 建设性处理冲突的技巧：提问和释义&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;《沟通的艺术》读书笔记&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;第一章 人际沟通入门&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;1.1 我们为什么需要沟通&lt;/h2&gt;
+&lt;p&gt;生理需求：人不能离开其他人&lt;br /&gt;
+认同需求：人通过沟通和互动来确定对自己的认知&lt;br /&gt;
+社交需求：沟通能有效解决很多社交上的问题&lt;br /&gt;
+实际目标：沟通是实现人生中各种目标(生理，安全，社交，工作，人生)的有效手段&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;1.2 沟通的历程&lt;/h2&gt;
+&lt;p&gt;沟通包括哪些步骤或过程，学术上通过使用各种模型来描述&lt;br /&gt;
+线性观&lt;br /&gt;
+交流观&lt;br /&gt;
+沟通的定义：沟通是一种交流的过程，其参与者处于不同但是有所重叠的背景下，经由交换信息而建立关系，关系品质会受到外在的、生理的和心理的噪音所干扰。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;1.3 沟通的原则与迷思&lt;/h2&gt;
+
+&lt;p&gt;沟通的原则&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;沟通可以是有目的或无目的的行为&lt;/li&gt;
+  &lt;li&gt;沟通是不可理转的&lt;/li&gt;
+  &lt;li&gt;人不可能不沟通&lt;/li&gt;
+  &lt;li&gt;沟通是不可复制的&lt;/li&gt;
+  &lt;li&gt;沟通同时具有内容和关系两个向度&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;沟通的迷思&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;沟通的越多不见得沟通的越好，例如负面沟通越多越不好&lt;/li&gt;
+  &lt;li&gt;意思不在字眼里，例如沟通不一定就是要把话说出来&lt;/li&gt;
+  &lt;li&gt;成功的沟通并不表示彼此了解&lt;/li&gt;
+  &lt;li&gt;人的反应并非针对单一事件或特定的对象&lt;/li&gt;
+  &lt;li&gt;沟通不会解决所有问题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;1.4 人际沟通的本质&lt;/h2&gt;
+
+&lt;p&gt;两周人际沟通的观点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;数量&lt;/li&gt;
+  &lt;li&gt;质量&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;科技与人际沟通&lt;/p&gt;
+
+&lt;p&gt;个人化与非个人化的沟通：平衡之道&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;1.5 如何成为沟通高手&lt;/h2&gt;
+
+&lt;p&gt;沟通能力：某种程度上能达到个人的目标，并且理想上要能维持和增进关系&lt;/p&gt;
+
+&lt;p&gt;沟通高手的特质：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拥有多样性的行为反应&lt;/li&gt;
+  &lt;li&gt;挑选恰当行为的能力&lt;/li&gt;
+  &lt;li&gt;表现行为的技巧&lt;/li&gt;
+  &lt;li&gt;认知的复杂度&lt;/li&gt;
+  &lt;li&gt;自我监控&lt;/li&gt;
+  &lt;li&gt;承诺&lt;/li&gt;
+  &lt;li&gt;跨文化的沟通能力
+    &lt;ul&gt;
+      &lt;li&gt;动机&lt;/li&gt;
+      &lt;li&gt;容忍模糊性&lt;/li&gt;
+      &lt;li&gt;开放心胸&lt;/li&gt;
+      &lt;li&gt;知识和技巧&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-6&quot;&gt;第二章 认同：自我的塑造和展现&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-7&quot;&gt;2.1 沟通和自我概念&lt;/h2&gt;
+
+&lt;p&gt;自我概念：对自己持有的相当稳定可靠的直觉，包括身体特征、状态、情感等&lt;br /&gt;
+自尊是自我概念的一部分，是对自我价值的评估&lt;br /&gt;
+高自尊会对沟通有较正向的预期，这些预期增加沟通的成功率，因此对正面预期会强化沟通，低自尊反之&lt;br /&gt;
+生物性决定了一个人的性格，而性格会对自我概念产生重大影响，也会对沟通产生重要影响&lt;br /&gt;
+社会中对个人的评价也是影响自我概念的重要因素&lt;/p&gt;
+
+&lt;p&gt;自我概念的特点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;自我概念是主观的，有可能不能客观的反应真实的状态：以往的经历、他人错误的回应、过于期待完美 都会影响自我评价，自尊的高低会对沟通行为产生正向和反向的影响&lt;/li&gt;
+  &lt;li&gt;自我概念会抗拒改变，更倾向接受符合现存自我概念的信息，抗拒修正不正确的自我概念&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;文化，性别都会影响自我概念的塑造&lt;/p&gt;
+
+&lt;p&gt;自我应验预言会影响自我概念从而沟通&lt;br /&gt;
+自我应验预言的步骤：期待某事某结果，表现出与期望一致的行为，某事发生，强化期待&lt;br /&gt;
+自我应验预言包括自我强加语言和别人强加语言，分别对应着自己期待某事和别人期待&lt;/p&gt;
+
+&lt;p&gt;改变自我概念的一些&lt;strong&gt;方法&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拥有真实的自我感：罗列出自己的优缺点，不要过于苛刻，可以找别人帮忙确认&lt;/li&gt;
+  &lt;li&gt;拥有切合实际的期待：不要对沟通表现期待过高，要符合现有的沟通能力&lt;/li&gt;
+  &lt;li&gt;拥有改变的意愿：要切实的行动去改变&lt;/li&gt;
+  &lt;li&gt;拥有改变的技巧：通过阅读和其他人的指导学习技巧，通过仔细观察别人来取长补短&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-8&quot;&gt;2.2 自我的展现：沟通作为认同管理&lt;/h2&gt;
+
+&lt;p&gt;自我有隐私的自我和公开的自我&lt;/p&gt;
+
+&lt;p&gt;认同管理是用来影响别人对自己观感的策略性沟通，特征包括：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;人致力于构建多元认同，就是让别人对自己有不同方面的好印象，例如幽默、稳重等等&lt;/li&gt;
+  &lt;li&gt;认同管理是一个双向的过程，双方都会进行着认同管理&lt;/li&gt;
+  &lt;li&gt;认同管理可以深谋远虑或不知不觉&lt;/li&gt;
+  &lt;li&gt;认同管理会因为情境不同而不同，通过自我管理来达到认同认同管理的目的&lt;/li&gt;
+  &lt;li&gt;自我管理的程度因人不同，高度自我管理的人在沟通中能更好的进行认同管理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;为什么需要认同管理：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;开始经营关系&lt;/li&gt;
+  &lt;li&gt;获得别人的顺从&lt;/li&gt;
+  &lt;li&gt;保证别人的颜面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如何进行认同管理：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;面对面印象管理：举止、外貌和物品；举止包括语言和非语言，外貌包括着装、打扮等，物品包括车、表等&lt;/li&gt;
+  &lt;li&gt;非面对面：通过文字表达等&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-9&quot;&gt;第三章 知觉：看到什么就是什么&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;3.1 知觉历程&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;选择：选择引起注意的主题，例如强烈的刺激，重复的刺激，个人动机&lt;/li&gt;
+  &lt;li&gt;组织：根据自己的经验和想法来理解别人和沟通
+    &lt;ul&gt;
+      &lt;li&gt;过程中存在的问题有偏见，断句；解决方法去除偏见、认出双发不同观点考虑有益的方法&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;诠释：理解话中的特定意义&lt;/li&gt;
+  &lt;li&gt;协商：互相交流，包括意见相阻或共同理解达成一致&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-11&quot;&gt;3.2 影响知觉的因素&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;生理因素&lt;/li&gt;
+  &lt;li&gt;文化差异&lt;/li&gt;
+  &lt;li&gt;社会角色&lt;/li&gt;
+  &lt;li&gt;自我概念&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-12&quot;&gt;3.3 知觉的倾向&lt;/h2&gt;
+
+&lt;p&gt;除了影响知觉的因素以外，人在诠释他人的行为还会有倾向&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对人严厉，对己仁慈&lt;/li&gt;
+  &lt;li&gt;强调别人的缺点&lt;/li&gt;
+  &lt;li&gt;最明显的最有力，问题在于最重要的因素不一定最明显&lt;/li&gt;
+  &lt;li&gt;先入为主&lt;/li&gt;
+  &lt;li&gt;以己之心度人之腹&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-13&quot;&gt;&lt;em&gt;3.4 知觉检验&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;知觉检验是一种帮助理解别人的好方法，完整的程序包括3部分：描述你注意到的行为，列出来关于此行为至少两种可能的诠释，请求对方对行为诠释作澄清&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;知觉检验的考量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;完整性：某些情况下，知觉检验不需囊括所有程序&lt;/li&gt;
+  &lt;li&gt;非口语的一致性：你的表情语调应该是真诚的，开放的&lt;/li&gt;
+  &lt;li&gt;文化支配：在高语境敏感文化(亚拉)里会把知觉检验这种直白的方式视为潜在的窘境，需要用间接的方式来了解暧昧信息&lt;/li&gt;
+  &lt;li&gt;保留颜面：知觉检验的多种诠释有时能保留别人的脸面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-14&quot;&gt;3.5 同理心与沟通&lt;/h2&gt;
+
+&lt;p&gt;知觉检验能澄清暧昧的信息，但不一定能了解背后的原因，需要设身处地&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;同理心&lt;/em&gt;是从某人的角度来体验世界，重新创造个人观点的能力&lt;/p&gt;
+
+&lt;p&gt;同理心有三个面向：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;同理心包含获得知觉，一种采用别人观点的尝试，这需要中止你的论断，将自己的意见放在一边，同时试着去了解对方&lt;/li&gt;
+  &lt;li&gt;同理心的情感面向，使我们更贴近的去体验别人的感受&lt;/li&gt;
+  &lt;li&gt;同理心第三面向是真诚的关心对方的福祉&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有同理心不一定需要同意别人的观点，也不可能完全同理&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;帮助建立同理心的&lt;strong&gt;方法&lt;/strong&gt;：&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;枕头法：站在“我对你错”、“你对我错”、“双方都对，双方都错”、“议题不重要”、“四个立场都具有真理”&lt;br /&gt;
+这个方法让人全面的考虑到所有立场的优点，并发现真正重要的东西，并且在最终确定立场的时候可以不影响到更重要的东西&lt;/p&gt;
+
+&lt;h1 id=&quot;section-15&quot;&gt;第四章 情绪：适时适地的产达感觉&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-16&quot;&gt;4.1 情绪是什么？&lt;/h2&gt;
+
+&lt;p&gt;情绪通常包括几个因素&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;生理因素：血压、心跳等&lt;/li&gt;
+  &lt;li&gt;非口语因素：表情，手势等&lt;/li&gt;
+  &lt;li&gt;认知的解释：对认知的不同解释体现不同的情绪会影响&lt;/li&gt;
+  &lt;li&gt;口语表达：不同的口语表达代表不同的情绪强度&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-17&quot;&gt;4.2 影响情绪表达的因素&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;性格：外向内向&lt;/li&gt;
+  &lt;li&gt;文化：集体主义和个人主义&lt;/li&gt;
+  &lt;li&gt;性别：男女&lt;/li&gt;
+  &lt;li&gt;社会习俗：&lt;/li&gt;
+  &lt;li&gt;自我坦露的不安：&lt;/li&gt;
+  &lt;li&gt;情绪感染力：情绪是能传染的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-18&quot;&gt;4.3 情绪表达的原则&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;一些帮助决定何时和如何表达情绪的建议&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;辨认感觉：尝试辨认自己的情绪，能有助于自已意识到自己会不合理发泄情绪&lt;/li&gt;
+  &lt;li&gt;辨识感觉，说话和行动之间的不同：了解感觉和发泄情绪之间的差异有助于在失序的情景中建设性的表达自己&lt;/li&gt;
+  &lt;li&gt;以口语阐明情绪：想表达情绪是要用能清楚表达情绪的词汇，而婉转表达可能会让别人不理解你的情绪&lt;/li&gt;
+  &lt;li&gt;分享多样的情绪：人总是只会表达出最负面的情绪而不是全盘的情绪，这导致对方没法全面了解你的情绪&lt;/li&gt;
+  &lt;li&gt;评估何时与何处表达情绪：一阵强烈的情绪涌上的瞬间并不是说出口的最佳时机；处理情绪需要花很多时间和精力，应该要专心的进行处理，并保证对方也一样；有些时候最好还是不要表达情绪&lt;/li&gt;
+  &lt;li&gt;对自己的情绪负责：你。。。我觉得。。。&lt;/li&gt;
+  &lt;li&gt;选择合适的渠道&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-19&quot;&gt;4.4 管理困扰的情绪&lt;/h2&gt;
+
+&lt;p&gt;有助益情绪有利于沟通，而无助益情绪则会影响沟通，它们之间的区别是一种情绪的强度和持续性&lt;br /&gt;
+无助益的情绪对于 缓解难受 和 增进关系 都没好处&lt;/p&gt;
+
+&lt;p&gt;无助益情绪的来源：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;生理因素&lt;/li&gt;
+  &lt;li&gt;情绪记忆&lt;/li&gt;
+  &lt;li&gt;自我内言：事件 认知 感觉&lt;/li&gt;
+  &lt;li&gt;非理性的认知导致不良的自我内言
+    &lt;ul&gt;
+      &lt;li&gt;完美主义，甚至弄虚作假伤害自尊&lt;/li&gt;
+      &lt;li&gt;过于追求别人的认同，甚至放弃自己的原则和需求&lt;/li&gt;
+      &lt;li&gt;理所当然，把一切不合意的事情看得理所当然，可以不合意但应该付诸行动而不应该觉得理所当然&lt;/li&gt;
+      &lt;li&gt;过度推论：夸大缺点，过于聚焦处理结果的不足而忽视了问题的复杂性&lt;/li&gt;
+      &lt;li&gt;因果论的谬误：认为情绪是由他人引起的而非一个人的非理性的自我内言&lt;/li&gt;
+      &lt;li&gt;无助的谬误：麻木的认为“不能”，其实是不愿意改变&lt;/li&gt;
+      &lt;li&gt;灾难性预期的谬误：&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;减少无助益情绪的方法&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;监控你的情绪反应&lt;/li&gt;
+  &lt;li&gt;注意情绪是由什么事件引起的：这些事件有时不是那么显而易见，或不是单一事件引起的&lt;/li&gt;
+  &lt;li&gt;记录你的自我内言：这是一个一开始困难需要不停锻炼的&lt;/li&gt;
+  &lt;li&gt;驳斥你的非理性观念&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-20&quot;&gt;第五章 语言：既是障碍又是桥梁&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-21&quot;&gt;5.1 语言是符号&lt;/h2&gt;
+
+&lt;p&gt;语言只是符号，但每个人对不同的符号有不同的理解&lt;/p&gt;
+
+&lt;h2 id=&quot;section-22&quot;&gt;5.2 语言的影响&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;命名与认同：大家对名字有一些共同的理解&lt;/li&gt;
+  &lt;li&gt;联盟关系：大家趋向使用相同的交流方式来构建关系，而用俚语来与其他人区分&lt;/li&gt;
+  &lt;li&gt;权力：用低权力的语言避免损害人际关系，但用权威性的语言可能会最快的达到效果&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;打岔性语言：一些语言上的不良会增加冲突&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;事实与意见的混淆：事实是无可争辩的，意见则是主观的，当表达意见时把它当事实来表达会引发不必要的争论，可以加上“我觉得”，“在我看来”会减少敌对性&lt;/li&gt;
+      &lt;li&gt;事实与推论的混淆：推论性陈述是指在一切都没定的情况下就做出结论，当我们当推论作为事实是会引起争议&lt;/li&gt;
+      &lt;li&gt;情绪性的语言：情绪性语言表面上在陈述事实，但实际上表明了说话者的态度和意见，更容易引发争议，可以用中性字眼来更精确的表达，也更容易被接受&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;语言的责任性：
+    &lt;ul&gt;
+      &lt;li&gt;“这…”有托词的意味，而“我”则为表达的感觉负责&lt;/li&gt;
+      &lt;li&gt;“但是”是一种保留颜面的策略，要清楚的表达是最好不要用&lt;/li&gt;
+      &lt;li&gt;“疑问句”一些是请求，而一些是避免成为我的宣告的语言手段&lt;/li&gt;
+      &lt;li&gt;“我”和“你”，使用“你”的时候很容易表达出对别人下诊断，会激起别人的戒心，也会造成地位不对等的错觉；使用“我”提供比较精确，不那么挑拨的方式来表达不满，表明说话者愿意为不满负责，“我”陈述一般包含四部分：他人的行为，你的诠释，你的感受，他人行为对你的后续影响；但即使在用“我”表达时，你的情绪，手势等非语言全都在表达出“你”时，也会成为“你”的效果；但即使使用“我”来表达不满也不见的好，因为没有人喜欢自己不对，并且“我”还会被认为以自我为中心，所以最好节制使用“我”&lt;/li&gt;
+      &lt;li&gt;“我们”	：使用“我们”时含有表达的议题是双方共同关心并负责的&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/人称代名词的使用和效果.png&quot; alt=&quot;人称代名词的使用和效果&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-23&quot;&gt;5.3 性别与语言&lt;/h2&gt;
+
+&lt;p&gt;构成男女沟通差异的一些因素&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;内容
+    &lt;ul&gt;
+      &lt;li&gt;共同：工作、电视、电影、人的外貌、八卦&lt;/li&gt;
+      &lt;li&gt;女性：个人、家事、关系、家庭、健康、实物、穿着&lt;/li&gt;
+      &lt;li&gt;男性：音乐、时事、运动、事业&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;沟通的理由
+    &lt;ul&gt;
+      &lt;li&gt;女性：获得支持、维持关系&lt;/li&gt;
+      &lt;li&gt;男性：解决问题、叙述喜欢的事情&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;对话的形式
+    &lt;ul&gt;
+      &lt;li&gt;男性：直接、任务取向的&lt;/li&gt;
+      &lt;li&gt;女性：间接的、详述的、关系去向&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;非性别因素&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-24&quot;&gt;5.4 语言与文化&lt;/h2&gt;
+
+&lt;p&gt;构成不同文化的语言沟通差异的一些因素&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;口语沟通的形式
+    &lt;ul&gt;
+      &lt;li&gt;低语境敏感文化和高语境敏感文化&lt;/li&gt;
+      &lt;li&gt;清楚和模糊&lt;/li&gt;
+      &lt;li&gt;正式和非正式用语&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;语言和世界观&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-25&quot;&gt;第六章 非口语沟通：超越字词之外的信息&lt;/h1&gt;
+
+&lt;p&gt;非口语沟通的定义是“通过非语言途径所呈现的信息”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/沟通的形式.png&quot; alt=&quot;沟通的形式&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-26&quot;&gt;6.1 非口语沟通的特征&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;非口语沟通比口语沟通传达的信息量更多&lt;/li&gt;
+  &lt;li&gt;所有的行为都包含信息&lt;/li&gt;
+  &lt;li&gt;非口语沟通可以作为认同管理的手段&lt;/li&gt;
+  &lt;li&gt;非口语沟通和口语沟通相结合表达出更丰富的意思&lt;/li&gt;
+  &lt;li&gt;非口语沟通表达的意思较不明确&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-27&quot;&gt;6.2 影响非口语沟通的元素&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;性别&lt;/li&gt;
+  &lt;li&gt;文化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-28&quot;&gt;6.3 非口语沟通的类型&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;身体动作&lt;/li&gt;
+  &lt;li&gt;声音&lt;/li&gt;
+  &lt;li&gt;触碰&lt;/li&gt;
+  &lt;li&gt;外貌：穿着在建立关系的第一阶段很重要&lt;/li&gt;
+  &lt;li&gt;物理空间&lt;/li&gt;
+  &lt;li&gt;物理环境&lt;/li&gt;
+  &lt;li&gt;时间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-29&quot;&gt;第七章 倾听：不只是听见&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-30&quot;&gt;7.1 倾听的定义&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-31&quot;&gt;7.2 倾听过程的元素&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;听到：注意音量，速度，清晰度&lt;/li&gt;
+  &lt;li&gt;专注&lt;/li&gt;
+  &lt;li&gt;了解&lt;/li&gt;
+  &lt;li&gt;回应：好的沟通者会使用非语言行为来表达他们的专心&lt;/li&gt;
+  &lt;li&gt;记忆&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-32&quot;&gt;7.3 倾听的挑战&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;无效倾听的类型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;虚拟的倾听&lt;/li&gt;
+  &lt;li&gt;自恋的倾听：尝试将沟通的主题转移到自己感兴趣的事物上&lt;/li&gt;
+  &lt;li&gt;选择性的倾听&lt;/li&gt;
+  &lt;li&gt;隔绝性的倾听：表现出避免沟通&lt;/li&gt;
+  &lt;li&gt;防卫性的倾听：这种倾听者对模糊不清的信息没有安全感&lt;/li&gt;
+  &lt;li&gt;埋伏性的倾听：容易导致别人产生防卫&lt;/li&gt;
+  &lt;li&gt;鲁钝的倾听&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;无法有效倾听的原因&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;超负荷的信息&lt;/li&gt;
+  &lt;li&gt;心不在焉&lt;/li&gt;
+  &lt;li&gt;飞快的思想&lt;/li&gt;
+  &lt;li&gt;费力&lt;/li&gt;
+  &lt;li&gt;外在的噪音&lt;/li&gt;
+  &lt;li&gt;错误的假定：认为自己听过，认为别人想法太浅显或者太复杂或者没有价值&lt;/li&gt;
+  &lt;li&gt;缺乏明显的益处：这种自我中心非常致命&lt;/li&gt;
+  &lt;li&gt;缺乏训练&lt;/li&gt;
+  &lt;li&gt;听力的问题&lt;/li&gt;
+  &lt;li&gt;媒体的影响&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;提高倾听的技巧&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;少说话：是指需要倾听别人的时候仍然说了太多话&lt;/li&gt;
+  &lt;li&gt;摆脱注意力分散：尤其是心理&lt;/li&gt;
+  &lt;li&gt;不要过早评断：尤其是那些忠告和对自己的评论&lt;/li&gt;
+  &lt;li&gt;寻找关键意思：尝试把思考推得比说话者还快来摘录关键信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-33&quot;&gt;7.4 倾听反应的类型&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;借力使力：用非语言行为或简短的言论来鼓舞对方多说一点话，表现要真诚；适合无法帮别人做决定时&lt;/li&gt;
+  &lt;li&gt;问话：鼓励性的发现远胜过布施性的忠告&lt;/li&gt;
+  &lt;li&gt;释义：倾听者将所解读的信息再重新说一次的做法，释义个人性信息能反映说话者的想法和感受而不是去评断或分析等：培训技巧
+    &lt;ul&gt;
+      &lt;li&gt;改变说话者的措辞&lt;/li&gt;
+      &lt;li&gt;从所接受的信息中抓取一个具体例子来说明自己了解的程度&lt;/li&gt;
+      &lt;li&gt;反映说话者的潜在寓意&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;支持：同情心，同意，提供协助，赞美，恢复信心；
+    &lt;ul&gt;
+      &lt;li&gt;需要避免的冷安慰
+        &lt;ul&gt;
+          &lt;li&gt;否认别人拥有感觉的权利：如“不用担心”，”这又没什么“&lt;/li&gt;
+          &lt;li&gt;看轻事情的重要性：例如”那不过…而已“，”没事“&lt;/li&gt;
+          &lt;li&gt;聚焦在”彼时彼地“而非”此时此刻“&lt;/li&gt;
+          &lt;li&gt;火上加油的评断&lt;/li&gt;
+          &lt;li&gt;自我防卫：”不要怪我…“&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;有效的支持的原则
+        &lt;ul&gt;
+          &lt;li&gt;对他人内心的挣扎提供支持，但不表达自己赞同或否定的思想&lt;/li&gt;
+          &lt;li&gt;观察对方对你的支持性回应，有必要时换一个适合对方继续探索问题的回应方式&lt;/li&gt;
+          &lt;li&gt;要了解到支持也不是永远收到欢迎&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;分析：对说话者的内容加以解释，但是这种带评价性质的反应容易引起别人的防卫
+    &lt;ul&gt;
+      &lt;li&gt;有效的分析的原则
+        &lt;ul&gt;
+          &lt;li&gt;提出解释时使用试探性的口气会比绝对性的口吻更好&lt;/li&gt;
+          &lt;li&gt;提供的分析应该要合逻辑、接近事实&lt;/li&gt;
+          &lt;li&gt;确定对方的准备度足够，适合接受你的分析&lt;/li&gt;
+          &lt;li&gt;确认自己提供分析的动机是基于协助而非借此凸显自己的聪明或对方的差劲&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;忠告：协助他人解决问题时，但有可能不适合另外一个人，让接收者产生不需要负责任的错觉
+    &lt;ul&gt;
+      &lt;li&gt;提出忠告需要确认的状况：
+        &lt;ul&gt;
+          &lt;li&gt;一定要确认所根据的信息是正确的，即使百分百确定也不能表现出权威专家一样&lt;/li&gt;
+          &lt;li&gt;问自己询问你的人是否诚心愿意接受，最佳方式是等待别人提出需要忠告&lt;/li&gt;
+          &lt;li&gt;当你提出建议行不通时确定接收者不会怪罪于你&lt;/li&gt;
+          &lt;li&gt;用顾全面子的态度来传达忠告，要尊重对方并以强化关系为基础&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;评断：容易引起别人的防卫心态
+    &lt;ul&gt;
+      &lt;li&gt;评断容易被接受的两种状况
+        &lt;ul&gt;
+          &lt;li&gt;当别人寻求评断时才提出自己的评价&lt;/li&gt;
+          &lt;li&gt;当提出评断时，动机应该是真诚、建设性的，莪不是奚落对方，例如“我告诉你这是为你好”这类话通常不是真心的而且也没有帮助&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;选择最佳的倾听反应：各人接受的反应不同，因素包括：
+    &lt;ul&gt;
+      &lt;li&gt;性别：女人更喜欢接受和提供支持性的反应，男人倾向提供忠告和转移话题&lt;/li&gt;
+      &lt;li&gt;情境：首要原则是多进一步了解而少给予建议，使用借力使力、问话、释义、支持是一个聪明的开始，当搜集到足够的事实并显示出你的兴趣和关切时，接收者会对你的分析、忠告等评价式的反应准备的比较充分&lt;/li&gt;
+      &lt;li&gt;对象：有些人只是想吐苦水，有些人能搞深入思考忠告的价值，有些人只是利用忠告来逃避责任&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;你的个人风格：反省一下自己的有点和缺点，取长补短予以调整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-34&quot;&gt;第八章 发展关系动力&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-35&quot;&gt;8.1 我们为什么要建立关系&lt;/h2&gt;
+
+&lt;p&gt;影响选择关系伙伴的因素：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;外貌：在关系的初期阶段尤其重要，但随着关系增进重要性下降&lt;/li&gt;
+  &lt;li&gt;相似性&lt;/li&gt;
+  &lt;li&gt;互补性&lt;/li&gt;
+  &lt;li&gt;相互吸引力&lt;/li&gt;
+  &lt;li&gt;能力：原则就是在所做的事上尽力而为，而且愿意承认自己的错误&lt;/li&gt;
+  &lt;li&gt;袒露：袒露在关系发展的初期扮演十分重要的角色，关键有两：
+    &lt;ul&gt;
+      &lt;li&gt;揭露的咨询量与质跟对方要取得平衡&lt;/li&gt;
+      &lt;li&gt;时机&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;接近：近水楼台先得月&lt;/li&gt;
+  &lt;li&gt;报酬&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-36&quot;&gt;8.2 关系发展与维系的模式&lt;/h2&gt;
+
+&lt;p&gt;一种关系发展的理论，不是所有学者都认同：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;初始阶段：目标在于你愿意与人接触，并表示你是一个值得谈话的对象&lt;/li&gt;
+  &lt;li&gt;试验阶段：这一阶段是考虑是否进一步建立关系，“闲谈”是这一阶段最佳保证&lt;/li&gt;
+  &lt;li&gt;强化阶段：真正的人际关系才开始&lt;/li&gt;
+  &lt;li&gt;整合阶段&lt;/li&gt;
+  &lt;li&gt;结合阶段&lt;/li&gt;
+  &lt;li&gt;分化阶段：保持关系的同时，保持自我的认同，关键在于当创造一些空间去成为个体时还能维持在关系当中的承诺&lt;/li&gt;
+  &lt;li&gt;各自阶段：成员们选择退缩，而非讨论一个不认同的话题&lt;/li&gt;
+  &lt;li&gt;停滞阶段：成员彼此用老方法相待，熟悉的方法没什么感觉，关系就是空壳&lt;/li&gt;
+  &lt;li&gt;逃避阶段：关系陷入困境&lt;/li&gt;
+  &lt;li&gt;结束阶段&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;辩证的观点: 沟通者想要追求重要但内在相互矛盾的目标：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;联系和自主：寻求联系的同时不失去全部的自我，每个人都在重复表现3个阶段“抱紧我”，“放开我”，”让我一个人“&lt;/li&gt;
+  &lt;li&gt;公开和隐私：&lt;/li&gt;
+  &lt;li&gt;巡礼和新奇：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;关系的特性&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;关系是经常变动的&lt;/li&gt;
+  &lt;li&gt;文化会影响关系&lt;/li&gt;
+  &lt;li&gt;关系需要维持，沟通占80%，&lt;strong&gt;五种维持沟通满意的方法&lt;/strong&gt;：
+    &lt;ul&gt;
+      &lt;li&gt;正向：保持关系气氛礼貌而乐观，避免批评&lt;/li&gt;
+      &lt;li&gt;开放：直接说出对于关系的看法，袒露自己的需要和看重的事&lt;/li&gt;
+      &lt;li&gt;确信：让别人知道他人对你的重要性，你重视并投入到关系中&lt;/li&gt;
+      &lt;li&gt;社会网络：利用社会网络的支持和安慰，减少关系中的压力&lt;/li&gt;
+      &lt;li&gt;分工：彼此协助度过低潮，携手完成人生义务&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;修复损坏的关系&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/关系越界类型.png&quot; alt=&quot;关系越界类型&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;关系修复策略：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;明确地承认自己的越界行为是不当的&lt;/li&gt;
+  &lt;li&gt;很诚恳地道歉&lt;/li&gt;
+  &lt;li&gt;某种补偿形式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-37&quot;&gt;8.3 对关系做沟通&lt;/h2&gt;
+
+&lt;p&gt;内容与关系性信息&lt;/p&gt;
+
+&lt;p&gt;关系型信息的类型&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;亲切感：人们欣赏和喜欢对方的程度&lt;/li&gt;
+  &lt;li&gt;即时性：立即转向别人并与之沟通的这种对别人感兴趣和专注的程度&lt;/li&gt;
+  &lt;li&gt;尊重感&lt;/li&gt;
+  &lt;li&gt;控制性：在关系中一方是否有权可以影响另一方，包括“发言权”和“决策权”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后设沟通是指人们相互讨论他们之间的关系，可以协助人们以建设性的态度解决问题，可以提高关系的满意程度，但需要被小心地使用&lt;/p&gt;
+
+&lt;h1 id=&quot;section-38&quot;&gt;第九章 表达亲密感&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-39&quot;&gt;9.1 关系中的亲密&lt;/h2&gt;
+
+&lt;p&gt;亲密关系有多个向度&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;生理向度&lt;/li&gt;
+  &lt;li&gt;来自理性的分享&lt;/li&gt;
+  &lt;li&gt;交互重要的感受，分享个人信息，可帮助反映和创造亲近的感觉&lt;/li&gt;
+  &lt;li&gt;共同活动&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;男性和女性的亲密形态：男性通过共同活动来培养亲密，女性通过交流分享感受和个人信息培养亲密&lt;/p&gt;
+
+&lt;p&gt;文化对亲密的影响&lt;/p&gt;
+
+&lt;p&gt;电子媒介沟通的亲密&lt;/p&gt;
+
+&lt;p&gt;亲密感的限制：由于时间和精力的限制，不可能和每个人都有亲密关系，有时礼貌的沟通足矣&lt;/p&gt;
+
+&lt;h2 id=&quot;section-40&quot;&gt;9.2 关系中的自我袒露&lt;/h2&gt;
+
+&lt;p&gt;自我袒露是&lt;em&gt;郑重其事&lt;/em&gt;地透露与自己有关的、&lt;em&gt;有意义的&lt;/em&gt;、&lt;em&gt;不经常为人所知&lt;/em&gt;的信息的过程&lt;/p&gt;
+
+&lt;p&gt;自我袒露的程度：宽度和深度&lt;br /&gt;
+宽度是指讨论的主题的范围&lt;br /&gt;
+深度是指自愿开放的个人信息&lt;/p&gt;
+
+&lt;p&gt;有一些分享的信息的类别来衡量自我袒露的深度：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;陈腔滥调：公式化且陈腐的回应，一点都不深入，但能使社交转轮保持润滑&lt;/li&gt;
+  &lt;li&gt;事实：有意义的、特殊的且不是大家都知道的&lt;/li&gt;
+  &lt;li&gt;意见：意见通常比事实透露更多信息&lt;/li&gt;
+  &lt;li&gt;感受：最深的层次&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自我坦露的模式&lt;/p&gt;
+
+&lt;p&gt;自我袒露的好处和风险&lt;/p&gt;
+
+&lt;p&gt;好处：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;宣泄&lt;/li&gt;
+  &lt;li&gt;互惠：袒露个人信息也会促使别人那样做&lt;/li&gt;
+  &lt;li&gt;自我澄清：&lt;/li&gt;
+  &lt;li&gt;自我确认：假如你期待聆听者对你袒露的信息表达认同就是在寻求认同和确认&lt;/li&gt;
+  &lt;li&gt;认同管理：通过袒露个人信息来使自己更有吸引力&lt;/li&gt;
+  &lt;li&gt;关系的维持和增强&lt;/li&gt;
+  &lt;li&gt;社会控制：袒露个人信息会增加你对他人的控制&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自我袒露的风险：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拒绝：袒露可能会受到拒绝&lt;/li&gt;
+  &lt;li&gt;负面影响&lt;/li&gt;
+  &lt;li&gt;降低关系满意度：尤其是在吐露对关系的不好感受时&lt;/li&gt;
+  &lt;li&gt;丧失影响力&lt;/li&gt;
+  &lt;li&gt;伤害别人&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自我袒露的原则：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在道德上有义务袒露则需要袒露，例如HIV&lt;/li&gt;
+  &lt;li&gt;对方对你来说重要么&lt;/li&gt;
+  &lt;li&gt;袒露的量和方式合适么：渐进式，正面和负面信息兼具，袒露的时间和场合&lt;/li&gt;
+  &lt;li&gt;袒露的风险合理么&lt;/li&gt;
+  &lt;li&gt;袒露对于现状有重大意义么&lt;/li&gt;
+  &lt;li&gt;有建设性的影响么：小心踏到了雷区&lt;/li&gt;
+  &lt;li&gt;自我袒露够清楚和可理解么&lt;/li&gt;
+  &lt;li&gt;自我袒露是互惠的么&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-41&quot;&gt;9.3 自我袒露以外的其他选择&lt;/h2&gt;
+
+&lt;p&gt;当人处在一个诚实但不舒服的情况中时，会使用四个袒露的替代：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;沉默&lt;/li&gt;
+  &lt;li&gt;说谎，理由包括，但说谎别识别会有影响
+    &lt;ul&gt;
+      &lt;li&gt;保住面子&lt;/li&gt;
+      &lt;li&gt;避免紧张和冲突&lt;/li&gt;
+      &lt;li&gt;掌控社交反应&lt;/li&gt;
+      &lt;li&gt;增进或减少关系&lt;/li&gt;
+      &lt;li&gt;得到权力&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;模棱两可，理由包括
+    &lt;ul&gt;
+      &lt;li&gt;使接受者免于尴尬的伤害&lt;/li&gt;
+      &lt;li&gt;为发送和接受信息的双方保留面子&lt;/li&gt;
+      &lt;li&gt;为说谎提供一个替代方式&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;暗示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-42&quot;&gt;第十章 增进沟通气氛&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-43&quot;&gt;10.1 沟通气氛：正向关系的关键&lt;/h2&gt;
+
+&lt;p&gt;沟通气氛是指关系当中的情绪氛围，存在于人与人之间共同活动的那股气氛远比活动本身来的重要多&lt;/p&gt;
+
+&lt;p&gt;肯定和不肯定沟通&lt;br /&gt;
+肯定的沟通方式能引导正向的沟通气氛，而不肯定则相反&lt;/p&gt;
+
+&lt;p&gt;有3中增加肯定信息的方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;表达重视&lt;/li&gt;
+  &lt;li&gt;承认&lt;/li&gt;
+  &lt;li&gt;赞同&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不肯定信息的类型：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;视若无睹：被忽视比误解或攻击更不被肯定&lt;/li&gt;
+  &lt;li&gt;口头辱骂&lt;/li&gt;
+  &lt;li&gt;概括抱怨：特定的抱怨可以使问题明朗化，但概括性的抱怨经常是不肯定信息，隐含对别人个性的挑剔&lt;/li&gt;
+  &lt;li&gt;插嘴：偶尔未必被认为是负面的&lt;/li&gt;
+  &lt;li&gt;各说各话&lt;/li&gt;
+  &lt;li&gt;岔题&lt;/li&gt;
+  &lt;li&gt;无人情味&lt;/li&gt;
+  &lt;li&gt;含糊其辞&lt;/li&gt;
+  &lt;li&gt;表里不一：信息包含两个冲突的信息，通常至少有一个是非口语的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;沟通气氛如何发展：一些导致正向或负向的沟通模型&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/负向和正向对应的沟通模式.png&quot; alt=&quot;负向和正向对应的沟通模式&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-44&quot;&gt;10.2 防卫：原因与对策&lt;/h2&gt;
+
+&lt;p&gt;防卫是保护自我表象、顾全自己面子的一个过程，尤其是别人的批评命中要害时&lt;br /&gt;
+当人某部分自我被攻击时，会产生认知失调，为了维持正向的自我形象就会防卫&lt;/p&gt;
+
+&lt;p&gt;防卫反应的类型：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;反击
+    &lt;ul&gt;
+      &lt;li&gt;口头侵犯&lt;/li&gt;
+      &lt;li&gt;讽刺：讽刺的回应会因为机智和快速的思考而有较高的效果，但具有敌意、不肯定的本质，可能导致反击&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;扭曲批评信息
+    &lt;ul&gt;
+      &lt;li&gt;合理化：为自己不能接受的行为找出一种不正确的解释来让它看起来合理、&lt;/li&gt;
+      &lt;li&gt;补偿：借由自己较强的一面来掩盖软弱的那一面&lt;/li&gt;
+      &lt;li&gt;退化：表现出无助，声称不能做一些事情而事实上那些是不想做的事情&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;躲避刺耳的信息：全然地躲开那些威胁到自我形象的信息
+    &lt;ul&gt;
+      &lt;li&gt;身体的躲避&lt;/li&gt;
+      &lt;li&gt;压抑：心理上压抑住那些刺耳的信息，压抑住脑海里的问题&lt;/li&gt;
+      &lt;li&gt;漠不关心：承认那些不愉快的信息，却装出无动于衷、一点也不在意的样子&lt;/li&gt;
+      &lt;li&gt;替代：对看似较不具有威胁感的人或事物发泄出侵略或不友善的情感&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;防止对他人防卫&lt;/p&gt;
+
+&lt;p&gt;解决问题的方法时：在内容层面表达出不满，在关系层面表现出-不管是口头还是非口头-你对别人的重视；主要包括6种方式&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/防卫性和支持性行为分类.png&quot; alt=&quot;防卫性和支持性行为分类&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;评价与描述：评价式沟通主要用“你”，容易唤起防卫；描述式沟通着重描述说话者的想法和感受而非重在价值的判断&lt;/li&gt;
+  &lt;li&gt;支配和问题导向：支配式沟通的信息传达者不顾接受者的需要和兴趣自顾决定一些事情，容易唤起防卫；而问题导向会将焦点放在满足自己和他人需求的办法上，让大家觉得自己是赢家&lt;/li&gt;
+  &lt;li&gt;策略和自发：策略式的沟通容易唤起防卫，这种沟通模式中传达者会把真正的动机隐藏起来，表现的很有心机，即使动机是正确的也会让接受者感觉被蒙蔽；自发性是指诚实的表达出内心的想法，即使坦言会失去一点小目标但长期下来会对关系有正向影响；注意，自发性不要与正向气氛建立法则相违背&lt;/li&gt;
+  &lt;li&gt;中立与同理：中立应该是指“冷淡”，表达出了不肯定，莫不关心，容易唤起防卫；而同理是把自己置身于对方的经历中，但不一定认同别人的观点&lt;/li&gt;
+  &lt;li&gt;优越和平等：自以为是的信息为容易引起防卫状态&lt;/li&gt;
+  &lt;li&gt;确定和协商：确定的沟通者会将注意力放在自己所坚持的观点上，因此会漠视别人的观点；而协商则不全然认为自己没错，倘若其他观点更合理也也会改变自己观点&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这些方法不一定就能建立出正向的沟通气氛，对方可能不接受你这一套，但沟通是由这些积极因子构成时则有可能创造积极的关系&lt;/p&gt;
+
+&lt;h2 id=&quot;section-45&quot;&gt;10.3 保留面子：清晰信息处方&lt;/h2&gt;
+
+&lt;p&gt;这个技巧能清晰、直接但又不具有威胁性的表达出心意，让人不觉得被评断和命令；这个技巧借由以下几种信息来运作：你的希望、问题、抱怨和珍视；肯定信息以“我”的语言做表述，包含3个元素，完整的肯定信息有5个部分&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;行为：行为描述应该是客观的，描述一件事情而不带情绪，这样抱怨行为不会攻击到别人的自我&lt;/li&gt;
+  &lt;li&gt;诠释：诠释是主观的，诠释也必须把推论过程说得非常清楚，注意，非常清楚不是指确定而应该是协商&lt;/li&gt;
+  &lt;li&gt;感受：分享诠释很重要，但分享感受则更上一个层次&lt;/li&gt;
+  &lt;li&gt;结果：陈述行为导致的结果有助于别人了解你的信息，弄清楚结果&lt;/li&gt;
+  &lt;li&gt;意图：就是沟通的意图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;清晰的表达：以上的元素可以乱序传达，信息的表达要符合个人风格，有时可以把两个因素糅合在一个句子里，以自己的速度来传达、有时甚至会重复陈述同一个因素多次&lt;/p&gt;
+
+&lt;h2 id=&quot;section-46&quot;&gt;10.4 对批评以不防卫回应&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;寻找更多的信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当别人攻击背后其实是有话要说时，一味防卫其实是蠢事，寻找更多信息才是明智之举，因为对方的华中常常包含少许甚至许多事实，首先学会倾听别人的批评能更清楚自己的立场，了解批评的内容&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;询问详情&lt;br /&gt;
+当批评是抽象的评判时，可以通过询问详情来获取信息，但要真诚，真心想从别人那了解信息，注意自己的口语和非口语的情绪，否则会引起进一步的反击&lt;/li&gt;
+  &lt;li&gt;推测详情&lt;br /&gt;
+有时候对方不愿详说批评的背后的想法，那么可以进行善意真诚的猜测，但必须要让批评者知道你是真心想要知道究竟发生什么&lt;/li&gt;
+  &lt;li&gt;对说话者的想法予以释义&lt;br /&gt;
+释义有两好处：批评者领悟到有人倾听抱怨会减少自己强硬的态度；批评者会在它的需要没得到满足时增长挫败&lt;/li&gt;
+  &lt;li&gt;询问批评者要的是什么&lt;br /&gt;
+必须要表现出真诚的想知道才行&lt;/li&gt;
+  &lt;li&gt;询问行为的后果&lt;/li&gt;
+  &lt;li&gt;询问还有哪里出错&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;同意批评者的看法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同意有两种类型，在不同的情况中都可以用得到&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;同意事实&lt;br /&gt;
+如果事实如此的话，对事实表示同意会产生真诚而不防卫的反应&lt;/li&gt;
+  &lt;li&gt;同意批评者的观感
+当仔细的倾听以后并询问足够的信息以后，觉得别人的结论言过其实时，一种表示同意的方法是，尝试着站在对方的角度看待事情，而并不去认同批评者的结论&lt;br /&gt;
+认同批评者的言论却不会让自己感到不舒服的关键是，同意那些评判不会迫使你道歉，可以用解释替代，并且即使道歉也不会让自己显得卑躬屈膝&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;section-47&quot;&gt;第十一章 处理人际冲突&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-48&quot;&gt;11.1 冲突的本质&lt;/h2&gt;
+
+&lt;p&gt;冲突的定义：在至少两个相互依赖的个体之间，感觉到不相容的目标、不足的资源和达成目标时来自另一个个体的阻挠时，一种表达出来的挣扎&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;表达出来的挣扎：当两个个体察觉到意见不合时冲突便成立了&lt;/li&gt;
+  &lt;li&gt;感觉到不相容的目标：其实不一定不存在双赢的方法，只是大家只关注各自不同的目标找不到双赢的方法&lt;/li&gt;
+  &lt;li&gt;知觉到资源不足&lt;/li&gt;
+  &lt;li&gt;相互依赖&lt;/li&gt;
+  &lt;li&gt;其他个体的阻挠：只有行动阻挠才会有冲突&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;冲突是自然的，无论如何肯定存在的&lt;/p&gt;
+
+&lt;p&gt;冲突可以是有益的&lt;/p&gt;
+
+&lt;h2 id=&quot;section-49&quot;&gt;11.2 冲突的类型&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/冲突的类型.png&quot; alt=&quot;冲突的类型&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/解决冲突方法的选择.png&quot; alt=&quot;解决冲突方法的选择&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-50&quot;&gt;11.3 关系系统中的冲突&lt;/h2&gt;
+
+&lt;p&gt;冲突并不是全部靠个人的选择而来的，而是依靠个体之间的互动方式而来的，两人在长时间的关系中会发展出来一个管理不一致的模式-关系冲突系统&lt;/p&gt;
+
+&lt;p&gt;有多种分类来看待冲突的管理方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;互补的、对称的、平行的&lt;/li&gt;
+  &lt;li&gt;亲密和攻击方式&lt;/li&gt;
+  &lt;li&gt;冲突仪式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-51&quot;&gt;11.4 冲突类型的变项&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;性别：存在一些差异，但关系的本质比性别更加重要&lt;/li&gt;
+  &lt;li&gt;文化：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-52&quot;&gt;11.5 建设性处理冲突的技巧&lt;/h2&gt;
+
+&lt;p&gt;有些时候用合作模式来解决冲突是最好的策略，这时候可以用过一些技巧来提升使用合作模式解决冲突的概率&lt;/p&gt;
+
+&lt;p&gt;步骤包括：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;确认你的问题和未满足的条件&lt;br /&gt;
+首先要意识到感觉不爽是你提出来的一个问题，意识到这是你个人问题后会以描述的方式来沟通，并减少情绪和评价性的方式来行动，减少防卫&lt;br /&gt;
+接着是定义清楚自己的未被满足的需求，有时候这个需求是隐藏的很深的，这对应这意图；在陈述问题前必须要清楚自己的需求&lt;/li&gt;
+  &lt;li&gt;订立约会&lt;br /&gt;
+破坏性的争吵经常开始于在起始者当面对抗时他的伙伴还没准备好，所以应试着要求你的伙伴和你一起解决它&lt;/li&gt;
+  &lt;li&gt;描述你的问题和需求&lt;br /&gt;
+通过“清晰信息处方”来描述清楚问题和意图，再进一步讨论之前，有必要确定你的伙伴清楚的接收了你的描述，你可以通过确认的方式来确认一下&lt;/li&gt;
+  &lt;li&gt;思考对方的观点
+在描述完自己的需求以后可以询问对方的需求，这时候可以使用倾听的技巧来获取对方的需求&lt;/li&gt;
+  &lt;li&gt;商议解决之道
+当双方都了解清楚对方的需求以后，就可以合作相处解决方案，关键是尽可能多的发现潜在的解决方案，可以记录下这些方案，即使天方夜谭的方案也可能引出合理的方案&lt;/li&gt;
+  &lt;li&gt;追踪解决方案的效果&lt;br /&gt;
+效果不好时可以做适当的改变&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;要意识到在执行这些步骤的过程中不会一直都顺畅的，要多练习才行&lt;br /&gt;
+有时候双赢并不永远有效，即使用心良苦也找不到双赢的办法，可能需要妥协，但也会建立一种良善的氛围&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../styles/images/双赢协商流程.png&quot; alt=&quot;双赢协商流程&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-53&quot;&gt;11.6 建设性处理冲突的技巧：提问和释义&lt;/h2&gt;
+</description>
+        <pubDate>Mon, 06 Feb 2017 10:00:00 +0800</pubDate>
+        <link>/2017/02/06/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/</link>
+        <guid isPermaLink="true">/2017/02/06/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/</guid>
+        
+        <category>沟通</category>
+        
+        
+        <category>读书笔记</category>
+        
+      </item>
+    
+      <item>
+        <title>《从读心到攻心》读书笔记</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;序言：0.1秒获得肯定的第一步&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;第一章 你知道的和你不知道的语言&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;第一节 那些泄露天机的肢体语言信号&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#ta&quot; id=&quot;markdown-toc-ta&quot;&gt;细节会告诉你TA的特性&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;怎样延续你的好形象&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#ta-1&quot; id=&quot;markdown-toc-ta-1&quot;&gt;最初4分钟，TA会给你定性&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;第二节 各种情绪究竟源自哪里&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;第三节 绝对不会被拒绝的问话策略&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;为何催眠师的柠檬更酸&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;你的独特卖点就是你的品牌&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;第二章 用金口玉言打动人心&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;第一节 语言是情绪的种子&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;让你的语言更有说服力&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;永远奏效的皮格马利翁效应&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;政治家的花招&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ta-2&quot; id=&quot;markdown-toc-ta-2&quot;&gt;第二节 走进TA的潜意识&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;对方的沟通方式是什么&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;你的沟通方式是什么&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;视觉传达者：我看见&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;听觉传达者：我听见&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;感觉传达者：我感到&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;嗅觉传达者和味觉传达者&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;给你们的交流加点佐料&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#ta-3&quot; id=&quot;markdown-toc-ta-3&quot;&gt;引导TA顺着你的思路谈话&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;第三节 埋下积极的语言种子&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;能改变人的态度的“次启动效应”&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;为自己做个交际启动准备&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-23&quot; id=&quot;markdown-toc-section-23&quot;&gt;情景启动效应&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-24&quot; id=&quot;markdown-toc-section-24&quot;&gt;虚拟记忆&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-25&quot; id=&quot;markdown-toc-section-25&quot;&gt;做标记&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-26&quot; id=&quot;markdown-toc-section-26&quot;&gt;美感的启动效应&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-27&quot; id=&quot;markdown-toc-section-27&quot;&gt;针对未来医生的启动效应&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-28&quot; id=&quot;markdown-toc-section-28&quot;&gt;第四节 神奇的“镜像效应”&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-29&quot; id=&quot;markdown-toc-section-29&quot;&gt;为什么我们会做一样的动作&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-30&quot; id=&quot;markdown-toc-section-30&quot;&gt;默契的身体语言&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-31&quot; id=&quot;markdown-toc-section-31&quot;&gt;有些话能让你们更亲密&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-32&quot; id=&quot;markdown-toc-section-32&quot;&gt;应对不同的说话风格&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ta-4&quot; id=&quot;markdown-toc-ta-4&quot;&gt;第五节 拉起TA记忆之海的船锚&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-33&quot; id=&quot;markdown-toc-section-33&quot;&gt;怎样唤起他们的美好记忆&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-34&quot; id=&quot;markdown-toc-section-34&quot;&gt;别再散发负面情绪&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-35&quot; id=&quot;markdown-toc-section-35&quot;&gt;给自己也来个“沉锚效应”&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-36&quot; id=&quot;markdown-toc-section-36&quot;&gt;生意场上必备的“分层沉锚”&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-37&quot; id=&quot;markdown-toc-section-37&quot;&gt;展现你的激情而不是弱点&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-38&quot; id=&quot;markdown-toc-section-38&quot;&gt;第三章 在举手投足间征服人心&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-39&quot; id=&quot;markdown-toc-section-39&quot;&gt;第一节 身体语言的密码&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-40&quot; id=&quot;markdown-toc-section-40&quot;&gt;第二节 不安分的手和脚&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-41&quot; id=&quot;markdown-toc-section-41&quot;&gt;第一次握手：让我们有所联系&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-42&quot; id=&quot;markdown-toc-section-42&quot;&gt;竖起大拇指：好样的&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-43&quot; id=&quot;markdown-toc-section-43&quot;&gt;自己紧握双手：就这样做吧&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-44&quot; id=&quot;markdown-toc-section-44&quot;&gt;掌心朝上：我没有什么好遮掩的&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-45&quot; id=&quot;markdown-toc-section-45&quot;&gt;男人间的拥抱：嘿，哥们&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-46&quot; id=&quot;markdown-toc-section-46&quot;&gt;拳头互撞：与你同在&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-47&quot; id=&quot;markdown-toc-section-47&quot;&gt;击掌相庆：我们太牛了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-48&quot; id=&quot;markdown-toc-section-48&quot;&gt;双臂交抱：离我远点&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-49&quot; id=&quot;markdown-toc-section-49&quot;&gt;指指点点：打住，看那边&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-50&quot; id=&quot;markdown-toc-section-50&quot;&gt;定向反应：下意识靠近&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-51&quot; id=&quot;markdown-toc-section-51&quot;&gt;耸肩：我不知道&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-52&quot; id=&quot;markdown-toc-section-52&quot;&gt;砍劈手势：这就是我的方式&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-53&quot; id=&quot;markdown-toc-section-53&quot;&gt;屈指计算：同意我的观点吧&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-54&quot; id=&quot;markdown-toc-section-54&quot;&gt;两手互搓：我要提出想法了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-55&quot; id=&quot;markdown-toc-section-55&quot;&gt;掌心朝下：这件事应该这样做&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-56&quot; id=&quot;markdown-toc-section-56&quot;&gt;两手叉腰：别来惹我&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-57&quot; id=&quot;markdown-toc-section-57&quot;&gt;十指相抵：这儿我说了算&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-58&quot; id=&quot;markdown-toc-section-58&quot;&gt;双手放在背后：你威胁不到我&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-59&quot; id=&quot;markdown-toc-section-59&quot;&gt;咬手指：我没有安全感&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-60&quot; id=&quot;markdown-toc-section-60&quot;&gt;卷起脚趾：千万别注意到我&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-61&quot; id=&quot;markdown-toc-section-61&quot;&gt;扭着手：我需要安慰&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-62&quot; id=&quot;markdown-toc-section-62&quot;&gt;抓耳挠腮：啊？我也不知道&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-63&quot; id=&quot;markdown-toc-section-63&quot;&gt;抚摸脖子：压力真大啊&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-64&quot; id=&quot;markdown-toc-section-64&quot;&gt;双手插袋：我不是一个开朗的人&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-65&quot; id=&quot;markdown-toc-section-65&quot;&gt;拇指朝外：我浑身是劲&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-66&quot; id=&quot;markdown-toc-section-66&quot;&gt;脚打拍子：我很兴奋&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-67&quot; id=&quot;markdown-toc-section-67&quot;&gt;焦躁不安的双脚：我控制不了我的情绪&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-68&quot; id=&quot;markdown-toc-section-68&quot;&gt;双脚交叉：我不赞同&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-69&quot; id=&quot;markdown-toc-section-69&quot;&gt;僵硬的动作：我可不想露馅&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-70&quot; id=&quot;markdown-toc-section-70&quot;&gt;遮羞动作：我很脆弱&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-71&quot; id=&quot;markdown-toc-section-71&quot;&gt;测量动作：尺寸有这么大&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-72&quot; id=&quot;markdown-toc-section-72&quot;&gt;侧身动作，谈话到此结束&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-73&quot; id=&quot;markdown-toc-section-73&quot;&gt;自我激励或抚慰：一切都会好起来&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-74&quot; id=&quot;markdown-toc-section-74&quot;&gt;克制着不去做任何手势：我正在撒谎&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-75&quot; id=&quot;markdown-toc-section-75&quot;&gt;用运动员起跑姿势坐着：我想离开&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-76&quot; id=&quot;markdown-toc-section-76&quot;&gt;第三节 脸部微表情泄漏的秘密&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-77&quot; id=&quot;markdown-toc-section-77&quot;&gt;点头：我同意&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-78&quot; id=&quot;markdown-toc-section-78&quot;&gt;见面或告别时的亲吻：我喜欢你&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-79&quot; id=&quot;markdown-toc-section-79&quot;&gt;摇头动作：不、不、不&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-80&quot; id=&quot;markdown-toc-section-80&quot;&gt;摸摸鼻子：这场谈话让我不舒服&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-81&quot; id=&quot;markdown-toc-section-81&quot;&gt;转动眼球&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-82&quot; id=&quot;markdown-toc-section-82&quot;&gt;低头俯首：我被打败了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-83&quot; id=&quot;markdown-toc-section-83&quot;&gt;目光朝下：我不敢直视你&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-84&quot; id=&quot;markdown-toc-section-84&quot;&gt;噘嘴&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#hi&quot; id=&quot;markdown-toc-hi&quot;&gt;眨眼：Hi，亲爱的&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-85&quot; id=&quot;markdown-toc-section-85&quot;&gt;收缩下巴：怒了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-86&quot; id=&quot;markdown-toc-section-86&quot;&gt;扬起下巴：我赢了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-87&quot; id=&quot;markdown-toc-section-87&quot;&gt;从眼睛上方看人：您拿我寻开心啊&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-88&quot; id=&quot;markdown-toc-section-88&quot;&gt;禁闭嘴唇：我正在努力不让自己说出来&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-89&quot; id=&quot;markdown-toc-section-89&quot;&gt;嘴巴向内抿：我收回我的话&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-90&quot; id=&quot;markdown-toc-section-90&quot;&gt;匆匆一瞥：你吸引了我&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-91&quot; id=&quot;markdown-toc-section-91&quot;&gt;延长眨眼闭眼时长：我不想听这些&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-92&quot; id=&quot;markdown-toc-section-92&quot;&gt;斜眼看：别让我看这些&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-93&quot; id=&quot;markdown-toc-section-93&quot;&gt;嘟着嘴：你竟然指望我相信那些&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-94&quot; id=&quot;markdown-toc-section-94&quot;&gt;歪着头：我听到&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-95&quot; id=&quot;markdown-toc-section-95&quot;&gt;咬嘴唇：我可应付不了&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-96&quot; id=&quot;markdown-toc-section-96&quot;&gt;用舌头舔牙齿或嘴唇：压力太大&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-97&quot; id=&quot;markdown-toc-section-97&quot;&gt;触摸嘴唇：我正在思考&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-98&quot; id=&quot;markdown-toc-section-98&quot;&gt;突出下巴：我看到你了，只是放不下姿态跟你说话&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-99&quot; id=&quot;markdown-toc-section-99&quot;&gt;瞳孔放大，这个我感兴趣&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-100&quot; id=&quot;markdown-toc-section-100&quot;&gt;摸下巴：决策，决策&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-101&quot; id=&quot;markdown-toc-section-101&quot;&gt;女性突然探出手腕：你可以靠近我&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-102&quot; id=&quot;markdown-toc-section-102&quot;&gt;男士卷起袖子，我很有魅力&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-103&quot; id=&quot;markdown-toc-section-103&quot;&gt;呼出一口气：我感到很挫折&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-104&quot; id=&quot;markdown-toc-section-104&quot;&gt;用手托腮：我感到很无聊&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-105&quot; id=&quot;markdown-toc-section-105&quot;&gt;第四节 别靠的太近，但也别离得太远&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-106&quot; id=&quot;markdown-toc-section-106&quot;&gt;第五节 影响人们感受的座次安排&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-107&quot; id=&quot;markdown-toc-section-107&quot;&gt;具有权威的座位&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-108&quot; id=&quot;markdown-toc-section-108&quot;&gt;具有影响力的座位&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-109&quot; id=&quot;markdown-toc-section-109&quot;&gt;中立座位&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-110&quot; id=&quot;markdown-toc-section-110&quot;&gt;具有次影响力的座位&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-111&quot; id=&quot;markdown-toc-section-111&quot;&gt;看不见的座位&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-112&quot; id=&quot;markdown-toc-section-112&quot;&gt;第六节 声音会泄漏你的秘密&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-113&quot; id=&quot;markdown-toc-section-113&quot;&gt;声音的化学反应&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#vs&quot; id=&quot;markdown-toc-vs&quot;&gt;第七节 自然体香VS昂贵香水&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-114&quot; id=&quot;markdown-toc-section-114&quot;&gt;第四章 读心攻心&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-115&quot; id=&quot;markdown-toc-section-115&quot;&gt;第一节 共同的目标和敌人会让我们心连心&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-116&quot; id=&quot;markdown-toc-section-116&quot;&gt;共同的目标：让我们高歌一曲&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-117&quot; id=&quot;markdown-toc-section-117&quot;&gt;共同的敌人：让我们一起讨厌他&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-118&quot; id=&quot;markdown-toc-section-118&quot;&gt;提升信赖感的魔法&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-119&quot; id=&quot;markdown-toc-section-119&quot;&gt;可以哭，但别在那都哭&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-120&quot; id=&quot;markdown-toc-section-120&quot;&gt;失格台词：我也许不感兴趣&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-121&quot; id=&quot;markdown-toc-section-121&quot;&gt;情景分析：这个场合是否合适&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-122&quot; id=&quot;markdown-toc-section-122&quot;&gt;声音在说谎：唏唏嘘嘘的谎言&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-123&quot; id=&quot;markdown-toc-section-123&quot;&gt;线性谎言&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-124&quot; id=&quot;markdown-toc-section-124&quot;&gt;谎言的面目&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-125&quot; id=&quot;markdown-toc-section-125&quot;&gt;瞳孔散大，眼神交流行为改变&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-126&quot; id=&quot;markdown-toc-section-126&quot;&gt;不断吞咽口水&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-127&quot; id=&quot;markdown-toc-section-127&quot;&gt;第二节 向外界展示你的最优个人形象&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-128&quot; id=&quot;markdown-toc-section-128&quot;&gt;矮个子要怎么表现自己的强势&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-129&quot; id=&quot;markdown-toc-section-129&quot;&gt;你在别人的眼里是怎样&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-130&quot; id=&quot;markdown-toc-section-130&quot;&gt;怎样发现仗势欺人者&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-131&quot; id=&quot;markdown-toc-section-131&quot;&gt;怎样促成你想要的交易&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-132&quot; id=&quot;markdown-toc-section-132&quot;&gt;怎样谈成一笔生意&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-133&quot; id=&quot;markdown-toc-section-133&quot;&gt;怎样接近群体&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-134&quot; id=&quot;markdown-toc-section-134&quot;&gt;怎样激发别人的积极性&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-135&quot; id=&quot;markdown-toc-section-135&quot;&gt;怎样让团队接受你的方案&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-136&quot; id=&quot;markdown-toc-section-136&quot;&gt;怎样表现你的友好&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-137&quot; id=&quot;markdown-toc-section-137&quot;&gt;第三节 讲个小故事打破冷场&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-138&quot; id=&quot;markdown-toc-section-138&quot;&gt;小故事能让你们产生共鸣&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-139&quot; id=&quot;markdown-toc-section-139&quot;&gt;用第一人称来讲故事&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-140&quot; id=&quot;markdown-toc-section-140&quot;&gt;引人入胜的开场白&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-141&quot; id=&quot;markdown-toc-section-141&quot;&gt;勇于自嘲&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-142&quot; id=&quot;markdown-toc-section-142&quot;&gt;用生动形象的语言描述&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-143&quot; id=&quot;markdown-toc-section-143&quot;&gt;巧用对话&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-144&quot; id=&quot;markdown-toc-section-144&quot;&gt;提供对故事的解读&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-145&quot; id=&quot;markdown-toc-section-145&quot;&gt;调整故事的篇幅&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-146&quot; id=&quot;markdown-toc-section-146&quot;&gt;练习讲故事和复述故事&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-147&quot; id=&quot;markdown-toc-section-147&quot;&gt;顺应听众的喜好&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-148&quot; id=&quot;markdown-toc-section-148&quot;&gt;一语倾城&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-149&quot; id=&quot;markdown-toc-section-149&quot;&gt;各种各样的信息&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-150&quot; id=&quot;markdown-toc-section-150&quot;&gt;隐藏的谈话思路&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-151&quot; id=&quot;markdown-toc-section-151&quot;&gt;第四节 男人女人都要懂的交流方式&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-152&quot; id=&quot;markdown-toc-section-152&quot;&gt;交流&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-153&quot; id=&quot;markdown-toc-section-153&quot;&gt;第五节 扭转乾坤的心理法则&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-154&quot; id=&quot;markdown-toc-section-154&quot;&gt;情感银行里的储备&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-155&quot; id=&quot;markdown-toc-section-155&quot;&gt;树立身份地位&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-156&quot; id=&quot;markdown-toc-section-156&quot;&gt;从光环效应里沾光&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-157&quot; id=&quot;markdown-toc-section-157&quot;&gt;成为权威人士&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-158&quot; id=&quot;markdown-toc-section-158&quot;&gt;限量版&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-159&quot; id=&quot;markdown-toc-section-159&quot;&gt;诱饵&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-160&quot; id=&quot;markdown-toc-section-160&quot;&gt;提高期望值&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-161&quot; id=&quot;markdown-toc-section-161&quot;&gt;先推出高价品&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-162&quot; id=&quot;markdown-toc-section-162&quot;&gt;把两个极端作比较&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-163&quot; id=&quot;markdown-toc-section-163&quot;&gt;把你的主张用疑问的语气说出来&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-164&quot; id=&quot;markdown-toc-section-164&quot;&gt;让别人觉得这是他的主张&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-165&quot; id=&quot;markdown-toc-section-165&quot;&gt;避免消费者后悔&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-166&quot; id=&quot;markdown-toc-section-166&quot;&gt;让人们接触物品&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-167&quot; id=&quot;markdown-toc-section-167&quot;&gt;内疚感是巨大的激发因素&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-168&quot; id=&quot;markdown-toc-section-168&quot;&gt;勇于转身离开&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-169&quot; id=&quot;markdown-toc-section-169&quot;&gt;第六节 让人折服于你的个人魅力&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#xx&quot; id=&quot;markdown-toc-xx&quot;&gt;不满情绪x变革远景x初步实践&amp;gt;变革阻力&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-170&quot; id=&quot;markdown-toc-section-170&quot;&gt;行动之前请先确定目标&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-171&quot; id=&quot;markdown-toc-section-171&quot;&gt;评估三步骤&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-172&quot; id=&quot;markdown-toc-section-172&quot;&gt;学会聆听&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-173&quot; id=&quot;markdown-toc-section-173&quot;&gt;湿度的自控力&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-174&quot; id=&quot;markdown-toc-section-174&quot;&gt;争取主动&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-175&quot; id=&quot;markdown-toc-section-175&quot;&gt;附录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;《从读心到攻心》读书笔记&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;序言：0.1秒获得肯定的第一步&lt;/h1&gt;
+
+&lt;p&gt;实现目标意味着关注那些能带来肯定回应的因素，即向周围的人展示自己最好的一面&lt;/p&gt;
+
+&lt;p&gt;获得别人肯定的回应还关系到如何每次都能在第一时间向初次见面的人在一瞬间展现出自我风采&lt;/p&gt;
+
+&lt;p&gt;一旦用魅力征服了别人，想要改变看法就不容易&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;句式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;是的，而且…&lt;/li&gt;
+  &lt;li&gt;没有，不过…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“是的，而且”能增加肯定的意味，“没有，不过”能减少负面感觉且不失为诚实的回答&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;第一章 你知道的和你不知道的语言&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;第一节 那些泄露天机的肢体语言信号&lt;/h2&gt;
+
+&lt;p&gt;无论怎样，每个人都有感觉拘束的时候，这种拘束感往往源于特定情境下&lt;em&gt;你对自己的定位&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ta&quot;&gt;细节会告诉你TA的特性&lt;/h3&gt;
+
+&lt;p&gt;识别谎言的方法&lt;br /&gt;
+先简单的问几个让别人回忆和思考一些事情的问题，观察她眼睛活动的规律，然后再问你想问的问题，如果对方眼睛的活动规律不同则有可能说谎&lt;/p&gt;
+
+&lt;p&gt;改变自己的姿势来换发自己的自信风采&lt;br /&gt;
+抬头挺胸，肩膀向后打开，面带微笑，摊开手脚，然后尽力伸展&lt;/p&gt;
+
+&lt;p&gt;呼吸能识别一个人的紧张&lt;br /&gt;
+短促的呼吸，时而的深呼吸能表明一个人的紧张&lt;/p&gt;
+
+&lt;p&gt;腿部姿势能分辨谈话的兴趣&lt;br /&gt;
+脚尖正朝你的话表示对谈话感兴趣，朝着门口则表示不感兴趣&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;怎样延续你的好形象&lt;/h3&gt;
+
+&lt;p&gt;只要不做一些劣迹事情就能把好形象延续下去&lt;/p&gt;
+
+&lt;h3 id=&quot;ta-1&quot;&gt;最初4分钟，TA会给你定性&lt;/h3&gt;
+
+&lt;p&gt;精神抖擞的走路，微笑热情的主动握手&lt;br /&gt;
+握手后注意一下对方需要的谈话距离，如果对方侧身以便听得更清楚则保持距离，如果站的太近就稍微调整距离&lt;br /&gt;
+保持良好的姿势，双手自然下垂，不要双手交叉，脚尖朝向正在交谈的人&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;第二节 各种情绪究竟源自哪里&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;第三节 绝对不会被拒绝的问话策略&lt;/h2&gt;
+
+&lt;p&gt;先静下心来倾听，收获更多&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;为何催眠师的柠檬更酸&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;你的独特卖点就是你的品牌&lt;/h3&gt;
+
+&lt;p&gt;想要打动别人，一定要先对自己有充分的认识，对自己的优点有充分的认识&lt;br /&gt;
+在营造融洽的关系和说服他人之前，首先应该有良好的自我感觉&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;打造自己的卖点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section-8&quot;&gt;第二章 用金口玉言打动人心&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;第一节 语言是情绪的种子&lt;/h2&gt;
+
+&lt;p&gt;改变思维的架构，便能改变事情的意义和价值&lt;/p&gt;
+
+&lt;p&gt;改变思维架构有两种方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;改变架构情景：提高某一行为或事情的价值&lt;/li&gt;
+  &lt;li&gt;改变架构内容：探求同意事情的其他意义&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-10&quot;&gt;让你的语言更有说服力&lt;/h3&gt;
+
+&lt;p&gt;对别人运用改变思维架构的词语来说服别人&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;永远奏效的皮格马利翁效应&lt;/h3&gt;
+
+&lt;p&gt;指抱有低期望值的人们往往表现差强人意，而抱有高期望值的人能表现的更好&lt;/p&gt;
+
+&lt;h3 id=&quot;section-12&quot;&gt;政治家的花招&lt;/h3&gt;
+
+&lt;p&gt;通过修改词汇来改变观点的思想架构，更容易的说服别人&lt;/p&gt;
+
+&lt;h2 id=&quot;ta-2&quot;&gt;第二节 走进TA的潜意识&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;对方的沟通方式是什么&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;你的沟通方式是什么&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-15&quot;&gt;视觉传达者：我看见&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-16&quot;&gt;听觉传达者：我听见&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;感觉传达者：我感到&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-18&quot;&gt;嗅觉传达者和味觉传达者&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-19&quot;&gt;给你们的交流加点佐料&lt;/h3&gt;
+
+&lt;p&gt;人不只属于一种传达者&lt;/p&gt;
+
+&lt;h3 id=&quot;ta-3&quot;&gt;引导TA顺着你的思路谈话&lt;/h3&gt;
+
+&lt;p&gt;肯定式对话框架&lt;br /&gt;
+可以建立起一种潜意识下的同意模式，让其他人顺着你的思路进行&lt;/p&gt;
+
+&lt;p&gt;常理：语言伪装&lt;br /&gt;
+肯定式对话框架形成以后，接下来可以说一些常理，事实来夯实肯定式对话框架，然后夹杂一些相似的观点陈述&lt;/p&gt;
+
+&lt;p&gt;预设：把需要认可的回答隐在已知部分中&lt;/p&gt;
+
+&lt;p&gt;抽象化词语：摆脱临界因素干扰&lt;br /&gt;
+运用带有积极意味的抽象化词语可以让谈话对象深入思考，然后可以悄悄的输出一条指令&lt;/p&gt;
+
+&lt;p&gt;反义疑问句：
+这种句式更容易获得别人同意，在肯定的陈述后可以带上否定的反问句加强肯定&lt;/p&gt;
+
+&lt;h2 id=&quot;section-20&quot;&gt;第三节 埋下积极的语言种子&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-21&quot;&gt;能改变人的态度的“次启动效应”&lt;/h3&gt;
+
+&lt;p&gt;词启动效应是激活某种特定观念联系的过程&lt;/p&gt;
+
+&lt;h3 id=&quot;section-22&quot;&gt;为自己做个交际启动准备&lt;/h3&gt;
+
+&lt;p&gt;让自己的同伴帮你向素不相识的人做个词启动，作为回报，你也一样给同伴做词启动&lt;/p&gt;
+
+&lt;h3 id=&quot;section-23&quot;&gt;情景启动效应&lt;/h3&gt;
+
+&lt;p&gt;环境也能作为一种启动，要预先了解当其他人置身某种环境时会产生什么联想，情绪&lt;/p&gt;
+
+&lt;h3 id=&quot;section-24&quot;&gt;虚拟记忆&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-25&quot;&gt;做标记&lt;/h3&gt;
+
+&lt;p&gt;做标记可以帮助别人发挥自己的能力，并挖掘出其才能&lt;/p&gt;
+
+&lt;h3 id=&quot;section-26&quot;&gt;美感的启动效应&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-27&quot;&gt;针对未来医生的启动效应&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-28&quot;&gt;第四节 神奇的“镜像效应”&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-29&quot;&gt;为什么我们会做一样的动作&lt;/h3&gt;
+
+&lt;p&gt;用镜像法重复他人的动作，就像是在告诉别人：我和你是一样的&lt;/p&gt;
+
+&lt;p&gt;首先用相同的沟通方式交流，肯定式交流中加入一些动作模仿&lt;/p&gt;
+
+&lt;h3 id=&quot;section-30&quot;&gt;默契的身体语言&lt;/h3&gt;
+
+&lt;p&gt;第一步：肢体动作&lt;br /&gt;
+观察对方的一些肢体动作，用一些类似的动作予以回应&lt;/p&gt;
+
+&lt;p&gt;第二步：面部表情&lt;br /&gt;
+尝试保持表情跟他人的同步&lt;/p&gt;
+
+&lt;p&gt;第三步：呼吸&lt;br /&gt;
+尝试保持跟别人呼吸同步&lt;/p&gt;
+
+&lt;p&gt;第四步：声音
+熟悉别人的说话节律然后模仿&lt;/p&gt;
+
+&lt;p&gt;第五步：眨眼
+观察别人的眨眼频率，然后尽量模仿&lt;/p&gt;
+
+&lt;h3 id=&quot;section-31&quot;&gt;有些话能让你们更亲密&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-32&quot;&gt;应对不同的说话风格&lt;/h3&gt;
+
+&lt;h2 id=&quot;ta-4&quot;&gt;第五节 拉起TA记忆之海的船锚&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-33&quot;&gt;怎样唤起他们的美好记忆&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-34&quot;&gt;别再散发负面情绪&lt;/h3&gt;
+
+&lt;p&gt;小心沉锚效应传递自己的负面情绪&lt;/p&gt;
+
+&lt;h3 id=&quot;section-35&quot;&gt;给自己也来个“沉锚效应”&lt;/h3&gt;
+
+&lt;p&gt;先回想一个记忆，唤起自己的感受，然后通过一个动作把这个记忆的感受和这个动作相关联&lt;/p&gt;
+
+&lt;h3 id=&quot;section-36&quot;&gt;生意场上必备的“分层沉锚”&lt;/h3&gt;
+
+&lt;p&gt;通过视觉，听觉，感觉来增强沉锚效应&lt;/p&gt;
+
+&lt;h3 id=&quot;section-37&quot;&gt;展现你的激情而不是弱点&lt;/h3&gt;
+
+&lt;h1 id=&quot;section-38&quot;&gt;第三章 在举手投足间征服人心&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-39&quot;&gt;第一节 身体语言的密码&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-40&quot;&gt;第二节 不安分的手和脚&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-41&quot;&gt;第一次握手：让我们有所联系&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-42&quot;&gt;竖起大拇指：好样的&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-43&quot;&gt;自己紧握双手：就这样做吧&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-44&quot;&gt;掌心朝上：我没有什么好遮掩的&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-45&quot;&gt;男人间的拥抱：嘿，哥们&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-46&quot;&gt;拳头互撞：与你同在&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-47&quot;&gt;击掌相庆：我们太牛了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-48&quot;&gt;双臂交抱：离我远点&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-49&quot;&gt;指指点点：打住，看那边&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-50&quot;&gt;定向反应：下意识靠近&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-51&quot;&gt;耸肩：我不知道&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-52&quot;&gt;砍劈手势：这就是我的方式&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-53&quot;&gt;屈指计算：同意我的观点吧&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-54&quot;&gt;两手互搓：我要提出想法了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-55&quot;&gt;掌心朝下：这件事应该这样做&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-56&quot;&gt;两手叉腰：别来惹我&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-57&quot;&gt;十指相抵：这儿我说了算&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-58&quot;&gt;双手放在背后：你威胁不到我&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-59&quot;&gt;咬手指：我没有安全感&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-60&quot;&gt;卷起脚趾：千万别注意到我&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-61&quot;&gt;扭着手：我需要安慰&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-62&quot;&gt;抓耳挠腮：啊？我也不知道&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-63&quot;&gt;抚摸脖子：压力真大啊&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-64&quot;&gt;双手插袋：我不是一个开朗的人&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-65&quot;&gt;拇指朝外：我浑身是劲&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-66&quot;&gt;脚打拍子：我很兴奋&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-67&quot;&gt;焦躁不安的双脚：我控制不了我的情绪&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-68&quot;&gt;双脚交叉：我不赞同&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-69&quot;&gt;僵硬的动作：我可不想露馅&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-70&quot;&gt;遮羞动作：我很脆弱&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-71&quot;&gt;测量动作：尺寸有这么大&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-72&quot;&gt;侧身动作，谈话到此结束&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-73&quot;&gt;自我激励或抚慰：一切都会好起来&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-74&quot;&gt;克制着不去做任何手势：我正在撒谎&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-75&quot;&gt;用运动员起跑姿势坐着：我想离开&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-76&quot;&gt;第三节 脸部微表情泄漏的秘密&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-77&quot;&gt;点头：我同意&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-78&quot;&gt;见面或告别时的亲吻：我喜欢你&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-79&quot;&gt;摇头动作：不、不、不&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-80&quot;&gt;摸摸鼻子：这场谈话让我不舒服&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-81&quot;&gt;转动眼球&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-82&quot;&gt;低头俯首：我被打败了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-83&quot;&gt;目光朝下：我不敢直视你&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-84&quot;&gt;噘嘴&lt;/h3&gt;
+
+&lt;h3 id=&quot;hi&quot;&gt;眨眼：Hi，亲爱的&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-85&quot;&gt;收缩下巴：怒了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-86&quot;&gt;扬起下巴：我赢了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-87&quot;&gt;从眼睛上方看人：您拿我寻开心啊&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-88&quot;&gt;禁闭嘴唇：我正在努力不让自己说出来&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-89&quot;&gt;嘴巴向内抿：我收回我的话&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-90&quot;&gt;匆匆一瞥：你吸引了我&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-91&quot;&gt;延长眨眼闭眼时长：我不想听这些&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-92&quot;&gt;斜眼看：别让我看这些&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-93&quot;&gt;嘟着嘴：你竟然指望我相信那些&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-94&quot;&gt;歪着头：我听到&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-95&quot;&gt;咬嘴唇：我可应付不了&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-96&quot;&gt;用舌头舔牙齿或嘴唇：压力太大&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-97&quot;&gt;触摸嘴唇：我正在思考&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-98&quot;&gt;突出下巴：我看到你了，只是放不下姿态跟你说话&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-99&quot;&gt;瞳孔放大，这个我感兴趣&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-100&quot;&gt;摸下巴：决策，决策&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-101&quot;&gt;女性突然探出手腕：你可以靠近我&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-102&quot;&gt;男士卷起袖子，我很有魅力&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-103&quot;&gt;呼出一口气：我感到很挫折&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-104&quot;&gt;用手托腮：我感到很无聊&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-105&quot;&gt;第四节 别靠的太近，但也别离得太远&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-106&quot;&gt;第五节 影响人们感受的座次安排&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-107&quot;&gt;具有权威的座位&lt;/h3&gt;
+
+&lt;p&gt;长桌的两端&lt;/p&gt;
+
+&lt;h3 id=&quot;section-108&quot;&gt;具有影响力的座位&lt;/h3&gt;
+
+&lt;p&gt;老板身边的两个座位&lt;/p&gt;
+
+&lt;h3 id=&quot;section-109&quot;&gt;中立座位&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-110&quot;&gt;具有次影响力的座位&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-111&quot;&gt;看不见的座位&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-112&quot;&gt;第六节 声音会泄漏你的秘密&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-113&quot;&gt;声音的化学反应&lt;/h3&gt;
+
+&lt;p&gt;语调：让自己的声音变得抑扬顿挫，就可以马上改变别人对你的印象&lt;/p&gt;
+
+&lt;p&gt;千万不要害怕停顿，在沉默时坦然自若，反而能够帮助你吸引观众的注意力&lt;/p&gt;
+
+&lt;h2 id=&quot;vs&quot;&gt;第七节 自然体香VS昂贵香水&lt;/h2&gt;
+
+&lt;h1 id=&quot;section-114&quot;&gt;第四章 读心攻心&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-115&quot;&gt;第一节 共同的目标和敌人会让我们心连心&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-116&quot;&gt;共同的目标：让我们高歌一曲&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-117&quot;&gt;共同的敌人：让我们一起讨厌他&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-118&quot;&gt;提升信赖感的魔法&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-119&quot;&gt;可以哭，但别在那都哭&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-120&quot;&gt;失格台词：我也许不感兴趣&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-121&quot;&gt;情景分析：这个场合是否合适&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-122&quot;&gt;声音在说谎：唏唏嘘嘘的谎言&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-123&quot;&gt;线性谎言&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-124&quot;&gt;谎言的面目&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-125&quot;&gt;瞳孔散大，眼神交流行为改变&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-126&quot;&gt;不断吞咽口水&lt;/h3&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;h2 id=&quot;section-127&quot;&gt;第二节 向外界展示你的最优个人形象&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-128&quot;&gt;矮个子要怎么表现自己的强势&lt;/h3&gt;
+
+&lt;p&gt;站在高处，伸直脖子，双肩打开，挺起胸膛，体重均匀分散在双脚&lt;/p&gt;
+
+&lt;h3 id=&quot;section-129&quot;&gt;你在别人的眼里是怎样&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-130&quot;&gt;怎样发现仗势欺人者&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-131&quot;&gt;怎样促成你想要的交易&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-132&quot;&gt;怎样谈成一笔生意&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-133&quot;&gt;怎样接近群体&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-134&quot;&gt;怎样激发别人的积极性&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-135&quot;&gt;怎样让团队接受你的方案&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-136&quot;&gt;怎样表现你的友好&lt;/h3&gt;
+
+&lt;p&gt;倾听&lt;/p&gt;
+
+&lt;h2 id=&quot;section-137&quot;&gt;第三节 讲个小故事打破冷场&lt;/h2&gt;
+
+&lt;p&gt;精心准备的故事&lt;/p&gt;
+
+&lt;p&gt;小故事虽有效，但不能透露太多，特别是那些只能与最亲密朋友分享的个人秘密&lt;/p&gt;
+
+&lt;h3 id=&quot;section-138&quot;&gt;小故事能让你们产生共鸣&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-139&quot;&gt;用第一人称来讲故事&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-140&quot;&gt;引人入胜的开场白&lt;/h3&gt;
+
+&lt;p&gt;第一句话可以定基调，激起别人的兴趣&lt;/p&gt;
+
+&lt;h3 id=&quot;section-141&quot;&gt;勇于自嘲&lt;/h3&gt;
+
+&lt;p&gt;不要影响到自尊，然后谈谈自己怎么处理的&lt;/p&gt;
+
+&lt;h3 id=&quot;section-142&quot;&gt;用生动形象的语言描述&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-143&quot;&gt;巧用对话&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-144&quot;&gt;提供对故事的解读&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-145&quot;&gt;调整故事的篇幅&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-146&quot;&gt;练习讲故事和复述故事&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-147&quot;&gt;顺应听众的喜好&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-148&quot;&gt;一语倾城&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-149&quot;&gt;各种各样的信息&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-150&quot;&gt;隐藏的谈话思路&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-151&quot;&gt;第四节 男人女人都要懂的交流方式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-152&quot;&gt;交流&lt;/h3&gt;
+
+&lt;p&gt;男性一般是问题的解决者，而女性只是希望有人倾听&lt;/p&gt;
+
+&lt;h2 id=&quot;section-153&quot;&gt;第五节 扭转乾坤的心理法则&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-154&quot;&gt;情感银行里的储备&lt;/h3&gt;
+
+&lt;p&gt;乐于助人能为将来的自己换取回报&lt;/p&gt;
+
+&lt;h3 id=&quot;section-155&quot;&gt;树立身份地位&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-156&quot;&gt;从光环效应里沾光&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-157&quot;&gt;成为权威人士&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-158&quot;&gt;限量版&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-159&quot;&gt;诱饵&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-160&quot;&gt;提高期望值&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-161&quot;&gt;先推出高价品&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-162&quot;&gt;把两个极端作比较&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-163&quot;&gt;把你的主张用疑问的语气说出来&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-164&quot;&gt;让别人觉得这是他的主张&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-165&quot;&gt;避免消费者后悔&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-166&quot;&gt;让人们接触物品&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-167&quot;&gt;内疚感是巨大的激发因素&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-168&quot;&gt;勇于转身离开&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-169&quot;&gt;第六节 让人折服于你的个人魅力&lt;/h2&gt;
+
+&lt;h3 id=&quot;xx&quot;&gt;不满情绪x变革远景x初步实践&amp;gt;变革阻力&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-170&quot;&gt;行动之前请先确定目标&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-171&quot;&gt;评估三步骤&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-172&quot;&gt;学会聆听&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-173&quot;&gt;湿度的自控力&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-174&quot;&gt;争取主动&lt;/h3&gt;
+
+&lt;h1 id=&quot;section-175&quot;&gt;附录&lt;/h1&gt;
+
+</description>
+        <pubDate>Mon, 06 Feb 2017 10:00:00 +0800</pubDate>
+        <link>/2017/02/06/%E4%BB%8E%E8%AF%BB%E5%BF%83%E5%88%B0%E6%94%BB%E5%BF%83/</link>
+        <guid isPermaLink="true">/2017/02/06/%E4%BB%8E%E8%AF%BB%E5%BF%83%E5%88%B0%E6%94%BB%E5%BF%83/</guid>
+        
+        <category>沟通</category>
+        
+        
+        <category>读书笔记</category>
+        
+      </item>
     
       <item>
         <title>Java项目性能优化简介</title>
@@ -1530,177 +3280,6 @@ public class Interrupting2 {
         <pubDate>Wed, 07 Dec 2016 10:00:00 +0800</pubDate>
         <link>/2016/12/07/DEEP_IN_JAVA_java_obj_finalize_and_reachability/</link>
         <guid isPermaLink="true">/2016/12/07/DEEP_IN_JAVA_java_obj_finalize_and_reachability/</guid>
-        
-        <category>Java</category>
-        
-        
-        <category>技术</category>
-        
-      </item>
-    
-      <item>
-        <title>Java 垃圾收集</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;火车算法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;本文是对Java 垃圾收集的汇总和个人理解&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;垃圾收集算法必须要完成两件事：垃圾对象的检测 和 方法区和堆上的空间回收&lt;/p&gt;
-
-&lt;p&gt;垃圾对象的检测有两种方法&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;引用计数：每个对象都有个引用计数器，当引用数为0时成为垃圾，缺点是无法检测循环引用&lt;/li&gt;
-  &lt;li&gt;跟踪：从根对象开始遍历可达的对象图，不可达的都是垃圾&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;垃圾对象空间回收的算法&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;压缩收集：通过把存活对象移动到堆的一端，剩余空间即为回收的空间，这样可以消除碎片&lt;/li&gt;
-  &lt;li&gt;拷贝收集：通过把存活对象拷贝到一个新的区域，然后回收旧的区域，好处是垃圾对象的检测和收集同时进行，但需要更大的空间&lt;/li&gt;
-  &lt;li&gt;按代收集：把堆分成不同的区域 存放不同年龄的对象，长久存活的对象就不用多次检测，提高高死亡率的对象回收效率&lt;/li&gt;
-  &lt;li&gt;自适应收集：JVM根据运行时的情况自适应的选择不同的算法&lt;/li&gt;
-  &lt;li&gt;火车算法：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;火车算法&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;为什么？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;一般的垃圾收集算法会导致应用程序的停顿，而停顿的时长是不可控的，为此需要使用渐进式的垃圾收集算法；渐进式垃圾收集算法不一次性的完成整个堆的垃圾收集，而只收集一部分空间；只需要控制一次收集的空间的大小即可控制并减少停顿的时间&lt;/p&gt;
-
-&lt;p&gt;渐进式垃圾收集算法一般是按代收集，通过控制每一个代(除了成熟对象空间)的大小即可控制最长停顿时长，但最老的那个代(成熟对象空间)的大小是无法给定最大上限的(因为不适合放到其他代的对象都会放到成熟对象空间)，火车算法就是为了能在成熟对象空间中渐进的收集垃圾对象而发明的&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;是什么？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;火车算法把 成熟对象空间 按固定长度的内存块进行划分，每个固定长度的内存块叫“车厢”，多个“车厢”组成的内存块成为一列“火车”，而成熟对象空间里就是一系列“火车”组成的空间&lt;/p&gt;
-
-&lt;p&gt;“火车”按创建的顺序进行编号，编号小的火车里的对象都是比较老的对象，同样，一列“火车”里的“车厢”也按照创建的顺序进行编号，新创建的“车厢”会被放到“火车”尾部&lt;/p&gt;
-
-&lt;p&gt;对象从年轻的代中晋升到成熟对象区间时，或者把它放到已存在的(非最小号吗的)“火车”的尾部“车厢”，或者新建个“火车”并放进去&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../../../styles/images/java_gc.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;怎么样?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;火车算法执行时首先检查序号最小的火车内的对象 是否被 成熟对象区以外或其他火车的对象引用，没有则回收这列火车&lt;/p&gt;
-
-&lt;p&gt;否则检查序号最小的火车的序号最小的车厢：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;检查是否有从 对象成熟区 以外的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到本列火车外的其他车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到其他火车，若其他火车的车厢满了则新建一个车厢&lt;/li&gt;
-  &lt;li&gt;检查是否有从 其他火车 的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到发起引用的火车的车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到发起引用的火车，若车厢满了则新建一个车厢&lt;/li&gt;
-  &lt;li&gt;检查是否有从 本列火车内的其他车厢 的引用 指向 当前车厢内的对象，若有则把 被引用的对象转移到最后一个车厢，然后检查被转移的对象是否有指向原车厢的对象，有则递归转移到最后一个车厢，若车厢满了则新建一个车厢&lt;/li&gt;
-  &lt;li&gt;然后回收当前车厢&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;通过控制车厢的大小即可控制回收的停顿时间&lt;/p&gt;
-
-&lt;p&gt;算法为了让检查和转移对象更高效，使用了一种 记忆集合 的数据结构，每个车厢和火车都有一个记忆集合，记忆集合里存放的是对车厢或火车的外部引用，所以当记忆集合为空时则可回收车厢或火车，当转移对象以后，也可以方便的使用记忆集合的信息更新外部引用；但转移流行对象则会导致需要更新大量外部引用&lt;/p&gt;
-</description>
-        <pubDate>Wed, 07 Dec 2016 10:00:00 +0800</pubDate>
-        <link>/2016/12/07/DEEP_IN_JAVA_java_gc/</link>
-        <guid isPermaLink="true">/2016/12/07/DEEP_IN_JAVA_java_gc/</guid>
-        
-        <category>Java</category>
-        
-        
-        <category>技术</category>
-        
-      </item>
-    
-      <item>
-        <title>Java的类型装载</title>
-        <description>
-&lt;p&gt;&lt;strong&gt;本文是对Java的类型装载的汇总和个人理解&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Java有多种类装载器，其中一个虚拟机内置的叫 启动类装载器，用户自定义的类装载器都需要继承ClassLoader&lt;/p&gt;
-
-&lt;p&gt;有两种方式可以触发类型的装载，一种是使用forName、classloader等来装载类型，一种是程序使用了新的类型时虚拟机解析符号引用前装载类型&lt;/p&gt;
-
-&lt;p&gt;无论哪种方式触发类型装载，都需要装载器进行装载；当一个装载器装载类型时使用 双亲委派模型，也就是本装载器 装载类之前先用parent装载器来装载；除了启动类装载器外，每个装载器都有一个parent装载器，这样就组成了一个装载器链；所以每个类装载器得到装载请求时可能是通过其他装载器装载的；&lt;/p&gt;
-
-&lt;p&gt;真正装载类型的装载器被称为 定义类型装载器，装载器链上从 定义类型装载器 到 开始接受装载请求的装载器 都被称为 初始类型装载器&lt;/p&gt;
-
-&lt;p&gt;每个被装载的类型都有一个指向其 定义类型装载器的引用；而每个装载器都会保存一个类型列表，列表里存放的每个类型 都是该装载器作为其初始类型装载器的类型&lt;/p&gt;
-
-&lt;p&gt;一个类型的装载流程：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;当一个装载器接收到装载请求时，首先检查其类型列表里是否已经存在该类型，有则返回该类型&lt;/li&gt;
-  &lt;li&gt;否则委托parent装载器装载类型，这个委托流程会一直把请求传递到 启动类型装载器&lt;/li&gt;
-  &lt;li&gt;若parent装载器没办法装载类型(它会抛异常)，则由本装载器装载该类型，若装载不了则抛异常&lt;/li&gt;
-  &lt;li&gt;若装载成功，则新类型会有一个指向本装载器的引用，并且装载器链上从本装载开始到开始受到装载请求的装载器都会在其类型列表里增加一个新类型&lt;/li&gt;
-  &lt;li&gt;当一个类型装载了以后，虚拟机会检查其类型信息并使用本类型的 定义类型装载器 装载其父类型和所实现的接口类型(自定义的类型装载器在调用defineClass的时候进行)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;装载约束&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;当两个由不同 定义类型装载器 装载的对象引用同一个限定名(包名)的类型时，在这两个定义类型装载器加载该类型的过程中，该类型必须由同一个 装载器加载&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;自定义装载器例子&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;覆盖findClass，在此方法里获取class文件格式的二进制流并使用defineClass创建 Class实例并返回&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-class MyClassLoader extends ClassLoader {
-
-	private String basePath;
-
-	MyClassLoader(String basePath) {
-		this.basePath = basePath;
-	}
-
-	MyClassLoader(ClassLoader parent, String basePath) {
-		super(parent);
-		this.basePath = basePath;
-	}
-
-	@Override
-	protected Class&amp;lt;?&amp;gt; findClass(String className) throws ClassNotFoundException {
-		byte[] classData = getTypeFromBasePath(className);
-
-		// Try to load the class from base path directory
-		if (classData == null) {
-			throw new ClassNotFoundException();
-		}
-		
-		// Parse the class binary data to create a Class instance 
-		return defineClass(className, classData, 0, classData.length);
-	}
-
-	private byte[] getTypeFromBasePath(String typeName) {
-		String fileName = basePath + File.separator + typeName.replace(&quot;.&quot;, File.pathSeparator) + &quot;.class&quot;;
-
-		try {
-			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(fileName));
-			ByteArrayOutputStream out = new ByteArrayOutputStream();
-
-			int c = bis.read();
-			while (c != -1) {
-				out.write(c);
-				c = bis.read();
-			}
-			return out.toByteArray();
-		} catch (IOException e) {
-			return null;
-		}
-	}
-}
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 07 Dec 2016 10:00:00 +0800</pubDate>
-        <link>/2016/12/07/DEEP_IN_JAVA_java_class_loading/</link>
-        <guid isPermaLink="true">/2016/12/07/DEEP_IN_JAVA_java_class_loading/</guid>
         
         <category>Java</category>
         
