@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,26 +449,26 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">应用的系统需求</a></li>
-  <li><a href="#jvm" id="markdown-toc-jvm">JVM调优的步骤</a></li>
-  <li><a href="#jvm-gc" id="markdown-toc-jvm-gc">JVM GC调优</a>    <ul>
-      <li><a href="#gc" id="markdown-toc-gc">GC的自适应调优</a>        <ul>
-          <li><a href="#gc-1" id="markdown-toc-gc-1">并行GC调优建议</a></li>
-          <li><a href="#g1" id="markdown-toc-g1">G1调优建议</a></li>
+  <li><a href="#应用的系统需求" id="markdown-toc-应用的系统需求">应用的系统需求</a></li>
+  <li><a href="#jvm调优的步骤" id="markdown-toc-jvm调优的步骤">JVM调优的步骤</a></li>
+  <li><a href="#jvm-gc调优" id="markdown-toc-jvm-gc调优">JVM GC调优</a>    <ul>
+      <li><a href="#gc的自适应调优" id="markdown-toc-gc的自适应调优">GC的自适应调优</a>        <ul>
+          <li><a href="#并行gc调优建议" id="markdown-toc-并行gc调优建议">并行GC调优建议</a></li>
+          <li><a href="#g1调优建议" id="markdown-toc-g1调优建议">G1调优建议</a></li>
         </ul>
       </li>
-      <li><a href="#gc-2" id="markdown-toc-gc-2">复杂的GC调优</a></li>
-      <li><a href="#gcjvm" id="markdown-toc-gcjvm">调优GC并确定JVM内存使用量</a></li>
-      <li><a href="#gc-3" id="markdown-toc-gc-3">调优GC延迟</a>        <ul>
-          <li><a href="#gc-4" id="markdown-toc-gc-4">对并行GC的调优</a></li>
-          <li><a href="#cms" id="markdown-toc-cms">对CMS的调优</a></li>
+      <li><a href="#复杂的gc调优" id="markdown-toc-复杂的gc调优">复杂的GC调优</a></li>
+      <li><a href="#调优gc并确定jvm内存使用量" id="markdown-toc-调优gc并确定jvm内存使用量">调优GC并确定JVM内存使用量</a></li>
+      <li><a href="#调优gc延迟" id="markdown-toc-调优gc延迟">调优GC延迟</a>        <ul>
+          <li><a href="#对并行gc的调优" id="markdown-toc-对并行gc的调优">对并行GC的调优</a></li>
+          <li><a href="#对cms的调优" id="markdown-toc-对cms的调优">对CMS的调优</a></li>
         </ul>
       </li>
-      <li><a href="#gc-5" id="markdown-toc-gc-5">调优GC的吞吐量</a></li>
-      <li><a href="#gc-6" id="markdown-toc-gc-6">GC调优用到的命令行参数</a></li>
+      <li><a href="#调优gc的吞吐量" id="markdown-toc-调优gc的吞吐量">调优GC的吞吐量</a></li>
+      <li><a href="#gc调优用到的命令行参数" id="markdown-toc-gc调优用到的命令行参数">GC调优用到的命令行参数</a></li>
     </ul>
   </li>
-  <li><a href="#section-1" id="markdown-toc-section-1">参考文献</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ul>
 
 <p><strong>本文是对JVM性能调优的基本知识的汇总和个人理解</strong></p>
@@ -456,7 +484,7 @@
 <p>根据应用的行为特征来配置JVM的启动参数，让应用获得其需要的性能<br />
 性能数据一般包括：应用启动时间，内存使用量，吞吐率，延迟</p>
 
-<h2 id="section">应用的系统需求</h2>
+<h2 id="应用的系统需求">应用的系统需求</h2>
 
 <p>在进行JVM调优之前，首先要确定应用的系统需求，这个需求应该在设计阶段已经定义好了，系统需求包括：</p>
 
@@ -469,7 +497,7 @@
   <li>可管理性：对维护，运行，部署系统所产生的开销，可用性的提高很可能会牺牲掉可管理型</li>
 </ul>
 
-<h2 id="jvm">JVM调优的步骤</h2>
+<h2 id="jvm调优的步骤">JVM调优的步骤</h2>
 
 <p>根据定好的系统需求按照流程来对JVM进行调优，调优时应针对系统运行进入稳定阶段的运行情况来调优，以下是JVM调优的步骤(图源自《Java性能优化权威指南》)：</p>
 
@@ -484,7 +512,7 @@
 
 <p>由于调优的某个过程会影响到先前的系统需求、或者为了达到某个需求需要调整以前步骤的调优，所以调优的过程是一个重复多次步骤的过程</p>
 
-<h2 id="jvm-gc">JVM GC调优</h2>
+<h2 id="jvm-gc调优">JVM GC调优</h2>
 
 <p><strong>优化GC是什么？</strong></p>
 
@@ -512,7 +540,7 @@
 
 <p>这些属性都是不可兼得的，只能取舍</p>
 
-<h3 id="gc">GC的自适应调优</h3>
+<h3 id="gc的自适应调优">GC的自适应调优</h3>
 
 <p>GC的自适应调优对人来说是最简单的，需要的工作量最少，这种调优方法叫人类工程学(Ergonomics 有道翻译)，简单地说就是JVM根据 <em>应用类型</em> 、应用的运行情况和 <em>性能指标</em> 来对JVM和GC进行配置和调整</p>
 
@@ -525,7 +553,7 @@
 server型的默认配置是 并行GC，[1/64总内存大小, 1/4总内存大小]的Java堆，server型运行时编译器<br />
 不同的硬件平台具体的默认配置请参考<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#ergonomics">HotSpot优化指南</a></p>
 
-<h4 id="gc-1">并行GC调优建议</h4>
+<h4 id="并行gc调优建议">并行GC调优建议</h4>
 
 <p>并行GC还会根据应用程序的运行情况和性能需求在初始大小和最大值中自动调整Java堆的大小</p>
 
@@ -542,7 +570,7 @@ server型的默认配置是 并行GC，[1/64总内存大小, 1/4总内存大小]
   <li>当不能忍受GC的停顿时长时需要设置最大停顿时长，但这导致现有的吞吐量的下降</li>
 </ul>
 
-<h4 id="g1">G1调优建议</h4>
+<h4 id="g1调优建议">G1调优建议</h4>
 
 <p>G1跟并行GC一样是一种自适应GC，所以最简单的方法就是通过设置其XX:G1NewSizePercent来满足最大停顿时长的需求，设置XX:InitiatingHeapOccupancyPercent、XX:G1MixedGCLiveThresholdPercent、XX:G1MixedGCCountTarget、XX:G1HeapWastePercent、XX:G1OldCSetRegionThresholdPercent来满足吞吐率的需求，设置XX:Xmx来满足内存占用的需求</p>
 
@@ -558,7 +586,7 @@ server型的默认配置是 并行GC，[1/64总内存大小, 1/4总内存大小]
 
 <p>G1调优时避免固定新生代的大小，这样会覆盖最大停顿时间配置</p>
 
-<h3 id="gc-2">复杂的GC调优</h3>
+<h3 id="复杂的gc调优">复杂的GC调优</h3>
 
 <p>当GC的自适应调优不能满足应用的性能需求时就有必要进行更细致的调优<br />
 调优手段包括利用JVM的监控命令参数来打印GC的各种信息，根据性能需求调整GC的堆大小和各个代的大小，根据应用的性能需求和行为选择GC的种类</p>
@@ -574,7 +602,7 @@ server型的默认配置是 并行GC，[1/64总内存大小, 1/4总内存大小]
 
 <p>在根据性能需求和应用的行为特点选择了一种GC以后，可以通过调整堆和代的大小来调整应用的停顿和吞吐率，由于不同的的GC有各自的特点，所以其调优的方法和重点不一样</p>
 
-<h3 id="gcjvm">调优GC并确定JVM内存使用量</h3>
+<h3 id="调优gc并确定jvm内存使用量">调优GC并确定JVM内存使用量</h3>
 
 <p>首先要确定GC所需要的内存使用量，然后作为参考来确定JVM的内存使用量是否合适 <br />
 通过获取活跃数据的大小能确定GC所需的内存使用量<br />
@@ -588,7 +616,7 @@ Java堆大小并不代表Java应用程序大小，堆大小只是一部分，还
 
 <p>经过调整Java堆大小，对JVM内存大小的影响则取决于应用的因素了</p>
 
-<h3 id="gc-3">调优GC延迟</h3>
+<h3 id="调优gc延迟">调优GC延迟</h3>
 
 <p>对应用的延迟制定的系统需求主要包括4点：</p>
 
@@ -613,7 +641,7 @@ Java堆大小并不代表Java应用程序大小，堆大小只是一部分，还
 <p>通过调整GC的参数来使上述GC延迟满足系统的延迟需求<br />
 根据Minor GC的持续时间和频率调整新生代的大小，根据Full GC的持续时间和频率调整老年代的大小和决定是否需要切换到新的垃圾收集器</p>
 
-<h4 id="gc-4">对并行GC的调优</h4>
+<h4 id="对并行gc的调优">对并行GC的调优</h4>
 
 <p><strong>第一步，调整新生代大小</strong></p>
 
@@ -627,7 +655,7 @@ Java堆大小并不代表Java应用程序大小，堆大小只是一部分，还
 
 <p>调整堆大小时需要符合几个准则：老年代大小至少是活跃数据的1.5倍，新生代至少为堆大小的10%，JVM大小不能超过可用物理内存；</p>
 
-<h4 id="cms">对CMS的调优</h4>
+<h4 id="对cms的调优">对CMS的调优</h4>
 
 <p><strong>第一步，调整Survivor</strong></p>
 
@@ -652,13 +680,13 @@ Java堆大小并不代表Java应用程序大小，堆大小只是一部分，还
   <li>改变JVM的部署模式，减少单个JVM的负荷</li>
 </ol>
 
-<h3 id="gc-5">调优GC的吞吐量</h3>
+<h3 id="调优gc的吞吐量">调优GC的吞吐量</h3>
 
 <p>调优吞吐量其实就是尽量降低Minor GC和Full GC的频率，例如可以是增大Eden空间降低Minor GC频率，例如增大Survivor空间来让提升发生之前都被Minor GC收集了，例如增大老年代来降低Full GC频率等</p>
 
 <p>另外还需要调整并发GC使用的CPU数量来控制GC对应用吞吐率的影响</p>
 
-<h3 id="gc-6">GC调优用到的命令行参数</h3>
+<h3 id="gc调优用到的命令行参数">GC调优用到的命令行参数</h3>
 
 <p><strong>优化GC时一般用到的监控命令行参数</strong></p>
 
@@ -705,7 +733,7 @@ Java堆大小并不代表Java应用程序大小，堆大小只是一部分，还
 -XX:G1OldCSetRegionThresholdPercent G1一次混合收集中老年代区块数占收集区块的数上限<br />
 -XX:G1ReservePercent G1预留给拷贝阶段使用的空间</p>
 
-<h2 id="section-1">参考文献</h2>
+<h2 id="参考文献">参考文献</h2>
 
 <p><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/">Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide</a></p>
 

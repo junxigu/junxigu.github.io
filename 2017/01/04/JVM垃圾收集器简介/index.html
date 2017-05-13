@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,14 +449,14 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#gc" id="markdown-toc-gc">GC进行内存回收的普遍方法</a></li>
-  <li><a href="#gc--" id="markdown-toc-gc--">GC进行 次要收集 的方法</a></li>
-  <li><a href="#gc-1" id="markdown-toc-gc-1">序列化GC</a></li>
-  <li><a href="#gc-gc" id="markdown-toc-gc-gc">并行GC(又名 吞吐率GC)</a></li>
-  <li><a href="#gcthe-mostly-concurrent-collectors" id="markdown-toc-gcthe-mostly-concurrent-collectors">并发GC(The Mostly Concurrent Collectors)</a></li>
-  <li><a href="#gccms" id="markdown-toc-gccms">并发标记清除GC(CMS)</a></li>
-  <li><a href="#gcg1" id="markdown-toc-gcg1">垃圾优先GC(G1)</a></li>
-  <li><a href="#section" id="markdown-toc-section">参考文献</a></li>
+  <li><a href="#gc进行内存回收的普遍方法" id="markdown-toc-gc进行内存回收的普遍方法">GC进行内存回收的普遍方法</a></li>
+  <li><a href="#gc进行-次要收集-的方法" id="markdown-toc-gc进行-次要收集-的方法">GC进行 次要收集 的方法</a></li>
+  <li><a href="#序列化gc" id="markdown-toc-序列化gc">序列化GC</a></li>
+  <li><a href="#并行gc又名-吞吐率gc" id="markdown-toc-并行gc又名-吞吐率gc">并行GC(又名 吞吐率GC)</a></li>
+  <li><a href="#并发gcthe-mostly-concurrent-collectors" id="markdown-toc-并发gcthe-mostly-concurrent-collectors">并发GC(The Mostly Concurrent Collectors)</a></li>
+  <li><a href="#并发标记清除gccms" id="markdown-toc-并发标记清除gccms">并发标记清除GC(CMS)</a></li>
+  <li><a href="#垃圾优先gcg1" id="markdown-toc-垃圾优先gcg1">垃圾优先GC(G1)</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ul>
 
 <p><strong>本文是对JVM垃圾收集器的基本知识的汇总和个人理解</strong></p>
@@ -464,7 +492,7 @@
   <li>并发GC：适合占用内存较多，多CPU的应用，对延迟有要求的应用</li>
 </ul>
 
-<h2 id="gc">GC进行内存回收的普遍方法</h2>
+<h2 id="gc进行内存回收的普遍方法">GC进行内存回收的普遍方法</h2>
 
 <p>垃圾收集必须要完成两件事：<em>垃圾对象的检测</em> 和 <em>内存空间回收</em></p>
 
@@ -505,7 +533,7 @@
 
 <p>由于应用在运行过程中，在不同的阶段会对内存有不同的需求，GC通过自动的调整来增加或减少内存回收所使用的资源</p>
 
-<h2 id="gc--">GC进行 次要收集 的方法</h2>
+<h2 id="gc进行-次要收集-的方法">GC进行 次要收集 的方法</h2>
 
 <p>Java的分代GC的 <em>次要收集</em> 方法逻辑上都相同，所以此处描述的次要收集方法对所有GC适用</p>
 
@@ -520,7 +548,7 @@
 
 <p>Survivor中没有足够空间存放存活对象时，存活时间不够长的对象会被拷贝到老年代，容易导致 主要收集</p>
 
-<h2 id="gc-1">序列化GC</h2>
+<h2 id="序列化gc">序列化GC</h2>
 
 <p>序列化GC在进行垃圾回收时会把所有的线程都停掉(Stop the world (STW))，并且用单线程的方式来进行回收，因此它适合单CPU，内存需求不高的应用；对于这类应用，它效率很高</p>
 
@@ -528,7 +556,7 @@
 
 <p>序列化GC使用的主要收集方法也很简单，当内存占用达到阈值时触发主要收集；首先通过 <em>跟踪</em> 找到所有存活的对象，然后通过 <em>压缩收集</em> 方法来回收老年代空间</p>
 
-<h2 id="gc-gc">并行GC(又名 吞吐率GC)</h2>
+<h2 id="并行gc又名-吞吐率gc">并行GC(又名 吞吐率GC)</h2>
 
 <p>并行GC和序列化GC在 次要收集 和 主要收集 使用一样的方法，都会让应用程序停止，不同的是并行GC使用多线程同时进行内存回收来减少停顿时间，获取高吞吐率</p>
 
@@ -538,7 +566,7 @@
 
 <p>当98%的时间用在垃圾回收而只有不到2%的空间得到回收，就会抛出OutOfMemoryException(OOME)</p>
 
-<h2 id="gcthe-mostly-concurrent-collectors">并发GC(The Mostly Concurrent Collectors)</h2>
+<h2 id="并发gcthe-mostly-concurrent-collectors">并发GC(The Mostly Concurrent Collectors)</h2>
 
 <p>并发GC通过使用特别的 <em>主要收集</em> 算法来使得在主要收集时，大部分的回收工作能和应用程序并发进行来减少应用的停顿时间，但这样会需要更长的主要收集阶段，并一直占用这线程资源，这样导致了吞吐率下降</p>
 
@@ -554,7 +582,7 @@
 
 <p>和并行GC一样，当98%的时间用在垃圾回收而只有不到2%的空间得到回收，就会抛出OOOME</p>
 
-<h2 id="gccms">并发标记清除GC(CMS)</h2>
+<h2 id="并发标记清除gccms">并发标记清除GC(CMS)</h2>
 
 <p>CMS在进行主要收集时，某些步骤中和应用并发执行，减少应用的停顿时长，适合在多核，中到大规模数据量，对延迟有一定要求的应用中使用</p>
 
@@ -587,7 +615,7 @@
 
 <p>CMS有一个<em>渐进式模式</em>，这个模式在JDK8时开始弃用，将来有可能会被去掉；这模式适合在1或2核的机器上</p>
 
-<h2 id="gcg1">垃圾优先GC(G1)</h2>
+<h2 id="垃圾优先gcg1">垃圾优先GC(G1)</h2>
 
 <p>和CMS差不多，G1在主要收集的一些步骤和应用是并发的，所以减少应用的停顿时长，适合在多核，大规模数据量，对延迟和吞吐率都有一定要求的应用中使用；当应用有以下任何一种特性时非常适合用G1：</p>
 
@@ -639,7 +667,7 @@
 大对象是不会在主要收集中被拷贝的，只有在全收集时G1才压缩大对象区块<br />
 每个大对象区块之间很可能会有空隙，所以会产生碎片</p>
 
-<h2 id="section">参考文献</h2>
+<h2 id="参考文献">参考文献</h2>
 
 <p><a href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/G1GettingStarted/index.html">Getting Started with the G1 Garbage Collector</a><br />
 <a href="http://www.drdobbs.com/jvm/g1-javas-garbage-first-garbage-collector/219401061?pgno=1">Java’s Garbage First Garbage Collector</a></p>

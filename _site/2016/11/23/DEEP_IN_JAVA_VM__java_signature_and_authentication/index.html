@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,8 +449,8 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java--" id="markdown-toc-java--">Java对 公私钥和证书 的支持</a></li>
-  <li><a href="#java---1" id="markdown-toc-java---1">Java对 使用私钥签名对代码 的支持</a></li>
+  <li><a href="#java对-公私钥和证书-的支持" id="markdown-toc-java对-公私钥和证书-的支持">Java对 公私钥和证书 的支持</a></li>
+  <li><a href="#java对-使用私钥签名对代码-的支持" id="markdown-toc-java对-使用私钥签名对代码-的支持">Java对 使用私钥签名对代码 的支持</a></li>
 </ul>
 
 <p><strong>本文是对Java 代码签名和认证的汇总和个人理解</strong></p>
@@ -431,7 +459,7 @@
 
 <p>Java对代码进行数字签名和认证需要使用公私钥和证书，对数字签名的原理不熟悉可先阅读这篇简单易懂的<a href="http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html" title="数字签名是什么?">博客</a></p>
 
-<h3 id="java--">Java对 公私钥和证书 的支持</h3>
+<h3 id="java对-公私钥和证书-的支持">Java对 公私钥和证书 的支持</h3>
 
 <p>Java提供了内置的工具 keytool 给用户创建 公私钥和证书，用户创建的公私钥和证书是储存在一个 keystore 文件中，keystore文件中可以储存多对公私钥和证书，每对公私钥和证书会与一个 别名 相关联，用户使用 别名 来从keystore文件里获取公私钥和证书</p>
 
@@ -450,7 +478,7 @@ keytool -genkey -alias example_alias -keypass example_key_pass -validity 10000 -
 </code></pre>
 </div>
 
-<h3 id="java---1">Java对 使用私钥签名对代码 的支持</h3>
+<h3 id="java对-使用私钥签名对代码-的支持">Java对 使用私钥签名对代码 的支持</h3>
 
 <p>Java能对jar包进行签名，所以需要把class文件放到jar包里，并且能对签名后的jar包进行认证</p>
 

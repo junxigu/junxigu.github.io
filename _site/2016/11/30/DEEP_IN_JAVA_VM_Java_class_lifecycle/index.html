@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,15 +449,15 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">装载</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">连接</a>    <ul>
-      <li><a href="#section-2" id="markdown-toc-section-2">验证</a></li>
-      <li><a href="#section-3" id="markdown-toc-section-3">准备</a></li>
-      <li><a href="#section-4" id="markdown-toc-section-4">解析</a></li>
+  <li><a href="#装载" id="markdown-toc-装载">装载</a></li>
+  <li><a href="#连接" id="markdown-toc-连接">连接</a>    <ul>
+      <li><a href="#验证" id="markdown-toc-验证">验证</a></li>
+      <li><a href="#准备" id="markdown-toc-准备">准备</a></li>
+      <li><a href="#解析" id="markdown-toc-解析">解析</a></li>
     </ul>
   </li>
-  <li><a href="#section-5" id="markdown-toc-section-5">初始化</a></li>
-  <li><a href="#section-6" id="markdown-toc-section-6">卸载</a></li>
+  <li><a href="#初始化" id="markdown-toc-初始化">初始化</a></li>
+  <li><a href="#卸载" id="markdown-toc-卸载">卸载</a></li>
 </ul>
 
 <p><strong>本文是对Java 类型的生命周期的汇总和个人理解</strong></p>
@@ -457,7 +485,7 @@
 
 <p>class的装载，链接和初始化 必须按照顺序进行，但链接中的 部分对class的验证过程会在装载中执行，链接中的解析可以延迟到初始化之后进行</p>
 
-<h2 id="section">装载</h2>
+<h2 id="装载">装载</h2>
 
 <p>装载的过程是一个动态的扩展程序的过程，装载阶段需要完成3项任务</p>
 
@@ -467,9 +495,9 @@
   <li>创建该类型的Class实例</li>
 </ul>
 
-<h2 id="section-1">连接</h2>
+<h2 id="连接">连接</h2>
 
-<h3 id="section-2">验证</h3>
+<h3 id="验证">验证</h3>
 
 <p>对class格式的二进制流的验证部分发生在装载期间(如检查class的文件格式，长度)，部分发生在解析期间(验证符号引用)，除此以外，验证阶段验证的内容包括各类二进制兼容性：</p>
 
@@ -482,21 +510,21 @@
   <li>检查字节码的完整性</li>
 </ul>
 
-<h3 id="section-3">准备</h3>
+<h3 id="准备">准备</h3>
 
 <p>JVM为类变量分配内存并初始化为默认值</p>
 
-<h3 id="section-4">解析</h3>
+<h3 id="解析">解析</h3>
 
 <p>对常量池中的符号引用替换为直接引用，解析的时候可能会触发新类型的装载、准备</p>
 
 <p>指向类型、类变量、类方法的直接引用很可能是指向方法区的本地指针，而指向实例变量和实例方法的直接引用都是偏移</p>
 
-<h2 id="section-5">初始化</h2>
+<h2 id="初始化">初始化</h2>
 
 <p>若父类未初始化受限初始化父类，然后执行类的静态初始化语句来初始化类变量的值</p>
 
-<h2 id="section-6">卸载</h2>
+<h2 id="卸载">卸载</h2>
 
 <p>当一个类型的Class对象在垃圾收集时不可达 就可以触发垃圾回收(具体的回收策略由JVM的具体实现决定)，当一个类的对象能可达，则垃圾回收器则通过该对象找到方法区中的类型信息，通过方法区中的Class对象引用 触及它</p>
 

@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,16 +449,16 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java" id="markdown-toc-java">Java基本的多线程应用</a>    <ul>
-      <li><a href="#section" id="markdown-toc-section">封装任务</a></li>
-      <li><a href="#section-1" id="markdown-toc-section-1">创建和管理线程</a></li>
-      <li><a href="#section-2" id="markdown-toc-section-2">配置线程</a></li>
+  <li><a href="#java基本的多线程应用" id="markdown-toc-java基本的多线程应用">Java基本的多线程应用</a>    <ul>
+      <li><a href="#封装任务" id="markdown-toc-封装任务">封装任务</a></li>
+      <li><a href="#创建和管理线程" id="markdown-toc-创建和管理线程">创建和管理线程</a></li>
+      <li><a href="#配置线程" id="markdown-toc-配置线程">配置线程</a></li>
     </ul>
   </li>
-  <li><a href="#section-3" id="markdown-toc-section-3">线程的互斥</a></li>
-  <li><a href="#section-4" id="markdown-toc-section-4">线程的协作</a></li>
-  <li><a href="#section-5" id="markdown-toc-section-5">线程的死锁</a></li>
-  <li><a href="#section-6" id="markdown-toc-section-6">任务的终结</a></li>
+  <li><a href="#线程的互斥" id="markdown-toc-线程的互斥">线程的互斥</a></li>
+  <li><a href="#线程的协作" id="markdown-toc-线程的协作">线程的协作</a></li>
+  <li><a href="#线程的死锁" id="markdown-toc-线程的死锁">线程的死锁</a></li>
+  <li><a href="#任务的终结" id="markdown-toc-任务的终结">任务的终结</a></li>
 </ul>
 
 <p><strong>本文是对Java语言多线程的基本知识的汇总和个人理解</strong></p>
@@ -441,7 +469,7 @@
 
 <p>以下内容中的代码均出自《Java编程思想》</p>
 
-<h2 id="java">Java基本的多线程应用</h2>
+<h2 id="java基本的多线程应用">Java基本的多线程应用</h2>
 
 <p>在Java的多线程应用中，设计到几个基本的概念需要首先了解</p>
 
@@ -459,7 +487,7 @@
   <li>对线程进行配置，如优先级，deamon等属性</li>
 </ul>
 
-<h3 id="section">封装任务</h3>
+<h3 id="封装任务">封装任务</h3>
 
 <p>当使用线程时，其实是想在不同的线程上执行不同的任务，所以需要先创建任务，创建任务可以使用两种接口：Runnable和Callable</p>
 
@@ -483,7 +511,7 @@ class TaskWithResult implements Callable&lt;String&gt; {
 
 <p>可见，区别就是Callable的接口有返回值，也就是线程执行完以后能返回结果</p>
 
-<h3 id="section-1">创建和管理线程</h3>
+<h3 id="创建和管理线程">创建和管理线程</h3>
 
 <p>所有的任务都需要线程来驱动，然后不同的任务就可以在不同的线程驱动下并发的运行了</p>
 
@@ -566,7 +594,7 @@ class TaskWithResult implements Callable&lt;String&gt; {
 <p>当用线程池驱动Callable时，通过Future来获得返回结果<br />
 现在一般都是用线程池来提交任务，管理线程的生命周期</p>
 
-<h3 id="section-2">配置线程</h3>
+<h3 id="配置线程">配置线程</h3>
 
 <p>可以通过Thread的API来配置线程的一些属性，例如</p>
 
@@ -619,7 +647,7 @@ class DaemonFromFactory implements Runnable {
 
 <p>以上都是在使用多线程时用到的概念：任务，线程，线程池和它们用法的简单例子，对于这几个概念所对应的类和接口，Java提供了很多API，希望使用之前先多看看代码例子熟悉API</p>
 
-<h2 id="section-3">线程的互斥</h2>
+<h2 id="线程的互斥">线程的互斥</h2>
 
 <p>多线程的复杂在于不同的线程之间会互相影响，其中一种是不同的线程会共用资源，内存，I/O等；这些资源有时候是只能由一个线程从任务的开始到结束的过程中来独占的，不然在线程任务的中间被其他线程干扰后导致状态改变会引起问题<br />
 所以，多线程需要解决的一个重要问题是资源的互斥使用，这个问题其实可表现为两方面：原子性和可见性</p>
@@ -663,7 +691,7 @@ class DaemonFromFactory implements Runnable {
 
 <p>除了确保线程之间的互斥来解决冲突以外，其实有时可以避免冲突，例如用ThreadLocal火其他方法来使得线程不共享资源</p>
 
-<h2 id="section-4">线程的协作</h2>
+<h2 id="线程的协作">线程的协作</h2>
 
 <p>除了保持线程对资源的互斥使用外，还需要解决线程间的协作问题，也就是一个线程需的输入时另一个线程产生的输出，为了保证这两线程任务的顺序性和资源的互斥使用，Java API在锁之上提供了握手API：wait，notify，notifyAll</p>
 
@@ -760,7 +788,7 @@ condition.signalAll</p>
 
 <p>握手API是非常底层的线程协作API，Java API提供了一些高层的组件，这些组件的操作自动完成了握手的功能，例如BlockingQueue等，它们都更方便的使用</p>
 
-<h2 id="section-5">线程的死锁</h2>
+<h2 id="线程的死锁">线程的死锁</h2>
 
 <p>当多线程满足以下4个条件时能出现死锁：</p>
 
@@ -773,7 +801,7 @@ condition.signalAll</p>
 
 <p>为了防止死锁，只需要破坏以上其中一个条件即可</p>
 
-<h2 id="section-6">任务的终结</h2>
+<h2 id="任务的终结">任务的终结</h2>
 
 <p>当任务被终结时，线程会被回收<br />
 终结任务的方式就是通过标记位来通知任务需要终结自己</p>

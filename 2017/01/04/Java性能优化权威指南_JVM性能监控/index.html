@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,11 +449,11 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#jvm" id="markdown-toc-jvm">监控JVM垃圾回收</a></li>
-  <li><a href="#jit" id="markdown-toc-jit">监控JIT编译</a></li>
-  <li><a href="#section" id="markdown-toc-section">监控类加载</a></li>
-  <li><a href="#java" id="markdown-toc-java">监控Java应用</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">参考文献</a></li>
+  <li><a href="#监控jvm垃圾回收" id="markdown-toc-监控jvm垃圾回收">监控JVM垃圾回收</a></li>
+  <li><a href="#监控jit编译" id="markdown-toc-监控jit编译">监控JIT编译</a></li>
+  <li><a href="#监控类加载" id="markdown-toc-监控类加载">监控类加载</a></li>
+  <li><a href="#监控java应用" id="markdown-toc-监控java应用">监控Java应用</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ul>
 
 <p><strong>本文是对JVM性能监控的基本知识的汇总和个人理解</strong></p>
@@ -434,7 +462,7 @@
 
 <p>JVM的性能监控主要包括3种监控：垃圾回收、JIT编译 和 类加载</p>
 
-<h2 id="jvm">监控JVM垃圾回收</h2>
+<h2 id="监控jvm垃圾回收">监控JVM垃圾回收</h2>
 
 <p><strong>命令行工具</strong></p>
 
@@ -474,14 +502,14 @@
 
 <p>JConsole，VisualGC和VisualVM</p>
 
-<h2 id="jit">监控JIT编译</h2>
+<h2 id="监控jit编译">监控JIT编译</h2>
 
 <p>JIT编译器会对运行次数足够多的代码进行优化，对于优化不当的代码会进行逆优化甚至重新优化</p>
 
 <p>当需要监控优化，逆优化和重新优化的信息时可用命令行参数<br />
 -XX:+PrintCompilation</p>
 
-<h2 id="section">监控类加载</h2>
+<h2 id="监控类加载">监控类加载</h2>
 
 <p>当类加载到足够多的时候会触发垃圾回收，通过监控类加载信息能为优化提供信息</p>
 
@@ -489,14 +517,14 @@
 
 <p>可通过垃圾回收的日志信息来查看类的卸载</p>
 
-<h2 id="java">监控Java应用</h2>
+<h2 id="监控java应用">监控Java应用</h2>
 
 <p>监控应用的常用方法是查看应用的输出日志<br />
 当应用使用了内置的MBean时，可以使用兼容的JMX工具来监控这些MBean</p>
 
 <p>若要快速地定位应用的锁竞争信息，可以通过命令工具jstack来获取线程的转储信息</p>
 
-<h2 id="section-1">参考文献</h2>
+<h2 id="参考文献">参考文献</h2>
 
 <p>《Java性能优化权威指南》</p>
 

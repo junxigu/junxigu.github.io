@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,24 +449,24 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">性能问题的现状</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">性能分析的两种方法</a></li>
-  <li><a href="#section-2" id="markdown-toc-section-2">改善性能的3种活动</a></li>
-  <li><a href="#section-3" id="markdown-toc-section-3">参考文献</a></li>
+  <li><a href="#性能问题的现状" id="markdown-toc-性能问题的现状">性能问题的现状</a></li>
+  <li><a href="#性能分析的两种方法" id="markdown-toc-性能分析的两种方法">性能分析的两种方法</a></li>
+  <li><a href="#改善性能的3种活动" id="markdown-toc-改善性能的3种活动">改善性能的3种活动</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
 </ul>
 
 <p><strong>本文是对Java项目性能优化的基本知识的汇总和个人理解</strong></p>
 
 <hr />
 
-<h2 id="section">性能问题的现状</h2>
+<h2 id="性能问题的现状">性能问题的现状</h2>
 
 <p>传统的项目开发过程：分析-&gt;设计-&gt;编码-&gt;测试，缺少对性能问题的考虑，导致开发出来的系统很可能不符合性能的需求</p>
 
 <p>应该在分析的阶段就提炼出性能的需求，以用例的形式表达处理，在设计阶段加以考虑潜在的新能问题，并在测试阶段之前增加性能测试用例和分析来弥补，所以最终的开发流程是：<br />
 分析-&gt;设计-&gt;编码-&gt;性能测试-&gt;测试</p>
 
-<h2 id="section-1">性能分析的两种方法</h2>
+<h2 id="性能分析的两种方法">性能分析的两种方法</h2>
 
 <p>通过从不同的方向来寻找可优化的空间</p>
 
@@ -450,7 +478,7 @@
 <p>很多时候，CPU的架构会对应用的性能起到关键的影响，所以需要恰当的选择,例如多核和每核多硬件线程比多CPU更适合需要大量线程的应用，因为当CPU就绪，而某个硬件线程所需的资源未就绪时，可以在下一个时钟周期内切换到同CPU中的另一个硬件线程，而单硬件线程的CPU切换线程需要耗费数百个时钟周期；<br />
 另一方面，多硬件线程的CPU的时钟频率比较慢，所以当应用所需的线程不多时，单硬件线程的CPU的性能要比多硬件线程的CPU要好</p>
 
-<h2 id="section-2">改善性能的3种活动</h2>
+<h2 id="改善性能的3种活动">改善性能的3种活动</h2>
 
 <ul>
   <li>性能监控：以非浸入式的方式收集和查看应用的性能数据</li>
@@ -458,7 +486,7 @@
   <li>性能调优：通过更改运行配置参数，代码等多种方式来改善应用的性能，一般在性能监控和性能分析后进行</li>
 </ul>
 
-<h2 id="section-3">参考文献</h2>
+<h2 id="参考文献">参考文献</h2>
 
 <p>《Java性能优化权威指南》</p>
 

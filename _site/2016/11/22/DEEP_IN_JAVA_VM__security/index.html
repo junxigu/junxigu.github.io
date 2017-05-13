@@ -110,7 +110,35 @@
       
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
-            <li><a href="#month_2017_February">February</a></li>
+            <li><a href="#month_2017_May">May</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -421,13 +449,13 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#java-" id="markdown-toc-java-">Java 安全性是什么</a></li>
-  <li><a href="#java--1" id="markdown-toc-java--1">Java 为什么需要安全性</a></li>
-  <li><a href="#java--2" id="markdown-toc-java--2">Java 怎么样实现安全性</a>    <ul>
-      <li><a href="#section" id="markdown-toc-section">类加载器体系结构</a></li>
-      <li><a href="#class" id="markdown-toc-class">class文件检验器</a></li>
-      <li><a href="#java" id="markdown-toc-java">Java虚拟机中内置的安全特性</a></li>
-      <li><a href="#java-api" id="markdown-toc-java-api">安全管理器和Java API</a></li>
+  <li><a href="#java-安全性是什么" id="markdown-toc-java-安全性是什么">Java 安全性是什么</a></li>
+  <li><a href="#java-为什么需要安全性" id="markdown-toc-java-为什么需要安全性">Java 为什么需要安全性</a></li>
+  <li><a href="#java-怎么样实现安全性" id="markdown-toc-java-怎么样实现安全性">Java 怎么样实现安全性</a>    <ul>
+      <li><a href="#类加载器体系结构" id="markdown-toc-类加载器体系结构">类加载器体系结构</a></li>
+      <li><a href="#class文件检验器" id="markdown-toc-class文件检验器">class文件检验器</a></li>
+      <li><a href="#java虚拟机中内置的安全特性" id="markdown-toc-java虚拟机中内置的安全特性">Java虚拟机中内置的安全特性</a></li>
+      <li><a href="#安全管理器和java-api" id="markdown-toc-安全管理器和java-api">安全管理器和Java API</a></li>
     </ul>
   </li>
 </ul>
@@ -436,15 +464,15 @@
 
 <hr />
 
-<h2 id="java-">Java 安全性是什么</h2>
+<h2 id="java-安全性是什么">Java 安全性是什么</h2>
 
 <p>Java 通过其安全模型 来保护终端用户免受从网路下载的、来自不可靠来源的、恶意程序的侵犯</p>
 
-<h2 id="java--1">Java 为什么需要安全性</h2>
+<h2 id="java-为什么需要安全性">Java 为什么需要安全性</h2>
 
 <p>Java 程序是可从任意来源获取并运行的，因此需要保证运行这些代码时能进行限制，免受恶意代码的破坏</p>
 
-<h2 id="java--2">Java 怎么样实现安全性</h2>
+<h2 id="java-怎么样实现安全性">Java 怎么样实现安全性</h2>
 
 <p>Java 使用沙箱模型来对程序运行进行限制，防止其进行破坏，沙箱模型由一些基本组件组成</p>
 
@@ -459,7 +487,7 @@
 
 <p>前三个组成部分是为了保证JVM和它正在运行的应用程序的完整性，免受下载的恶意程序的侵犯；最后一个部分是为了保护外部资源不被JVM中运行的恶意程序侵犯</p>
 
-<h3 id="section">类加载器体系结构</h3>
+<h3 id="类加载器体系结构">类加载器体系结构</h3>
 
 <p><strong>是什么？</strong></p>
 
@@ -495,7 +523,7 @@
 
 <p>每个类都属于一个保护域，用户可以为某个保护域的类设置资源的访问权限策略，这样就能起到限制代码权限的作用</p>
 
-<h3 id="class">class文件检验器</h3>
+<h3 id="class文件检验器">class文件检验器</h3>
 
 <p><strong>是什么？</strong></p>
 
@@ -533,7 +561,7 @@
 
 <p>在执行过程中第一次引用新的类型时需要进行动态链接，这时候需要对引用的合法性(存在性等)进行校验，从而保证被引用的类文件的二进制兼容性</p>
 
-<h3 id="java">Java虚拟机中内置的安全特性</h3>
+<h3 id="java虚拟机中内置的安全特性">Java虚拟机中内置的安全特性</h3>
 
 <p>JVM通过在执行过程中加入以下特性来增强程序的健壮性</p>
 
@@ -545,7 +573,7 @@
   <li>空引用检查</li>
 </ul>
 
-<h3 id="java-api">安全管理器和Java API</h3>
+<h3 id="安全管理器和java-api">安全管理器和Java API</h3>
 
 <p><strong>是什么？</strong></p>
 
