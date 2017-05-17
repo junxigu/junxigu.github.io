@@ -5,8 +5,8 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 May 2017 12:15:56 +0800</pubDate>
-    <lastBuildDate>Sun, 14 May 2017 12:15:56 +0800</lastBuildDate>
+    <pubDate>Wed, 17 May 2017 14:04:52 +0800</pubDate>
+    <lastBuildDate>Wed, 17 May 2017 14:04:52 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -174,6 +174,10 @@ alter table gradeInfo add constraint s_num foreign key(s_num) references student
   &lt;li&gt;删除不再使用的索引&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;Key和Index的不同&lt;/strong&gt;
+在关系模型中Key可以理解为一种约束关系，比如主键要求唯一确定一个记录，外键要求记录连接到其他记录；而索引是为了加速查询，并且帮助实现约束，比如唯一索引能帮助实现唯一约束；MySQL中Key同时也是索引&lt;br /&gt;
+&lt;a href=&quot;http://discuss.fogcreek.com/joelonsoftware5/default.asp?cmd=show&amp;amp;ixPost=152398&quot;&gt;详情参考&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;常用命令用例-2&quot;&gt;常用命令用例&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -207,6 +211,7 @@ create index index_name on information(name(10));
 
 create index index_bir on information(birthday, address);
 
+-- 查看索引在查询中的使用情况
 explain select * from information where birthday='' \G
 
 alter table information add unique index index_id(id asc);
@@ -4453,7 +4458,6 @@ public class MyThreadFactory implements ThreadFactory {
 	public Thread newThread(Runnable r) {
 		Thread t = new Thread(r);
 		t.setDaemon(true);
-		t.setPriority(Thread.MIN_PRIORITY);
 		t.setName(&quot;Test&quot;);
 		t.setUncaughtExceptionHandler(new MyUncaughtExceptionHandler());
 		return t;
@@ -4462,6 +4466,7 @@ public class MyThreadFactory implements ThreadFactory {
 
 class DaemonFromFactory implements Runnable {
 	public void run() {
+		Thread.currentThread.setPriority(Thread.MIN_PRIORITY);
 		// Do things
 	}
 	public static void main(String[] args) throws InterruptedException {
@@ -4524,13 +4529,13 @@ class DaemonFromFactory implements Runnable {
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;除了确保线程之间的互斥来解决冲突以外，其实有时可以避免冲突，例如用ThreadLocal火其他方法来使得线程不共享资源&lt;/p&gt;
+&lt;p&gt;除了确保线程之间的互斥来解决冲突以外，其实有时可以避免冲突，例如用ThreadLocal或其他方法来使得线程不共享资源，使用如CopyOnWriteArray，CopyOnWriteSet，ConcurrentHashMap等免锁容器，使用Atomic等乐观加锁的类等减少加锁的性能损失&lt;/p&gt;
 
 &lt;h2 id=&quot;线程的协作&quot;&gt;线程的协作&lt;/h2&gt;
 
-&lt;p&gt;除了保持线程对资源的互斥使用外，还需要解决线程间的协作问题，也就是一个线程需的输入时另一个线程产生的输出，为了保证这两线程任务的顺序性和资源的互斥使用，Java API在锁之上提供了握手API：wait，notify，notifyAll&lt;/p&gt;
+&lt;p&gt;除了保持线程对资源的互斥使用外，还需要解决线程间的协作问题，也就是一个线程需要的输入是另一个线程产生的输出，为了保证这两线程任务的顺序性和资源的互斥使用，Java API在锁之上提供了握手API：wait，notify，notifyAll&lt;/p&gt;
 
-&lt;p&gt;wait：一个下游线程在获得一个资源的锁，单独使用资源的时候，发现其上游线程还没处理好时，释放获得的资源的锁，并阻塞自己
+&lt;p&gt;wait：一个下游线程在获得一个资源的锁，单独使用资源的时候，发现其上游线程还没处理好时，释放获得的资源的锁，并阻塞自己&lt;br /&gt;
 notify，notifyAll：一个上游线程在获得一个资源的锁后，处理完以后，释放获得的锁并通知下游线程&lt;/p&gt;
 
 &lt;p&gt;例如&lt;/p&gt;
@@ -4621,7 +4626,7 @@ condition.await&lt;br /&gt;
 condition.signal&lt;br /&gt;
 condition.signalAll&lt;/p&gt;
 
-&lt;p&gt;握手API是非常底层的线程协作API，Java API提供了一些高层的组件，这些组件的操作自动完成了握手的功能，例如BlockingQueue等，它们都更方便的使用&lt;/p&gt;
+&lt;p&gt;握手API是非常底层的线程协作API，Java API提供了一些高层的组件，这些组件的操作自动完成了握手的功能，例如BlockingQueue，CountDownLatch，CyclicBarrier，DelayQueue，PriorityBlockingQueue，ScheduleExecutor，Semaphore，Exchanger等，它们都更方便的使用&lt;/p&gt;
 
 &lt;h2 id=&quot;线程的死锁&quot;&gt;线程的死锁&lt;/h2&gt;
 

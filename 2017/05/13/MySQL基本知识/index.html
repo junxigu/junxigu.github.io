@@ -611,6 +611,10 @@ alter table gradeInfo add constraint s_num foreign key(s_num) references student
   <li>删除不再使用的索引</li>
 </ul>
 
+<p><strong>Key和Index的不同</strong>
+在关系模型中Key可以理解为一种约束关系，比如主键要求唯一确定一个记录，外键要求记录连接到其他记录；而索引是为了加速查询，并且帮助实现约束，比如唯一索引能帮助实现唯一约束；MySQL中Key同时也是索引<br />
+<a href="http://discuss.fogcreek.com/joelonsoftware5/default.asp?cmd=show&amp;ixPost=152398">详情参考</a></p>
+
 <h2 id="常用命令用例-2">常用命令用例</h2>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>
@@ -644,6 +648,7 @@ create index index_name on information(name(10));
 
 create index index_bir on information(birthday, address);
 
+-- 查看索引在查询中的使用情况
 explain select * from information where birthday='' \G
 
 alter table information add unique index index_id(id asc);

@@ -618,7 +618,6 @@ public class MyThreadFactory implements ThreadFactory {
 	public Thread newThread(Runnable r) {
 		Thread t = new Thread(r);
 		t.setDaemon(true);
-		t.setPriority(Thread.MIN_PRIORITY);
 		t.setName("Test");
 		t.setUncaughtExceptionHandler(new MyUncaughtExceptionHandler());
 		return t;
@@ -627,6 +626,7 @@ public class MyThreadFactory implements ThreadFactory {
 
 class DaemonFromFactory implements Runnable {
 	public void run() {
+		Thread.currentThread.setPriority(Thread.MIN_PRIORITY);
 		// Do things
 	}
 	public static void main(String[] args) throws InterruptedException {
@@ -689,13 +689,13 @@ class DaemonFromFactory implements Runnable {
   </tbody>
 </table>
 
-<p>除了确保线程之间的互斥来解决冲突以外，其实有时可以避免冲突，例如用ThreadLocal火其他方法来使得线程不共享资源</p>
+<p>除了确保线程之间的互斥来解决冲突以外，其实有时可以避免冲突，例如用ThreadLocal或其他方法来使得线程不共享资源，使用如CopyOnWriteArray，CopyOnWriteSet，ConcurrentHashMap等免锁容器，使用Atomic等乐观加锁的类等减少加锁的性能损失</p>
 
 <h2 id="线程的协作">线程的协作</h2>
 
-<p>除了保持线程对资源的互斥使用外，还需要解决线程间的协作问题，也就是一个线程需的输入时另一个线程产生的输出，为了保证这两线程任务的顺序性和资源的互斥使用，Java API在锁之上提供了握手API：wait，notify，notifyAll</p>
+<p>除了保持线程对资源的互斥使用外，还需要解决线程间的协作问题，也就是一个线程需要的输入是另一个线程产生的输出，为了保证这两线程任务的顺序性和资源的互斥使用，Java API在锁之上提供了握手API：wait，notify，notifyAll</p>
 
-<p>wait：一个下游线程在获得一个资源的锁，单独使用资源的时候，发现其上游线程还没处理好时，释放获得的资源的锁，并阻塞自己
+<p>wait：一个下游线程在获得一个资源的锁，单独使用资源的时候，发现其上游线程还没处理好时，释放获得的资源的锁，并阻塞自己<br />
 notify，notifyAll：一个上游线程在获得一个资源的锁后，处理完以后，释放获得的锁并通知下游线程</p>
 
 <p>例如</p>
@@ -786,7 +786,7 @@ condition.await<br />
 condition.signal<br />
 condition.signalAll</p>
 
-<p>握手API是非常底层的线程协作API，Java API提供了一些高层的组件，这些组件的操作自动完成了握手的功能，例如BlockingQueue等，它们都更方便的使用</p>
+<p>握手API是非常底层的线程协作API，Java API提供了一些高层的组件，这些组件的操作自动完成了握手的功能，例如BlockingQueue，CountDownLatch，CyclicBarrier，DelayQueue，PriorityBlockingQueue，ScheduleExecutor，Semaphore，Exchanger等，它们都更方便的使用</p>
 
 <h2 id="线程的死锁">线程的死锁</h2>
 
