@@ -5,8 +5,8 @@
     <description>个人技术博客</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 May 2017 16:43:24 +0800</pubDate>
-    <lastBuildDate>Fri, 19 May 2017 16:43:24 +0800</lastBuildDate>
+    <pubDate>Tue, 23 May 2017 15:04:46 +0800</pubDate>
+    <lastBuildDate>Tue, 23 May 2017 15:04:46 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -597,23 +597,83 @@ private DataSource source;
 
 &lt;h1 id=&quot;operate-database&quot;&gt;Operate Database&lt;/h1&gt;
 
-&lt;p&gt;相对MyISAM和Memory，InnoDB支持事务，外键，表修复和并发控制，但磁盘和内存占用大，插入速度慢；Memory一般只用于临时表且表的大小受限&lt;/p&gt;
+&lt;p&gt;各种存储引擎各有特点，相对MyISAM和Memory，InnoDB支持事务，外键，表修复和并发控制，但磁盘和内存占用大，插入速度慢；Memory一般只用于临时表且表的大小受限&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;存储引擎的比较&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;特性&lt;/th&gt;
+      &lt;th&gt;InnoDB&lt;/th&gt;
+      &lt;th&gt;MyISAM&lt;/th&gt;
+      &lt;th&gt;MEMORY&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;事务安全&lt;/td&gt;
+      &lt;td&gt;支持&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;存储限制&lt;/td&gt;
+      &lt;td&gt;64TB&lt;/td&gt;
+      &lt;td&gt;有&lt;/td&gt;
+      &lt;td&gt;有&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;空间占用&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+      &lt;td&gt;低&lt;/td&gt;
+      &lt;td&gt;低&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;内存占用&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+      &lt;td&gt;低&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;插入数据速度&lt;/td&gt;
+      &lt;td&gt;低&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;支持外建&lt;/td&gt;
+      &lt;td&gt;支持&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h2 id=&quot;常用命令用例&quot;&gt;常用命令用例&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-- start mysql server
+mysqld_safe --user=root
+
+-- shutdown the server
+mysqladmin -u root shutdown
+
+-- connect to mysql server
 mysql -h localhost -uroot -p;
 
 create database example;
 
 show databases;
 
+-- show current database
 select database();
 
 drop database example;
 
+-- show all engines
 show engines \G
 
+-- 
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1374,7 +1434,7 @@ long_query_time=1
       &lt;li&gt;&lt;a href=&quot;#获取方法的类型信息&quot; id=&quot;markdown-toc-获取方法的类型信息&quot;&gt;获取方法的类型信息&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#获取方法的参数的正式名字&quot; id=&quot;markdown-toc-获取方法的参数的正式名字&quot;&gt;获取方法的参数的正式名字&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#获取方法的访问修饰符&quot; id=&quot;markdown-toc-获取方法的访问修饰符&quot;&gt;获取方法的访问修饰符&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#用method的反射api来挑用方法&quot; id=&quot;markdown-toc-用method的反射api来挑用方法&quot;&gt;用Method的反射API来挑用方法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#用method的反射api来调用方法&quot; id=&quot;markdown-toc-用method的反射api来调用方法&quot;&gt;用Method的反射API来调用方法&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#构造器constructors的反射api&quot; id=&quot;markdown-toc-构造器constructors的反射api&quot;&gt;构造器(Constructors)的反射API&lt;/a&gt;    &lt;ul&gt;
@@ -1460,7 +1520,7 @@ Class cStringArray = Class.forName(&quot;[[Ljava.lang.String;&quot;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;.type语法&lt;/strong&gt; 可以通过.type语法来获取基本类型包装类的Class对象，但其实可以用.class语法代替&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;.type语法&lt;/strong&gt; 可以通过.TYPE语法来获取基本类型包装类的Class对象，但其实可以用.class语法代替&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Class的一些其他API&lt;/strong&gt;&lt;/p&gt;
 
@@ -1924,7 +1984,7 @@ Method.getGenericExceptionTypes&lt;/p&gt;
 
 &lt;p&gt;Method.getModifiers 获取方法的访问修饰符&lt;/p&gt;
 
-&lt;h2 id=&quot;用method的反射api来挑用方法&quot;&gt;用Method的反射API来挑用方法&lt;/h2&gt;
+&lt;h2 id=&quot;用method的反射api来调用方法&quot;&gt;用Method的反射API来调用方法&lt;/h2&gt;
 
 &lt;p&gt;Method.invoke 调用方法，传给invoke的第一个参数是一个对象，例如method.invoke(a)相当于非反射调用a.method()，如果调用的静态方法，则参数为invoke的第一个参数null；另外，method.invoke(a, 1, “er”, new int[1]{})相当于a.method(1, “er”, new int[1]{})&lt;/p&gt;
 
@@ -2052,6 +2112,13 @@ testDeet() returned true
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;对于签名是参数数目可变的函数，其实只是一种语法糖，最终编译结果只是把参数列表变成一个数组，所以使用Method.invoke的时候要传一个数组Object给invoke&lt;/p&gt;
+
+&lt;p&gt;有一点容易让人产生疑惑的是Method的invoke函数签名有新旧两个版本&lt;br /&gt;
+invoke(Object obj,Object[] args)&lt;br /&gt;
+invoke(Object obj,Object… args)&lt;br /&gt;
+数组签名是1.4版本，而可变参数类型是1.5版本，如果没有新版本，那么给多参数的函数传参数就得构造一个Object数组了，但如果不把一个数组转强制换成Object的话，编译器就会指定数组版本，导致参数个数异常；另外，基本类型数组是一个Object类型，因此不需要强制转换&lt;/p&gt;
 
 &lt;p&gt;另外，可以通过Method.setAccessible来禁止对方法访问的权限检查&lt;/p&gt;
 

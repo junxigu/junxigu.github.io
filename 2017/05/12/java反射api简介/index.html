@@ -478,7 +478,7 @@
       <li><a href="#获取方法的类型信息" id="markdown-toc-获取方法的类型信息">获取方法的类型信息</a></li>
       <li><a href="#获取方法的参数的正式名字" id="markdown-toc-获取方法的参数的正式名字">获取方法的参数的正式名字</a></li>
       <li><a href="#获取方法的访问修饰符" id="markdown-toc-获取方法的访问修饰符">获取方法的访问修饰符</a></li>
-      <li><a href="#用method的反射api来挑用方法" id="markdown-toc-用method的反射api来挑用方法">用Method的反射API来挑用方法</a></li>
+      <li><a href="#用method的反射api来调用方法" id="markdown-toc-用method的反射api来调用方法">用Method的反射API来调用方法</a></li>
     </ul>
   </li>
   <li><a href="#构造器constructors的反射api" id="markdown-toc-构造器constructors的反射api">构造器(Constructors)的反射API</a>    <ul>
@@ -564,7 +564,7 @@ Class cStringArray = Class.forName("[[Ljava.lang.String;");
 </code></pre>
 </div>
 
-<p><strong>.type语法</strong> 可以通过.type语法来获取基本类型包装类的Class对象，但其实可以用.class语法代替</p>
+<p><strong>.type语法</strong> 可以通过.TYPE语法来获取基本类型包装类的Class对象，但其实可以用.class语法代替</p>
 
 <p><strong>Class的一些其他API</strong></p>
 
@@ -1028,7 +1028,7 @@ Method.getGenericExceptionTypes</p>
 
 <p>Method.getModifiers 获取方法的访问修饰符</p>
 
-<h2 id="用method的反射api来挑用方法">用Method的反射API来挑用方法</h2>
+<h2 id="用method的反射api来调用方法">用Method的反射API来调用方法</h2>
 
 <p>Method.invoke 调用方法，传给invoke的第一个参数是一个对象，例如method.invoke(a)相当于非反射调用a.method()，如果调用的静态方法，则参数为invoke的第一个参数null；另外，method.invoke(a, 1, “er”, new int[1]{})相当于a.method(1, “er”, new int[1]{})</p>
 
@@ -1156,6 +1156,13 @@ testDeet() returned true
 
 </code></pre>
 </div>
+
+<p>对于签名是参数数目可变的函数，其实只是一种语法糖，最终编译结果只是把参数列表变成一个数组，所以使用Method.invoke的时候要传一个数组Object给invoke</p>
+
+<p>有一点容易让人产生疑惑的是Method的invoke函数签名有新旧两个版本<br />
+invoke(Object obj,Object[] args)<br />
+invoke(Object obj,Object… args)<br />
+数组签名是1.4版本，而可变参数类型是1.5版本，如果没有新版本，那么给多参数的函数传参数就得构造一个Object数组了，但如果不把一个数组转强制换成Object的话，编译器就会指定数组版本，导致参数个数异常；另外，基本类型数组是一个Object类型，因此不需要强制转换</p>
 
 <p>另外，可以通过Method.setAccessible来禁止对方法访问的权限检查</p>
 

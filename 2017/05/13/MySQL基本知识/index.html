@@ -522,23 +522,83 @@
 
 <h1 id="operate-database">Operate Database</h1>
 
-<p>相对MyISAM和Memory，InnoDB支持事务，外键，表修复和并发控制，但磁盘和内存占用大，插入速度慢；Memory一般只用于临时表且表的大小受限</p>
+<p>各种存储引擎各有特点，相对MyISAM和Memory，InnoDB支持事务，外键，表修复和并发控制，但磁盘和内存占用大，插入速度慢；Memory一般只用于临时表且表的大小受限</p>
+
+<p><strong>存储引擎的比较</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>特性</th>
+      <th>InnoDB</th>
+      <th>MyISAM</th>
+      <th>MEMORY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>事务安全</td>
+      <td>支持</td>
+      <td>无</td>
+      <td>无</td>
+    </tr>
+    <tr>
+      <td>存储限制</td>
+      <td>64TB</td>
+      <td>有</td>
+      <td>有</td>
+    </tr>
+    <tr>
+      <td>空间占用</td>
+      <td>高</td>
+      <td>低</td>
+      <td>低</td>
+    </tr>
+    <tr>
+      <td>内存占用</td>
+      <td>高</td>
+      <td>低</td>
+      <td>高</td>
+    </tr>
+    <tr>
+      <td>插入数据速度</td>
+      <td>低</td>
+      <td>高</td>
+      <td>高</td>
+    </tr>
+    <tr>
+      <td>支持外建</td>
+      <td>支持</td>
+      <td>无</td>
+      <td>无</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="常用命令用例">常用命令用例</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
+<div class="highlighter-rouge"><pre class="highlight"><code>-- start mysql server
+mysqld_safe --user=root
+
+-- shutdown the server
+mysqladmin -u root shutdown
+
+-- connect to mysql server
 mysql -h localhost -uroot -p;
 
 create database example;
 
 show databases;
 
+-- show current database
 select database();
 
 drop database example;
 
+-- show all engines
 show engines \G
 
+-- 
 
 </code></pre>
 </div>
