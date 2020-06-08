@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Java的安全性</title>
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="canonical" href="/2016/11/22/DEEP_IN_JAVA_VM__security/">
+	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
+	
+	<meta name="description" content="顾俊喜;个人博客">
+
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">主页</a>
+        </li>
+        <li>
+          <a href="/categories/">分类博客</a>
+        </li>
+        <li>
+          <a href="/tag">标签博客</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/junxigu/">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本博客模板</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>Java的安全性</h1>
+		    <p>Post on Nov 22, 2016 by <a href="/about">Jun Xi Gu</a></p>
+		-->
+		    <h1>Stay Hungry Stay Foolish</h1>
+    
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/categories/#技术-ref">技术</a>	/
+    	<a href="/tag/#Java-ref">Java</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2017">2017</a>
+          <ul class="nav">
+            <li><a href="#month_2017_September">September</a></li>
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2016">2016</a>
+            <ul class="nav">
+              <li><a href="#month_2016_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_September">September</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Java的安全性</h1>
+              <!--
+                <p class="post-meta">Nov 22, 2016</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Nov 22, 2016</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#java-安全性是什么" id="markdown-toc-java-安全性是什么">Java 安全性是什么</a></li>
+  <li><a href="#java-为什么需要安全性" id="markdown-toc-java-为什么需要安全性">Java 为什么需要安全性</a></li>
+  <li><a href="#java-怎么样实现安全性" id="markdown-toc-java-怎么样实现安全性">Java 怎么样实现安全性</a>    <ul>
+      <li><a href="#类加载器体系结构" id="markdown-toc-类加载器体系结构">类加载器体系结构</a></li>
+      <li><a href="#class文件检验器" id="markdown-toc-class文件检验器">class文件检验器</a></li>
+      <li><a href="#java虚拟机中内置的安全特性" id="markdown-toc-java虚拟机中内置的安全特性">Java虚拟机中内置的安全特性</a></li>
+      <li><a href="#安全管理器和java-api" id="markdown-toc-安全管理器和java-api">安全管理器和Java API</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>本文是对Java的安全性的汇总和个人理解，此处的内容是针对旧版的Java</strong></p>
+
+<hr />
+
+<h2 id="java-安全性是什么">Java 安全性是什么</h2>
+
+<p>Java 通过其安全模型 来保护终端用户免受从网路下载的、来自不可靠来源的、恶意程序的侵犯</p>
+
+<h2 id="java-为什么需要安全性">Java 为什么需要安全性</h2>
+
+<p>Java 程序是可从任意来源获取并运行的，因此需要保证运行这些代码时能进行限制，免受恶意代码的破坏</p>
+
+<h2 id="java-怎么样实现安全性">Java 怎么样实现安全性</h2>
+
+<p>Java 使用沙箱模型来对程序运行进行限制，防止其进行破坏，沙箱模型由一些基本组件组成</p>
+
+<ul>
+  <li>类加载器体系结构</li>
+  <li>class文件检验器</li>
+  <li>内置于Java虚拟机(及语言)的安全特性</li>
+  <li>安全管理器及Java API</li>
+</ul>
+
+<p><img src="../../../../styles/images/java_security.png" alt="alt text" /></p>
+
+<p>前三个组成部分是为了保证JVM和它正在运行的应用程序的完整性，免受下载的恶意程序的侵犯；最后一个部分是为了保护外部资源不被JVM中运行的恶意程序侵犯</p>
+
+<h3 id="类加载器体系结构">类加载器体系结构</h3>
+
+<p><strong>是什么？</strong></p>
+
+<ul>
+  <li>类加载器是用于动态的加载类二进制流的对象</li>
+  <li>类加载有4类：启动类加载器(java内部实现，负责加载java核心API)、标准扩展类加载器(java自带，加载ext目录下的类)、类路径类加载器(java自带，加载CLASS_PATH环境变量下的类)、自定义类加载器</li>
+  <li>类加载器使用双亲委派模式进行类的加载(非启动类加载器都有一个双亲类加载器的引用，加载类时会先让双亲加载，若双亲加载不到才自己加载)，启动类加载器 &lt;- 标准扩展类加载器 &lt;- 类路径类加载器 &lt;- 自定义类加载器,保证可信的类由可信的类加载器优先加载</li>
+</ul>
+
+<p><strong>为什么？</strong></p>
+
+<p>类加载器是可信和不可信程序的入口，通过类加载器体系机构能够在一定程度上实现可信程序和不可信程序的隔离，并能对不可信的程序的资源访问进行限制</p>
+
+<p><strong>怎么样？</strong></p>
+
+<p>类加载器体系结构的作用</p>
+
+<ul>
+  <li>防止恶意代码干涉正常代码</li>
+</ul>
+
+<p>不同的类加载器加载的代码属于不同的命名空间(相同的类可以用不同类加载器多次加载到JVM)，不同的命名空间中的代码不能互相访问(除非显式运行交互)，达到隔离恶意代码的效果</p>
+
+<ul>
+  <li>守护了被信任的类库的边界</li>
+</ul>
+
+<p>使用类加载器双亲委托模型来保证所有信任的类库都通过信任的加载器来加载，不可靠的类可以使用自定义的加载器加载</p>
+
+<ul>
+  <li>为类创建保护域，由保护域来确定类所拥有的权限</li>
+</ul>
+
+<p>每个类都属于一个保护域，用户可以为某个保护域的类设置资源的访问权限策略，这样就能起到限制代码权限的作用</p>
+
+<h3 id="class文件检验器">class文件检验器</h3>
+
+<p><strong>是什么？</strong></p>
+
+<p>class文件检验器是对 类加载器加载的类 进行检查的对象</p>
+
+<p><strong>为什么？</strong></p>
+
+<p>虚拟机不能保证 加载的类 是由合法的编译器生成的，需要对类二进制流的 结构，类型，语义，符号引用信息 进行检查，保证其完整性和健壮性</p>
+
+<p><strong>怎么样？</strong></p>
+
+<p>class文件检验器需要进行四趟扫描来完成校验</p>
+
+<ul>
+  <li>class文件的结构检查</li>
+</ul>
+
+<p>检查class文件的结构是否满足java对于一个类型的结构的定义，包括魔数、结构、长度等</p>
+
+<ul>
+  <li>类型数据的语义检查</li>
+</ul>
+
+<p>检查各个组成部分的类型是否满足其所属的类型的定义，并检查这个类文件本身的类是否满足编译器所规定的条件</p>
+
+<ul>
+  <li>字节码验证</li>
+</ul>
+
+<p>通过对字节码流中的操作码，操作数进行检查，保证所有字节码都能安全的执行</p>
+
+<ul>
+  <li>符号引用的验证</li>
+</ul>
+
+<p>在执行过程中第一次引用新的类型时需要进行动态链接，这时候需要对引用的合法性(存在性等)进行校验，从而保证被引用的类文件的二进制兼容性</p>
+
+<h3 id="java虚拟机中内置的安全特性">Java虚拟机中内置的安全特性</h3>
+
+<p>JVM通过在执行过程中加入以下特性来增强程序的健壮性</p>
+
+<ul>
+  <li>类型安全的引用转换</li>
+  <li>结构化的内存访问</li>
+  <li>自动垃圾收集</li>
+  <li>数组边界检查</li>
+  <li>空引用检查</li>
+</ul>
+
+<h3 id="安全管理器和java-api">安全管理器和Java API</h3>
+
+<p><strong>是什么？</strong></p>
+
+<p>安全访问器是一个对象，它能确定一个程序是否有权限访问一个受保护的资源</p>
+
+<p>所有对资源的访问都是通过Java API来完成的，当给应用程序赋予了一个安全管理器实例时，则Java API在访问资源前都会让安全管理器确认程序是否有权限访问资源</p>
+
+<p><strong>为什么？</strong></p>
+
+<p>通过把对资源的访问封装在Java API里，然后API在访问资源前使用安全管理器确认程序是否有权限访问资源，这样就能保护外部资源不被不受信任的程序访问</p>
+
+<p><strong>怎么样？</strong></p>
+
+<p>Java通过签名对 受信任的代码 确定其身份和完整性</p>
+
+<p>一个class文件有它的代码来源，代码来源是指 代码从哪来、若被签名则是从谁那里来</p>
+
+<p>代码对资源所拥有的访问权限都与代码的代码来源相关联，所以在给某段代码赋予权限时，要制定其来源和所拥有权限</p>
+
+<p>所有的代码权限赋予都记录在一个ASCII策略文件里，文件里的内容有固定的语法，内容大意是 给 某个代码来源的代码 赋予 访问某种资源的权限</p>
+
+<p>类加载器 在加载类时 会给类创建一个保护域，保护域里有策略文件里定义的代码来源 和 所拥有的权限(类加载器也可以不参考策略文件)，当程序使用Java API时，安全管理器 能通过代码的保护域中的权限来确定代码是否有权访问资源</p>
+
+<p>安全管理器通过获取Java栈中 从资源访问调用开始到栈顶的所有栈帧，然后从每个栈帧所关联的class中获取保护域，并根据保护域中的权限来确定每个栈帧关联的类能否访问资源</p>
+
+<p><img src="../../../../styles/images/java_access_permision_check.png" alt="alt text" /></p>
+
+            </article>
+        </div>
+      </div>
+      <div class="panel docs-content">
+        <article class="post-content">
+          <div class="wrapper">
+             
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2014-2020 <a href=""><code>Jun Xi Gu</code></a>.</p>
+		<p>Customizied from <a href="https://github.com/luoyan35714/LessOrMore">LessOrMore</a></p></p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/application.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+
+  </body>
+</html>

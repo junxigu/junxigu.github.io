@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JDBC编程简介</title>
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="canonical" href="/2017/05/19/JDBC%E7%BC%96%E7%A8%8B%E7%AE%80%E4%BB%8B/">
+	<link rel="alternate" type="application/rss+xml" title="Jun Xi Gu 的博客" href="/feed.xml">
+	
+	<meta name="description" content="顾俊喜;个人博客">
+
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">主页</a>
+        </li>
+        <li>
+          <a href="/categories/">分类博客</a>
+        </li>
+        <li>
+          <a href="/tag">标签博客</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/junxigu/">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本博客模板</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>JDBC编程简介</h1>
+		    <p>Post on May 19, 2017 by <a href="/about">Jun Xi Gu</a></p>
+		-->
+		    <h1>Stay Hungry Stay Foolish</h1>
+    
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/categories/#Java-ref">Java</a>	/
+    	<a href="/tag/#JDBC-ref">JDBC</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2017">2017</a>
+          <ul class="nav">
+            <li><a href="#month_2017_September">September</a></li>
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2016">2016</a>
+            <ul class="nav">
+              <li><a href="#month_2016_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_September">September</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">JDBC编程简介</h1>
+              <!--
+                <p class="post-meta">May 19, 2017</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">May 19, 2017</span> By <a target="_blank" href="">Jun Xi Gu</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#jdbc编程简介" id="markdown-toc-jdbc编程简介">JDBC编程简介</a>    <ul>
+      <li><a href="#jdbc典型用法" id="markdown-toc-jdbc典型用法">JDBC典型用法</a></li>
+    </ul>
+  </li>
+  <li><a href="#java程序使用jdbc连接数据库" id="markdown-toc-java程序使用jdbc连接数据库">Java程序使用JDBC连接数据库</a>    <ul>
+      <li><a href="#注册数据库驱动" id="markdown-toc-注册数据库驱动">注册数据库驱动</a></li>
+      <li><a href="#获取数据库连接" id="markdown-toc-获取数据库连接">获取数据库连接</a></li>
+    </ul>
+  </li>
+  <li><a href="#java代码执行sql语句操作数据库" id="markdown-toc-java代码执行sql语句操作数据库">Java代码执行SQL语句操作数据库</a>    <ul>
+      <li><a href="#管理connectionstatementresultset" id="markdown-toc-管理connectionstatementresultset">管理Connection，Statement，ResultSet</a></li>
+      <li><a href="#分析sql异常" id="markdown-toc-分析sql异常">分析SQL异常</a></li>
+    </ul>
+  </li>
+  <li><a href="#执行查询操作详述" id="markdown-toc-执行查询操作详述">执行查询操作详述</a>    <ul>
+      <li><a href="#预备语句" id="markdown-toc-预备语句">预备语句</a></li>
+      <li><a href="#读写lob属性" id="markdown-toc-读写lob属性">读写LOB属性</a></li>
+      <li><a href="#转义语句" id="markdown-toc-转义语句">转义语句</a></li>
+      <li><a href="#多结果集" id="markdown-toc-多结果集">多结果集</a></li>
+      <li><a href="#获取自动生成的键" id="markdown-toc-获取自动生成的键">获取自动生成的键</a></li>
+    </ul>
+  </li>
+  <li><a href="#可滚动和可更新的结果集" id="markdown-toc-可滚动和可更新的结果集">可滚动和可更新的结果集</a>    <ul>
+      <li><a href="#更新一行的某些属性" id="markdown-toc-更新一行的某些属性">更新一行的某些属性</a></li>
+      <li><a href="#插入新行" id="markdown-toc-插入新行">插入新行</a></li>
+      <li><a href="#删除行" id="markdown-toc-删除行">删除行</a></li>
+    </ul>
+  </li>
+  <li><a href="#行集" id="markdown-toc-行集">行集</a></li>
+  <li><a href="#元数据" id="markdown-toc-元数据">元数据</a></li>
+  <li><a href="#事务" id="markdown-toc-事务">事务</a>    <ul>
+      <li><a href="#保存点" id="markdown-toc-保存点">保存点</a></li>
+      <li><a href="#批量更新" id="markdown-toc-批量更新">批量更新</a></li>
+    </ul>
+  </li>
+  <li><a href="#数据库连接管理" id="markdown-toc-数据库连接管理">数据库连接管理</a></li>
+  <li><a href="#参考文献" id="markdown-toc-参考文献">参考文献</a></li>
+</ul>
+
+<p><strong>本文是对JDBC编程入门知识的总结，主要参考《Java核心技术》，包括一些JDBC常见用法的示例，代码均来自《Java核心技术》</strong></p>
+
+<hr />
+
+<h1 id="jdbc编程简介">JDBC编程简介</h1>
+
+<p>JDBC是Java语言 连接，操作关系型数据库的 API库；通过JDBC的API，Java程序可以连接各种数据库，增删改查数据和获取数据库的元数据</p>
+
+<p><em><strong>可略过</strong> JDBC和数据库驱动的关系</em><br />
+<em>JDBC定义了供数据库客户端连接和操作数据库的API接口，而具体实现是由各个数据库厂商已驱动的方式来提供，所以在运行环境中需要部署驱动才能真正运行</em></p>
+
+<p><em><strong>可略过</strong> JDBC的驱动类型</em></p>
+
+<ul>
+  <li><em>JDBC/ODBC桥接：驱动把JDBC调用翻译成ODBC调用，不推荐使用</em></li>
+  <li><em>驱动由Java类库和平台相关数据库客户端组成：客户代码使用驱动提供的Java类库来调用数据库客户端从而使用数据库</em></li>
+  <li><em>纯Java客户端类库：把数据库调用请求发送给服务器构建，由服务器把请求转换为数据库协议</em></li>
+  <li><em>纯Java类库：把JDBC调用直接转换为数据库协议</em></li>
+</ul>
+
+<p><em>注意，在运行JDBC程序前需要安装数据库并下载和部署数据库驱动(jar包)到classpath中，请参考具体的数据库手册</em></p>
+
+<h2 id="jdbc典型用法">JDBC典型用法</h2>
+
+<p>本地客户端程序直接使用JDBC来操作数据库</p>
+
+<p><img src="../../../../styles/images/客户端连接数据库.png" alt="客户端连接数据库" /></p>
+
+<p>本地客户端程序连接服务器程序，由服务器程序使用JDBC来操作数据库</p>
+
+<p><img src="../../../../styles/images/中间件连接数据库.png" alt="中间件连接数据库" /></p>
+
+<h1 id="java程序使用jdbc连接数据库">Java程序使用JDBC连接数据库</h1>
+
+<p>使用JDBC连接数据库包括两个步骤</p>
+
+<ul>
+  <li>注册数据库驱动</li>
+  <li>使用数据库服务器URL，user，password获取数据库连接</li>
+</ul>
+
+<h2 id="注册数据库驱动">注册数据库驱动</h2>
+
+<p>如前所述，JDBC只是一些interface，而interface的具体实现是由数据库驱动来实现的，为了在Java代码中使用JDBC API的具体实现就需要注册 数据库驱动</p>
+
+<p>注册的方法很简单，只需要加载数据库驱动jar包里的驱动类到JVM，然后通过该驱动类来获取JDBC中各个接口的具体实现</p>
+
+<p>在代码中加载方法有两种</p>
+
+<ul>
+  <li>例如 <code class="highlighter-rouge">Class.forName("org.apache.jdbc.ClientDriver")</code></li>
+  <li>例如 <code class="highlighter-rouge">System.setProperty("jdbc.driver", "org.apache.jdbc.ClientDriver")</code></li>
+</ul>
+
+<h2 id="获取数据库连接">获取数据库连接</h2>
+
+<p>把数据库驱动类加载到JVM以后，就可以通过DriverManager来获取数据库连接</p>
+
+<p><strong>涉及的API</strong></p>
+
+<ul>
+  <li>DriverManager.getConnection</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String url = props.getProperty("jdbc.url");
+      String username = props.getProperty("jdbc.username");
+      String password = props.getProperty("jdbc.password");
+
+Connection con = DriverManager.getConnection(url, username, password)；
+
+</code></pre></div></div>
+
+<h1 id="java代码执行sql语句操作数据库">Java代码执行SQL语句操作数据库</h1>
+
+<p>获取数据库连接Connection以后，通过Connection获取一个Statement，然后使用Statement来执行SQL语句，执行查询SQL语句会返回结果集ResultSet，通过ResultSet可以使用查询数据库的结果</p>
+
+<p>上述的执行SQL语句流程示例</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Connection con = DriverManager.getConnection(url, username, password)； // 获取一个连接
+Statement stat = conn.createStatement(); // 获取一个Statement
+ResultSet result = stat.executeQuery("select * from user");  // 执行数据库查询
+while (result.next()) // 迭代结果集
+{
+    for (int i = 1; i &lt;= columnCount; i++)
+    {
+        if (i &gt; 1) System.out.print(", ");
+            System.out.print(result.getString(i));
+    }
+    System.out.println();
+}
+
+// 释放资源
+result.close();
+stat.close();
+con.close()
+
+</code></pre></div></div>
+
+<p>Statement是用来执行SQL语句的对象，它包括executeQuery，execute，executeUpdate等几种执行SQL语句的API，每种使用的场景不同，请参考API</p>
+
+<h2 id="管理connectionstatementresultset">管理Connection，Statement，ResultSet</h2>
+
+<p>Connection可以创建一个或以上的Statement，但有些数据库驱动只允许一个激活(没有close)的Statement，可以用DatabaseMetaData类来获取支持的最大Statement数</p>
+
+<p><em>注意，很多跟数据库相关的信息，驱动的信息都能通过DatabaseMetaData类来获取</em></p>
+
+<p>一个Statement可以拥有多个不相关的命令和查询，但最多只能同时打开一个ResultSet，当需要同时使用多个ResultSet的话可以考虑修改SQL或者用行集RowSet</p>
+
+<p>通过使用它们的close方法来释放资源</p>
+
+<h2 id="分析sql异常">分析SQL异常</h2>
+
+<p>SQLException是一个可迭代的对象，通过迭代SQLException来分析问题的根源</p>
+
+<p>SQLWarning是非致命异常的替代品，可以通过它来获取一些关于执行问题信息</p>
+
+<p>SQLException和SQLWarning都是多个对象链接而成链，通过迭代它们能获取更能多信息，并且它们都有API来获取error code等信息</p>
+
+<h1 id="执行查询操作详述">执行查询操作详述</h1>
+
+<h2 id="预备语句">预备语句</h2>
+
+<p>有时候某些SQL语句只是部分参数不同，为了能重用SQL语句，可以使用预备语句PreparedStatement;另外，使用PreparedStatement能对动态填充的参数进行中的特殊字符进行转义，能防止SQL注入攻击</p>
+
+<p>例如，’select * from user where name = ？‘里的条件name的值是根据参数来决定的，其他部分能重用，使用可重用的SQL能创建一个PreparedStatement并重用，示例如下</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String query = “select * from user where name = ？“;
+PreparedStatement pstat = con.prepareStatement(query);
+
+// 设置参数
+pstat.setString(1, “name1”);
+ResultSet s1 = pstat.executeQuery();
+s1.close();
+
+// 设置参数
+pstat.setString(1, “name1”);
+ResultSet s2 = pstat.executeQuery();
+s2.close();
+
+</code></pre></div></div>
+
+<h2 id="读写lob属性">读写LOB属性</h2>
+
+<p>数据库可以存储二进制大对象Blob和字符型大对象Clob</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Statement stat = conn.createStatement(); 
+ResultSet result = stat.executeQuery("select * from user"); 
+if (result.next())
+{
+	Blob blob = result.getBlob(1);
+	InputStream in = blob.getInputStream();
+}
+
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Blob blob = conn.createBlob();
+OutputStream out = blob.setBinaryStream();
+out.write(..);
+
+PreparedStatement stmt = conn.prepareStatement("insert into t values(?)");
+stmt.setBlob(1, blob);
+stmt.executeUpdate(); 
+
+</code></pre></div></div>
+
+<h2 id="转义语句">转义语句</h2>
+
+<p>JDBC能把转义语句转换成特定的数据库操作语法</p>
+
+<p>转义语句主要包括以下分类:</p>
+
+<ul>
+  <li>日期和时间字面量，如{d ‘2008-01-04’}, {ts ‘2008-01-04 23:59:59.999’}</li>
+  <li>函数，如{fn left(?, 20)}</li>
+  <li>调用存储过程，如{call PROC1(?, ?)}</li>
+  <li>like 条件里的转义符号 ,如 … where ? like %!_% * {escape !}</li>
+</ul>
+
+<h2 id="多结果集">多结果集</h2>
+
+<p>当调用存储过程或在使用允许单个查询中提交多个select语句的数据库时，Statement.execute的执行结果会返回多个结果集，通过Statement.getMoreResults来的移动到其他结果集</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boolean done = false;
+boolean isResult = stmt.execute(command);
+while(!done) {
+	if(isResult) {
+		ResultSet result = stmt.getResultSet();
+		// do something
+	} else {
+		int updateCount = stmt.getUpdateCount();
+		if(updateCount &gt;= 0) {
+			// do something
+		} else {
+			done = true;
+		}
+	}
+	stmt.getMoreResults();
+}
+
+</code></pre></div></div>
+
+<h2 id="获取自动生成的键">获取自动生成的键</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stmt.execute(insertStatement, Statement.RETURN_GENERATED_KEYS);
+ResultSet rs = stmt.getGeneratedKeys();
+if(rs.next()) {
+	int key = rs.getInt(1);
+}
+
+</code></pre></div></div>
+
+<h1 id="可滚动和可更新的结果集">可滚动和可更新的结果集</h1>
+
+<p>通过Connection.createStatement(type, concurrency)，Connection.preparedStatement(type, concurrency)可以配置可滚动和可更新的Statement和PreparedStatement</p>
+
+<p>其中type的取值和意义如下</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th style="text-align: right">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">TYPE_FORWARD_ONLY</td>
+      <td style="text-align: right">结果集不可滚动</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">TYPE_SCROLL_INSENSITIVE</td>
+      <td style="text-align: right">结果集可滚动，但对数据库数据的更新不敏感</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">TYPE_SCROLL_SENSITIVE</td>
+      <td style="text-align: right">结果集可滚动，对数据库数据的更新敏感</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>其中concurrency的取值和意义如下</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th style="text-align: right">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">CONCUR_READ_ONLY</td>
+      <td style="text-align: right">结果集不能用于更新</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CONCUR_UPDATABLE</td>
+      <td style="text-align: right">结果集可用于更新表</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>通过下面的API来判断结果集是否支持可滚动和更新<br />
+ResultSet.getType<br />
+ResultSet.getConcurrency</p>
+
+<p>通过下面的API来判断数据库驱动是否支持可滚动和更新<br />
+DatabaseMetaData.supportsResultSetType(type)<br />
+DatabaseMetaData.supportsResultSetConcurrency(concurrency)</p>
+
+<p>可滚动的ResultSet带有一个光标，有一些API可控制其维护的光标<br />
+rs.next()<br />
+rs.previous()<br />
+rs.relative(n) //相对当前位置移动光标<br />
+rs.absolute(n) //移动光标到指定行号<br />
+rs.getRow() //获取光标行号<br />
+first，last，beforeFirst，afterLast等<br />
+isFirst，isLast，isBeforeFirst，isAfterLast等</p>
+
+<h2 id="更新一行的某些属性">更新一行的某些属性</h2>
+
+<p>可更新的ResultSet中，ResultSet.updateXxx(i, XXX) 是用来更新结果集某一行的一个的属性<br />
+更新完属性以后还得使用ResultSet.updateRow()发送更新到数据库</p>
+
+<h2 id="插入新行">插入新行</h2>
+
+<p>使用可更新的ResultSet可以插入新行</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rs.moveToInsertRow();
+rs.updateString("Title", title);
+rs.updateString("ISBN", isbn);
+rs.updateString("Publisher_id", pubid);
+rs.insertRow(); //发送插入请求到数据库
+rs.moveToCurrentRow();
+
+</code></pre></div></div>
+
+<h2 id="删除行">删除行</h2>
+
+<p>rs.deleteRow()</p>
+
+<h1 id="行集">行集</h1>
+
+<p>数据集的一个弊端是要一直占用一个连接，为了在不同地方处理查询结果的过程中不占用连接，可以使用行集RowSet</p>
+
+<p>有多重扩展了RowSet接口的子接口：</p>
+
+<ul>
+  <li>CachedRowSet：允许断开连接的操作</li>
+  <li>WebRowSet：一个被缓存的行集，该行集能把数据保存到XML文件，需要使用的时候用WebRowSet打开XML文件即可</li>
+  <li>FilterRowSet和JoinRowSet：能在行集上执行相当于select和join的操作</li>
+  <li>JdbcRowSet：简单封装了RowSet提供get，set方法，相当于把RowSet转换为一个bean</li>
+</ul>
+
+<p>JDBC规范希望由厂商提供以上接口的高效实现，但JDBC同时也提供了参考实现，实现类以Impl结尾</p>
+
+<p>构造行集的方式有两种</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ResultSet result = ...
+CachedRowSet crs = new CachedRowSet();
+crs.setTableName(tableName);
+crs.populate(result);
+conn.close();
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CachedRowSet crs = new CachedRowSet();
+crs.setUrl("jdbc:...");
+crs.setUser("...");
+crs.setPassword("...");
+crs.setCommand("select * from user where name = ?");
+crs.setString(1, "..");
+crs.excute(); // 执行查询，自动填充数据，并释放连接
+
+</code></pre></div></div>
+
+<p>当数据量过大时，可以通过crs.setPageSize(size)，crs.nextPage()来本批获取数据</p>
+
+<p>当使用可更新的数据集可以使用crs.acceptChanges()和crs.acceptChanges(conn)来更新数据集</p>
+
+<h1 id="元数据">元数据</h1>
+
+<p>描述数据库及其组成部分的数据叫做元数据，通过JDBC API可以获取三类元数据：关于数据库的元数据、关于结果集的元数据、关于预备语句参数的元数据</p>
+
+<p>通过DatabaseMetaData来获取数据库的信息，例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DatabaseMetaData meta = conn.getMetaData();
+ResultSet mrs = meta.getTable(null, null, null, new String[]{"TABLE"});
+while(mrs.next())
+	System.out.println(mrs.getString(3)); // print table names
+
+</code></pre></div></div>
+<p>DatabaseMetaData有很多方法来获取数据库的信息</p>
+
+<p>通过ResultSetMetaData能获取数据集相关信息，例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ResultSet mrs = stat.executeQuery("select * from " + tableName);
+ResultSetMetaData meta = mrs.getMetaData();
+for(int i = 0; i &lt; meta.getColumnCount(); i++) {
+	String columnName = meta.getColumnLabel(i);
+	int columnWidth = meta.getColumnDisplaySize(i);
+	...
+}
+
+</code></pre></div></div>
+
+<h1 id="事务">事务</h1>
+
+<p>多个SQL语句能组成一个事务，事务能提交和回滚；默认情况下，JDBC是自动提交模式，为了启用事务，需要关闭自动提交</p>
+
+<p>使用事务的过程一般如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conn.setAutoCommit(false);
+Statement stmt = conn.createStatement();
+stmt.executeUpdate(command1);
+stmt.executeUpdate(command2);
+stmt.executeUpdate(command3);
+...
+conn.commit();
+
+// or conn.rollback();
+
+</code></pre></div></div>
+<h2 id="保存点">保存点</h2>
+
+<p>可以在事务中使用保存点，回滚的时候可以回滚到保存点，例如</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conn.setAutoCommit(false);
+Statement stmt = conn.createStatement();
+stmt.executeUpdate(command1);
+stmt.executeUpdate(command2);
+Savepoint svpt = conn.createSavepoint();
+if(..) conn.rollback(svpt);
+...
+conn.commit();
+conn.releaseSavepoint(svpt);
+
+</code></pre></div></div>
+
+<h2 id="批量更新">批量更新</h2>
+
+<p>当需要执行多次insert语句时，可以使用批量更新来提高性能</p>
+
+<p><em>通过DatabaseMetaData.supportBatchUpdates来查看驱动是否支持批量更新</em></p>
+
+<p><em>批量操作中不能包含查询语句</em></p>
+
+<p>一般批量更新是在一个事务之中，以保证批量更新能以原子的方式成功</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boolean autoCommit = conn.getAutoCommit();
+conn.setAutoCommit(false);
+
+Statement stmt = conn.createStatement();
+stmt.addBatch(command1);
+stmt.addBatch(command2);
+stmt.addBatch(command3);
+...
+int[] counts = stmt.executeBatch();
+conn.commit();
+conn.setAutoCommit(autoCommit);
+
+</code></pre></div></div>
+
+<h1 id="数据库连接管理">数据库连接管理</h1>
+
+<p>在企业应用中数据库连接管理主要包括两方面：</p>
+
+<ul>
+  <li>数据源连接信息的管理：集中管理一个数据源的连接信息并为客户端提供数据源服务</li>
+  <li>数据库连接的管理：建立数据库连接，并以连接池的方式来管理连接资源</li>
+</ul>
+
+<p>连接池服务一般是由Web容器或应用服务器提供，在容器中配置好数据库的连接信息后，客户端通过JNDI来获得</p>
+
+<p>获取数据源和连接的方法一般如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Context jndiContext = new InitialContext();
+DataSource source = (DataSource)jndiContext.lookup("java:...");
+Connection conn = source.getConnection();
+
+</code></pre></div></div>
+
+<p>Java EE5 容器中支持标注获取DataSource</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Resource("jdbc/corejava")
+private DataSource source;
+
+</code></pre></div></div>
+
+<h1 id="参考文献">参考文献</h1>
+
+<p>《Java核心技术》<br />
+<a href="http://docs.oracle.com/javase/tutorial/jdbc/index.html">JDBC(TM) Database Access</a></p>
+
+            </article>
+        </div>
+      </div>
+      <div class="panel docs-content">
+        <article class="post-content">
+          <div class="wrapper">
+             
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2014-2020 <a href=""><code>Jun Xi Gu</code></a>.</p>
+		<p>Customizied from <a href="https://github.com/luoyan35714/LessOrMore">LessOrMore</a></p></p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/application.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+
+  </body>
+</html>
