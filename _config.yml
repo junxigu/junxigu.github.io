@@ -1,0 +1,31 @@
+# Jekyll settings
+destination: ../junxigu.github.io
+
+# Site settings
+name: Jun Xi Gu 的博客
+email: gujunxiguerer@sina.com
+author: Jun Xi Gu
+url: ''
+resume_site: 
+github: https://github.com/junxigu/
+baseurl: ''
+description: 个人技术博客
+meta_description: 顾俊喜;个人博客
+motto: 'Stay Hungry Stay Foolish'
+banner: ''
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: junxigu
+highlighter: rouge
+
+# Build settings
+markdown: kramdown
